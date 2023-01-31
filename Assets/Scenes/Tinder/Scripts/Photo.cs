@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace Tinder
@@ -14,9 +13,15 @@ namespace Tinder
 
         [SerializeField] bool _deny, _accept;
 
+        [HideInInspector] public SpriteRenderer sp;
+        private void Awake()
+        {
+            transform.GetChild(0).TryGetComponent(out sp);
+        }
+
         private void Start()
         {
-            _cam = Controller.controller.cam;
+            _cam = Controller.controller.cam; 
         }
 
         private void OnMouseDrag()
