@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Bella Salvaje
   m_EditorClassIdentifier: 
-  imagen: {fileID: 0}
+  imagen: {fileID: 21300000, guid: 48464cd53bb3c604f999e7d3f15e8d09, type: 3}
   nombre: Bella Salvaje
   edad: 21
   signo: 4

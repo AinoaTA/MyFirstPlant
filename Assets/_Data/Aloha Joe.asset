@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Aloha Joe
   m_EditorClassIdentifier: 
-  imagen: {fileID: 0}
+  imagen: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
   nombre: Aloha Joe
   edad: 23
   signo: 12

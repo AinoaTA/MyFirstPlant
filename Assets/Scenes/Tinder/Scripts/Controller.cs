@@ -5,9 +5,12 @@ namespace Tinder
 {
     public class Controller : MonoBehaviour
     {
-        [SerializeField] private PlantaScriptableObject[] _tinderProfiles;
-        int _index;
         public static Controller controller;
+
+
+        [SerializeField] private PlantaScriptableObject[] _tinderProfiles;
+
+
 
         [HideInInspector] public Camera cam;
 
@@ -19,6 +22,10 @@ namespace Tinder
         [SerializeField] private TMP_Text[] _desintereses;
         [SerializeField] private TMP_Text _frase;
 
+        [SerializeField] PlantaScriptableObject[] _acceptedProfiles;
+
+
+        int _index;
         private void Awake()
         {
             controller = this;
@@ -32,15 +39,22 @@ namespace Tinder
 
         public void Accept()
         {
-            print("accepted");
+            SetNewProfile();
         }
         public void Deny()
         {
-            print("Denied");
+            SetNewProfile();
         }
 
         public void SetNewProfile()
         {
+            if (_index >= _tinderProfiles.Length)
+            {
+                Debug.Log("No hay más perfiles");
+                return;
+            }
+
+            Debug.Log("New profile Loaded");
             _photo.sp.sprite = _tinderProfiles[_index].imagen;
             _name.text = _tinderProfiles[_index].nombre + " " + _tinderProfiles[_index].edad.ToString();
             _zodiacSign.text = _tinderProfiles[_index].signo.ToString();
@@ -50,10 +64,10 @@ namespace Tinder
                 _intereses[i].text = _tinderProfiles[_index].intereses.Count <= i ? "" : _tinderProfiles[_index].intereses[i];
                 _desintereses[i].text = _tinderProfiles[_index].desintereses.Count <= i ? "" : _tinderProfiles[_index].desintereses[i];
             }
-            //_frase.text = _tinderProfiles[_index].frase;
+            _frase.text = _tinderProfiles[_index].frase;
 
             _index++;
-            if (_index >= _tinderProfiles.Length) _index = 0;
+            //  if (_index >= _tinderProfiles.Length) _index = 0;
         }
     }
 }

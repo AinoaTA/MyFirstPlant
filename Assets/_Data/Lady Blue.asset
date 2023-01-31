@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Lady Blue
   m_EditorClassIdentifier: 
-  imagen: {fileID: 0}
+  imagen: {fileID: 21300000, guid: 177f0e0a4941a464f935c21b367d57c7, type: 3}
   nombre: Lady Blue
   edad: 22
   signo: 2

@@ -21,7 +21,7 @@ namespace Tinder
 
         private void Start()
         {
-            _cam = Controller.controller.cam; 
+            _cam = Controller.controller.cam;
         }
 
         private void OnMouseDrag()
@@ -44,8 +44,9 @@ namespace Tinder
                 Controller.controller.Deny();
             else if (_accept)
                 Controller.controller.Accept();
-            else
-                transform.localRotation = Quaternion.identity;
+
+
+            transform.localRotation = Quaternion.identity;
         }
     }
 }

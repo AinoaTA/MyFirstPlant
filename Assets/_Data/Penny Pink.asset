@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Penny Pink
   m_EditorClassIdentifier: 
-  imagen: {fileID: 0}
+  imagen: {fileID: 21300000, guid: 23743f0c0ed1e6546808a5d645c2a6a5, type: 3}
   nombre: Penny Pink
   edad: 18
   signo: 7
