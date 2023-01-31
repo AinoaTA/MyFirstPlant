@@ -742,6 +742,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 27e58df032d0d044bbb797e243ec1deb, type: 2}
   - {fileID: 11400000, guid: f75f7b91a237263418a96c2f8f849a2c, type: 2}
   - {fileID: 11400000, guid: f399f5305a2ec58409b996b1611364dd, type: 2}
+  _playerProfile: {fileID: 11400000, guid: 819b0f906e0d0ae419c27de335e51158, type: 2}
   cam: {fileID: 0}
   _photo: {fileID: 178971863}
   _name: {fileID: 1774584136}
