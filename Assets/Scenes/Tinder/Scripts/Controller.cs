@@ -6,14 +6,15 @@ namespace Tinder
     {
         public static Controller controller;
 
-        /*[HideInInspector]*/
-        public Camera cam;
+        [HideInInspector] public Camera cam;
 
         private void Awake()
         {
             controller = this;
             cam = Camera.main;
-        } 
+        }
+
+
         public void Accept()
         {
             print("accepted");
