@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 11
+  m_Name: Bella Salvaje
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Sunny Sun (20)
-  signo: 8
+  nombre: Bella Salvaje
+  edad: 21
+  signo: 4
   intereses:
-  - Tomar el sol
-  - "Las comedias rom\xE1nticas"
-  - Ver el lado bueno de las cosas
+  - La fiesta
+  - El desfase
+  - Lo extremo
   desintereses:
-  - 
-  - "Los d\xEDas lluviosos"
-  - "La gente t\xF3xica"
-  frase: "\u201CHoy es un buen d\xEDa para sonre\xEDr\u201D."
+  - Lo aburrido
+  - Lo tranquilo
+  frase: "\u201CNo soy apta para todos los p\xFAblicos\u201D."

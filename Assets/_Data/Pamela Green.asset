@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 10
+  m_Name: Pamela Green
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Caballero Mariachi (25)
-  signo: 5
+  nombre: Pamela Green
+  edad: 25
+  signo: 10
   intereses:
-  - El tequila
-  - Todo lo picante...
-  - Las curvas...
+  - El senderismo
+  - El activismo medioambiental
+  - La escalada
   desintereses:
-  - La timidez
-  - Llegar temprano a casa
-  frase: "\u201CY yo sigo siendo el Rey\u201D."
+  - El sedentarismo
+  - "El color marr\xF3n"
+  frase: "\u201CSoy Hiedra, pero no venenosa\u201D."

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 6
+  m_Name: Penny Pink
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Amelia Blanez (33)
-  signo: 11
+  nombre: Penny Pink
+  edad: 18
+  signo: 7
   intereses:
-  - Pasear por el parque
-  - La limpieza
-  - Cantar en el coro de la Iglesia
+  - "Las novelas rom\xE1nticas"
+  - El rosa
+  - Los cotilleos
   desintereses:
-  - Lo moderno
-  - La falta de valores
-  frase: "\u201CDios conoce el anhelo de tu coraz\xF3n\u2026\u201D."
+  - Los malos modales
+  - El chocolate
+  frase: "\u201CEl amor no hay que comprenderlo, hay que sentirlo\u201D."

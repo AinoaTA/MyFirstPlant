@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 9
+  m_Name: Audrey Klerborn
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Audrey Klerborn (16)
+  nombre: Audrey Klerborn
+  edad: 16
   signo: 9
   intereses:
   - La cocina Gourmet

@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 1
+  m_Name: Linda Medusa
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Erica Draven (28)
-  signo: 3
+  nombre: Linda Medusa
+  edad: 0
+  signo: 6
   intereses:
-  - Color negro
-  - "M\xFAsica Rock"
-  - "Literatura G\xF3tica"
+  - El Arte
+  - El aire libre
+  - "El cine de acci\xF3n"
   desintereses:
-  - La playa
-  - Los musicales
-  frase: "\u201CY entonces dijo el p\xE1jaro: Nunca m\xE1s\u201D."
+  - Los espejos
+  - Los chulitos con espada
+  frase: "\u201CM\xEDrame a los ojos, no a mis hojas\u201D"

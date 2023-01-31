@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject
+  m_Name: "Cayetano Froil\xE1n"
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Linda Medusa (?)
-  signo: 6
+  nombre: "Cayetano Froil\xE1n"
+  edad: 21
+  signo: 1
   intereses:
-  - El Arte
-  - El aire libre
-  - "El cine de acci\xF3n"
+  - "Los coches r\xE1pidos"
+  - Las zonas VIP
+  - Los yates
   desintereses:
-  - Los espejos
-  - Los chulitos con espada
-  frase: "\u201CM\xEDrame a los ojos, no a mis hojas\u201D"
+  - La ropa sin marca
+  - La "igualdad"
+  frase: "Aqui va\u201CSobran las presentaciones\u201D. la frase estelar"

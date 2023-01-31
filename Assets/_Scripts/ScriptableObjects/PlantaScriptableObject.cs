@@ -8,9 +8,12 @@ public class PlantaScriptableObject : ScriptableObject
 {
     public Sprite imagen;
     public string nombre;
+    [Range(0, 50)]
+    public int edad;
     public ZodiacSign signo;
     public List<string> intereses;
     public List<string> desintereses;
+    [TextArea(5, 10)]
     public string frase = "Aqui va la frase estelar";
 }
 

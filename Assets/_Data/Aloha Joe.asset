@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 2
+  m_Name: Aloha Joe
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: "Cayetano Froil\xE1n (21)"
-  signo: 1
+  nombre: Aloha Joe
+  edad: 23
+  signo: 12
   intereses:
-  - "Los coches r\xE1pidos"
-  - Las zonas VIP
-  - Los yates
+  - "Los deportes acu\xE1ticos"
+  - La playa
+  - Viajar en mi Camper
   desintereses:
-  - La ropa sin marca
-  - La "igualdad"
-  frase: "Aqui va\u201CSobran las presentaciones\u201D. la frase estelar"
+  - Los sitios cerrados
+  - La negatividad
+  frase: "\u201CConmigo nunca te aburrir\xE1s\u201D."

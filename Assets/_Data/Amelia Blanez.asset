@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 4
+  m_Name: Amelia Blanez
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Lady Blue (22)
-  signo: 2
+  nombre: Amelia Blanez
+  edad: 33
+  signo: 11
   intereses:
-  - El lujo
-  - La belleza
-  - Las cosas brillantes
+  - Pasear por el parque
+  - La limpieza
+  - Cantar en el coro de la Iglesia
   desintereses:
-  - La vulgaridad
-  frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
-    Y a m\xED me sobra de ambas\u201D."
+  - Lo moderno
+  - La falta de valores
+  frase: "\u201CDios conoce el anhelo de tu coraz\xF3n\u2026\u201D."

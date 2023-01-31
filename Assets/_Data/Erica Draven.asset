@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 8
+  m_Name: Erica Draven
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Aloha Joe (23)
-  signo: 12
+  nombre: Erica Draven
+  edad: 28
+  signo: 3
   intereses:
-  - "Los deportes acu\xE1ticos"
-  - La playa
-  - Viajar en mi Camper
+  - Color negro
+  - "M\xFAsica Rock"
+  - "Literatura G\xF3tica"
   desintereses:
-  - Los sitios cerrados
-  - La negatividad
-  frase: "\u201CConmigo nunca te aburrir\xE1s\u201D."
+  - La playa
+  - Los musicales
+  frase: "\u201CY entonces dijo el p\xE1jaro: Nunca m\xE1s\u201D."

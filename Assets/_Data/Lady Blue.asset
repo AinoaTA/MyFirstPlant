@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: Default_PlantaScriptableObject 5
+  m_Name: Lady Blue
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: Penny Pink (18)
-  signo: 7
+  nombre: Lady Blue
+  edad: 22
+  signo: 2
   intereses:
-  - "Las novelas rom\xE1nticas"
-  - El rosa
-  - Los cotilleos
+  - El lujo
+  - La belleza
+  - Las cosas brillantes
   desintereses:
-  - Los malos modales
-  - El chocolate
-  frase: "\u201CEl amor no hay que comprenderlo, hay que sentirlo\u201D."
+  - La vulgaridad
+  frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
+    Y a m\xED me sobra de ambas\u201D."
