@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace Tinder
 {
@@ -9,7 +10,7 @@ namespace Tinder
         public static Controller controller;
 
         [SerializeField] private List<PlantaScriptableObject> _tinderProfiles = new();
-        [SerializeField] private PlantaScriptableObject _playerProfile;
+        private PlantaScriptableObject _playerProfile;
 
         [HideInInspector] public Camera cam;
 
@@ -26,15 +27,17 @@ namespace Tinder
         [SerializeField] private int _maxMatches = 4;
         List<PlantaScriptableObject> _finalMatches = new();
 
-        List<PlantaScriptableObject> _currentProfiles = new();
         List<PlantaScriptableObject> _allAccepted = new();
         List<PlantaScriptableObject> _allRejected = new();
         List<MatchesCompare> _matchesCompare = new();
+
+        [SerializeField] List<MatchesProfiles> _matchesProfile;
+
         [Header("UI")]
-        [SerializeField] public GameObject adverMinMatches;
+        [SerializeField] private GameObject _adverMinMatches;
+        [SerializeField] private GameObject _showMatches;
         [SerializeField] private TMP_Text _contentText;
-
-
+        public bool anyMenuOpen;
         int _index;
         bool _endMatch;
         private void Awake()
@@ -46,12 +49,13 @@ namespace Tinder
 
         private void Start()
         {
+            _playerProfile = Main.instance.playerProfile;
             SetNewProfile();
         }
 
         public void Accept()
         {
-            if (adverMinMatches.activeSelf || _endMatch) return;
+            if (_adverMinMatches.activeSelf || anyMenuOpen) return;
 
             _matchesCompare.Add(new MatchesCompare(_tinderProfiles[_index]));
             _allAccepted.Add(_tinderProfiles[_index]);
@@ -60,7 +64,7 @@ namespace Tinder
         }
         public void Deny()
         {
-            if (adverMinMatches.activeSelf || _endMatch) return;
+            if (_adverMinMatches.activeSelf || _endMatch) return;
 
             _allRejected.Add(_tinderProfiles[_index]);
             SetNewProfile();
@@ -110,6 +114,7 @@ namespace Tinder
             {
                 _endMatch = true;
                 CheckMatch();
+                SelectMatches();
             }
         }
 
@@ -117,8 +122,7 @@ namespace Tinder
         {
             for (int i = 0; i < _matchesCompare.Count; i++)
                 _matchesCompare[i].CheckInterests(_playerProfile);
-
-
+             
             while (_finalMatches.Count < _maxMatches)
             {
                 int common = _matchesCompare[0]._thingsInCommon;
@@ -135,26 +139,35 @@ namespace Tinder
                 }
                 _finalMatches.Add(plant);
                 _matchesCompare.RemoveAt(index);
-            } 
+            }
 
             Main.instance.SaveMatches(_finalMatches);
         }
 
         public void MinMatchesAdv(bool show)
         {
-            adverMinMatches.SetActive(show);
+            anyMenuOpen = show;
+            _adverMinMatches.SetActive(show);
 
             if (!show)
             {
-                for (int i = 0; i < _allAccepted.Count; i++) 
+                for (int i = 0; i < _allAccepted.Count; i++)
                     if (_tinderProfiles.Contains(_allAccepted[i]))
                         _tinderProfiles.Remove(_allAccepted[i]);
 
                 SetNewProfile();
             }
             else
-            {
                 _contentText.text = "Oh no! Te faltan " + (_minMatches - _allAccepted.Count) + " matches para tener plancitas :(";
+        }
+        public void SelectMatches()
+        {
+            anyMenuOpen = true;
+            _showMatches.SetActive(true); 
+
+            for (int i = 0; i < _matchesProfile.Count; i++)
+            {
+                _matchesProfile[i].SetUp(_finalMatches[i]);
             }
         }
 

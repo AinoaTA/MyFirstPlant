@@ -31,7 +31,7 @@ namespace Tinder
 
         private void OnMouseDrag()
         {
-            if (Controller.controller.adverMinMatches.activeSelf) return;
+            if (Controller.controller.anyMenuOpen) return;
 
             _mousePos = _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.nearClipPlane));
 
