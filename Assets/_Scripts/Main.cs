@@ -4,10 +4,11 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     public static Main instance;
+    public ManagerScene managerScene;
 
     public List<PlantaScriptableObject> plantProfiles = new();
     public PlantaScriptableObject playerProfile;
-    private PlantaScriptableObject _current;
+    public PlantaScriptableObject profilePlantSelected;
     private void Awake()
     {
         if (instance == null)
