@@ -33,10 +33,10 @@ namespace Tinder
 
             transform.localRotation = Quaternion.Euler(Mathf.Clamp(_currentXValue, -_maxRot, _maxRot), 0, 0);
 
-            if (_currentXValue <= -(_maxRot + _offSet)) _deny = true;
+            if (_currentXValue <= -_maxRot + _offSet) _deny = true;
             else _deny = false;
 
-            if (_currentXValue >= (_maxRot - _offSet)) _accept = true;
+            if (_currentXValue >= _maxRot - _offSet) _accept = true;
             else _accept = false;
         }
 
