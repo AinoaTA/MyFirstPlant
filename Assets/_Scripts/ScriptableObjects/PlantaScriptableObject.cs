@@ -16,6 +16,9 @@ public class PlantaScriptableObject : ScriptableObject
     public List<string> desintereses;
     [TextArea(5, 10)]
     public string frase = "Aqui va la frase estelar";
+    
+    [Header("Modelo")]
+    public GameObject modeloPrefab;
 }
 
 public enum ZodiacSign

@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: SO_Player1
+  m_Script: {fileID: 11500000, guid: b9492ade3e2c6cd4ba00183fed173ca5, type: 3}
+  m_Name: SO_Player
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
   nombre: "Plantal\xF3n"
+  tipoPlanta: Ninguna
   edad: 27
   signo: 8
   intereses:
@@ -24,3 +25,5 @@ MonoBehaviour:
   - "El color marr\xF3n"
   - La ropa sin marca
   frase: El team Rocket despega de neubo.
+  modeloPrefab: {fileID: 0}
+  variable: Hello World.

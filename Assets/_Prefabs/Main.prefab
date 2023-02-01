@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerScene: {fileID: 2896593176105643073}
   plantProfiles: []
-  playerProfile: {fileID: 11400000, guid: 85c42d238a5bec04e8bbe9ce9e5b6772, type: 2}
+  playerProfile: {fileID: 11400000, guid: 52e35948e528b0e4888a32aacdd9defe, type: 2}
   profilePlantSelected: {fileID: 0}
 --- !u!1 &8954955525490782894
 GameObject:

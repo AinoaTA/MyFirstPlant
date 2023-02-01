@@ -58,6 +58,7 @@ sysinfo.txt
 #ignore .idea too
 *.idea
 
+#ignore user settings...
+/[Uu]serSettings/
 # Crashlytics generated file
 crashlytics-build.properties
-
