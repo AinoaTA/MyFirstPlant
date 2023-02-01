@@ -292,6 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxRot: 30
   _maxXValue: 0.5
+  _offSet: 15
   _deny: 0
   _accept: 0
   sp: {fileID: 0}
@@ -591,9 +592,8 @@ MonoBehaviour:
   - {fileID: 587030015}
   - {fileID: 1831273985}
   _frase: {fileID: 2004823628}
+  _minMatches: 3
   _maxMatches: 3
-  _finalMatches: []
-  _matchesCompare: []
 --- !u!4 &407981149
 Transform:
   m_ObjectHideFlags: 0

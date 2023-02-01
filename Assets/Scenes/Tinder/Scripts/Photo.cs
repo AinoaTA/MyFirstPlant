@@ -7,8 +7,8 @@ namespace Tinder
         Camera _cam;
         Vector3 _mousePos;
         [SerializeField] private float _maxRot = 30;
-        [SerializeField] private float _maxXValue = 0.10f;
-
+        [SerializeField] private float _maxXValue = 0.5f;
+        [SerializeField] private float _offSet = 0.1f;
         private float _currentXValue;
 
         [SerializeField] bool _deny, _accept;
@@ -31,10 +31,10 @@ namespace Tinder
 
             transform.localRotation = Quaternion.Euler(Mathf.Clamp(_currentXValue, -_maxRot, _maxRot), 0, 0);
 
-            if (_currentXValue <= -_maxRot) _deny = true;
+            if (_currentXValue <= -(_maxRot + _offSet)) _deny = true;
             else _deny = false;
 
-            if (_currentXValue >= _maxRot) _accept = true;
+            if (_currentXValue >= (_maxRot - _offSet)) _accept = true;
             else _accept = false;
         }
 

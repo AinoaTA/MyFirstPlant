@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 namespace Tinder
 {
@@ -9,9 +10,9 @@ namespace Tinder
     {
         public static Controller controller;
 
-        [SerializeField] private PlantaScriptableObject[] _tinderProfiles;
+        [SerializeField] private List<PlantaScriptableObject> _tinderProfiles = new();
         [SerializeField] private PlantaScriptableObject _playerProfile;
-         
+
         [HideInInspector] public Camera cam;
 
         [Header("Settings")]
@@ -23,10 +24,13 @@ namespace Tinder
         [SerializeField] private TMP_Text _frase;
 
         [Header("Preferences")]
-        [SerializeField] private int _maxMatches = 3;
-        [SerializeField] List<PlantaScriptableObject> _finalMatches = new();
+        [SerializeField] private int _minMatches = 2;
+        [SerializeField] private int _maxMatches = 4;
+        List<PlantaScriptableObject> _finalMatches = new();
 
-        [SerializeField] List<MatchesCompare> _matchesCompare = new();
+        List<PlantaScriptableObject> _allAccepted = new();
+        List<PlantaScriptableObject> _allRejected = new();
+        List<MatchesCompare> _matchesCompare = new();
 
         int _index;
         private void Awake()
@@ -44,10 +48,13 @@ namespace Tinder
         public void Accept()
         {
             _matchesCompare.Add(new MatchesCompare(_tinderProfiles[_index]));
+            _allAccepted.Add(_tinderProfiles[_index]);
+
             SetNewProfile();
         }
         public void Deny()
         {
+            _allRejected.Add(_tinderProfiles[_index]);
             SetNewProfile();
         }
 
@@ -58,15 +65,19 @@ namespace Tinder
             {
                 StartCoroutine(CheckMatch());
             }
+
         }
 #endif
 
         public void SetNewProfile()
         {
             _index++;
-            if (_index >= _tinderProfiles.Length)
+
+            if (_index >= _tinderProfiles.Count)
             {
                 Debug.Log("No hay más perfiles");
+                _index=-1;
+                CheckPreferences();
                 return;
             }
 
@@ -80,8 +91,22 @@ namespace Tinder
                 _intereses[i].text = _tinderProfiles[_index].intereses.Count <= i ? "" : _tinderProfiles[_index].intereses[i];
                 _desintereses[i].text = _tinderProfiles[_index].desintereses.Count <= i ? "" : _tinderProfiles[_index].desintereses[i];
             }
-            _frase.text = _tinderProfiles[_index].frase; 
+            _frase.text = _tinderProfiles[_index].frase;
         }
+
+        private void CheckPreferences()
+        {
+            if (_allAccepted.Count < _minMatches)
+            {
+                Debug.Log("Necesitas realizar: " + (_minMatches - _allAccepted.Count) + " match(es) más");
+            }
+            else
+            {
+                CheckMatch(); 
+            }
+        }
+
+
 
         private IEnumerator CheckMatch()
         {
@@ -102,7 +127,7 @@ namespace Tinder
                     if (common < _matchesCompare[i]._thingsInCommon)
                     {
                         index = i;
-                        common = _matchesCompare[i]._thingsInCommon; 
+                        common = _matchesCompare[i]._thingsInCommon;
                         plant = _matchesCompare[i]._profile;
                     }
                 }
