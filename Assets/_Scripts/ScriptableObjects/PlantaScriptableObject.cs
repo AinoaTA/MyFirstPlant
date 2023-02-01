@@ -8,6 +8,7 @@ public class PlantaScriptableObject : ScriptableObject
 {
     public Sprite imagen;
     public string nombre;
+    public string tipoPlanta;
     [Range(0, 50)]
     public int edad;
     public ZodiacSign signo;
