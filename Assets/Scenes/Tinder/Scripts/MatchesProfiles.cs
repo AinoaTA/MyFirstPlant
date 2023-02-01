@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class MatchesProfiles : MonoBehaviour
 {
-    [HideInInspector] public int id;
+    public int id;
     public delegate void Match(Transform f, int i);
     public static Match delegateMatch;
 
