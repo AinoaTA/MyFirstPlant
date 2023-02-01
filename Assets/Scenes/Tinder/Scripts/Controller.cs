@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 
 namespace Tinder
 {
@@ -28,11 +26,17 @@ namespace Tinder
         [SerializeField] private int _maxMatches = 4;
         List<PlantaScriptableObject> _finalMatches = new();
 
+        List<PlantaScriptableObject> _currentProfiles = new();
         List<PlantaScriptableObject> _allAccepted = new();
         List<PlantaScriptableObject> _allRejected = new();
         List<MatchesCompare> _matchesCompare = new();
+        [Header("UI")]
+        [SerializeField] public GameObject adverMinMatches;
+        [SerializeField] private TMP_Text _contentText;
+
 
         int _index;
+        bool _endMatch;
         private void Awake()
         {
             _index = -1;
@@ -47,6 +51,8 @@ namespace Tinder
 
         public void Accept()
         {
+            if (adverMinMatches.activeSelf || _endMatch) return;
+
             _matchesCompare.Add(new MatchesCompare(_tinderProfiles[_index]));
             _allAccepted.Add(_tinderProfiles[_index]);
 
@@ -54,6 +60,8 @@ namespace Tinder
         }
         public void Deny()
         {
+            if (adverMinMatches.activeSelf || _endMatch) return;
+
             _allRejected.Add(_tinderProfiles[_index]);
             SetNewProfile();
         }
@@ -63,9 +71,8 @@ namespace Tinder
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
-                StartCoroutine(CheckMatch());
+                CheckMatch();
             }
-
         }
 #endif
 
@@ -76,12 +83,11 @@ namespace Tinder
             if (_index >= _tinderProfiles.Count)
             {
                 Debug.Log("No hay más perfiles");
-                _index=-1;
+                _index = -1;
                 CheckPreferences();
                 return;
             }
 
-            Debug.Log("New profile Loaded");
             _photo.sp.sprite = _tinderProfiles[_index].imagen;
             _name.text = _tinderProfiles[_index].nombre + " " + _tinderProfiles[_index].edad.ToString();
             _zodiacSign.text = _tinderProfiles[_index].signo.ToString();
@@ -98,24 +104,20 @@ namespace Tinder
         {
             if (_allAccepted.Count < _minMatches)
             {
-                Debug.Log("Necesitas realizar: " + (_minMatches - _allAccepted.Count) + " match(es) más");
+                MinMatchesAdv(true);
             }
             else
             {
-                CheckMatch(); 
+                _endMatch = true;
+                CheckMatch();
             }
         }
 
-
-
-        private IEnumerator CheckMatch()
+        private void CheckMatch()
         {
             for (int i = 0; i < _matchesCompare.Count; i++)
-            {
                 _matchesCompare[i].CheckInterests(_playerProfile);
 
-                yield return null;
-            }
 
             while (_finalMatches.Count < _maxMatches)
             {
@@ -133,6 +135,25 @@ namespace Tinder
                 }
                 _finalMatches.Add(plant);
                 _matchesCompare.RemoveAt(index);
+            }
+            Debug.Log("Tienes " + _finalMatches.Count + "Plancitas!");
+        }
+
+        public void MinMatchesAdv(bool show)
+        {
+            adverMinMatches.SetActive(show);
+
+            if (!show)
+            {
+                for (int i = 0; i < _allAccepted.Count; i++) 
+                    if (_tinderProfiles.Contains(_allAccepted[i]))
+                        _tinderProfiles.Remove(_allAccepted[i]);
+
+                SetNewProfile();
+            }
+            else
+            {
+                _contentText.text = "Oh no! Te faltan " + (_minMatches - _allAccepted.Count) + " matches para tener plancitas :(";
             }
         }
 

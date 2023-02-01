@@ -26,6 +26,8 @@ namespace Tinder
 
         private void OnMouseDrag()
         {
+            if (Controller.controller.adverMinMatches.activeSelf) return;
+
             _mousePos = _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.nearClipPlane));
             _currentXValue = _mousePos.x * _maxRot / _maxXValue;
 
