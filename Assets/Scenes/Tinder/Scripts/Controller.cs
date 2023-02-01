@@ -135,8 +135,9 @@ namespace Tinder
                 }
                 _finalMatches.Add(plant);
                 _matchesCompare.RemoveAt(index);
-            }
-            Debug.Log("Tienes " + _finalMatches.Count + "Plancitas!");
+            } 
+
+            Main.instance.SaveMatches(_finalMatches);
         }
 
         public void MinMatchesAdv(bool show)
