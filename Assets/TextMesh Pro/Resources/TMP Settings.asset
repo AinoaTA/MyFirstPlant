@@ -21,8 +21,8 @@ MonoBehaviour:
   m_GetFontFeaturesAtRuntime: 1
   m_missingGlyphCharacter: 0
   m_warningsDisabled: 0
-  m_defaultFontAsset: {fileID: 11400000, guid: 177d2af067e547a45b73f2e41fc2cc23, type: 2}
-  m_defaultFontAssetPath: Fonts & Materials/Snidely
+  m_defaultFontAsset: {fileID: 11400000, guid: 4b930f0b3a331364bbd8b84b9a5ea42f, type: 2}
+  m_defaultFontAssetPath: Fonts & Materials/Redondo
   m_defaultFontSize: 36
   m_defaultAutoSizeMinRatio: 0.5
   m_defaultAutoSizeMaxRatio: 2

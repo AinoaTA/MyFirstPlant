@@ -19,7 +19,7 @@ public class PlantaScriptableObject : ScriptableObject
 
 public enum ZodiacSign
 {
-    Capricornio = 1,
+    Capricornio = 0,
     Acuario, 
     Piscis, 
     Aries,
