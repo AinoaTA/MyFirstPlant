@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class MatchesProfiles : MonoBehaviour
 {
- /*   [HideInInspector]*/ public int id;
+    [HideInInspector] public int id;
     public delegate void Match(Transform f, int i);
     public static Match delegateMatch;
 
@@ -34,6 +34,6 @@ public class MatchesProfiles : MonoBehaviour
 
     public void SelectProfile()
     {
-        delegateMatch?.Invoke(transform, id); 
+        delegateMatch?.Invoke(transform, id);
     }
 }

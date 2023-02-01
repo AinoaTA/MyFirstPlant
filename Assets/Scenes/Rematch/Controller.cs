@@ -24,7 +24,7 @@ namespace Rematch
             for (int i = 0; i < Main.instance.plantProfiles.Count; i++)
             {
                 MatchesProfiles gm = Instantiate(_matches, transform.position, Quaternion.identity, _parent);
-                gm.id = _parent.childCount-1;
+                gm.id = _parent.childCount - 1;
                 gm.SetUp(Main.instance.plantProfiles[i]);
             }
             yield return null;
@@ -32,7 +32,7 @@ namespace Rematch
         }
 
         public void Selector(Transform tf, int i)
-        { 
+        {
             _selector.position = tf.position;
             _indexSelector = i;
         }
@@ -41,7 +41,7 @@ namespace Rematch
         {
             Main.instance.profilePlantSelected = Main.instance.plantProfiles[_indexSelector];
             Main.instance.plantProfiles.RemoveAt(_indexSelector);
-            Debug.Log("Cambiazo de escena bro");
+            Debug.Log("Escena encontronazo!!!");
             Main.instance.managerScene.LoadSceneWithLoading("Rematch");
         }
     }
