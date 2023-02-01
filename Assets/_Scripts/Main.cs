@@ -18,7 +18,7 @@ public class Main : MonoBehaviour
         }
         else
         {
-            Destroy(instance.gameObject);
+            Destroy(gameObject);
         }
     } 
 

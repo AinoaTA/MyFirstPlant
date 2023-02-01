@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay/Game_.unity
     guid: d76e3c226cef13746bd79ba921698a9a
+  - enabled: 1
+    path: Assets/Scenes/Rematch/Rematch.unity
+    guid: 2abd8a23c4e3c124da85c8d839bbe806
   m_configObjects: {}

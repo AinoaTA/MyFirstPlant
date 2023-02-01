@@ -1952,6 +1952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe36c8b87bf198746aab0a114f47304d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   _photo: {fileID: 4679058672964662671}
   _name: {fileID: 4679058673112411263}
   _zodiacSign: {fileID: 4679058674109495631}
@@ -1982,9 +1983,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 4679058674598179505}
-          m_TargetAssemblyTypeName: Tinder.MatchesProfiles, Assembly-CSharp
+          m_TargetAssemblyTypeName: MatchesProfiles, Assembly-CSharp
           m_MethodName: SelectProfile
-          m_Mode: 3
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace Tinder
 {
@@ -42,6 +41,15 @@ namespace Tinder
         public bool anyMenuOpen;
         int _index;
         bool _endMatch;
+
+        private void OnEnable()
+        {
+            MatchesProfiles.delegateMatch += Selector;
+        }
+        private void OnDisable()
+        {
+            MatchesProfiles.delegateMatch -= Selector;
+        }
         private void Awake()
         {
             _index = -1;
@@ -167,8 +175,8 @@ namespace Tinder
             anyMenuOpen = true;
             _showMatches.SetActive(true);
 
-            for (int i = 0; i < _matchesProfile.Count; i++) 
-                _matchesProfile[i].SetUp(_finalMatches[i]); 
+            for (int i = 0; i < _matchesProfile.Count; i++)
+                _matchesProfile[i].SetUp(_finalMatches[i]);
         }
 
         public void Selector(Transform tf, int i)
@@ -180,8 +188,9 @@ namespace Tinder
         public void StartPlancita()
         {
             Main.instance.profilePlantSelected = _finalMatches[_indexSelector];
-            Debug.Log("Cambiazo de escena bro");
-            Main.instance.managerScene.LoadSceneWithLoading("Game_");
+            _finalMatches.RemoveAt(_indexSelector);
+            Debug.Log("Escena encontronazo!!!");
+            Main.instance.managerScene.LoadSceneWithLoading("Rematch");
         }
 
         [System.Serializable]
