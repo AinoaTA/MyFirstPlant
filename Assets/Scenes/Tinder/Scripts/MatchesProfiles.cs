@@ -6,14 +6,14 @@ namespace Tinder
 {
     public class MatchesProfiles : MonoBehaviour
     {
-        [SerializeField] public Image _photo;
-        [SerializeField] public TMP_Text _name;
-        [SerializeField] public TMP_Text _zodiacSign;
-        [SerializeField] public TMP_Text[] _intereses;
-        [SerializeField] public TMP_Text[] _desintereses;
-        [SerializeField] public TMP_Text _frase;
+        public Image _photo;
+        public TMP_Text _name;
+        public TMP_Text _zodiacSign;
+        public TMP_Text[] _intereses;
+        public TMP_Text[] _desintereses;
+        public TMP_Text _frase;
 
-        public void SetUp(PlantaScriptableObject plant) 
+        public void SetUp(PlantaScriptableObject plant)
         {
             _photo.sprite = plant.imagen;
             _name.text = plant.nombre + " " + plant.edad.ToString();
@@ -26,6 +26,11 @@ namespace Tinder
             }
 
             _frase.text = plant.frase;
+        }
+
+        public void SelectProfile(int i) 
+        {
+            Controller.controller.Selector(transform, i);
         }
     }
 }

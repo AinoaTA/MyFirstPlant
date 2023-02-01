@@ -34,6 +34,8 @@ namespace Tinder
         [SerializeField] List<MatchesProfiles> _matchesProfile;
 
         [Header("UI")]
+        private int _indexSelector;
+        [SerializeField] private Transform _selector;
         [SerializeField] private GameObject _adverMinMatches;
         [SerializeField] private GameObject _showMatches;
         [SerializeField] private TMP_Text _contentText;
@@ -122,7 +124,7 @@ namespace Tinder
         {
             for (int i = 0; i < _matchesCompare.Count; i++)
                 _matchesCompare[i].CheckInterests(_playerProfile);
-             
+
             while (_finalMatches.Count < _maxMatches)
             {
                 int common = _matchesCompare[0]._thingsInCommon;
@@ -163,12 +165,24 @@ namespace Tinder
         public void SelectMatches()
         {
             anyMenuOpen = true;
-            _showMatches.SetActive(true); 
+            _showMatches.SetActive(true);
 
             for (int i = 0; i < _matchesProfile.Count; i++)
             {
                 _matchesProfile[i].SetUp(_finalMatches[i]);
             }
+        }
+
+        public void Selector(Transform tf, int i)
+        {
+            _selector.position = tf.position;
+            _indexSelector = i;
+        }
+
+        public void StartPlancita()
+        {
+            Main.instance.profilePlantSelected = _finalMatches[_indexSelector];
+            Debug.Log("Cambiazo de escena bro");
         }
 
         [System.Serializable]
