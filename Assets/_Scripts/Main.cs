@@ -6,6 +6,7 @@ public class Main : MonoBehaviour
     public static Main instance;
 
     public List<PlantaScriptableObject> plantProfiles = new();
+    public PlantaScriptableObject playerProfile;
     private PlantaScriptableObject _current;
     private void Awake()
     {

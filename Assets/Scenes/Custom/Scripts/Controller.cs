@@ -27,8 +27,12 @@ namespace Custom
         [SerializeField] TMP_Dropdown _desintereses2;
         [SerializeField] TMP_Dropdown _desintereses3;
 
+
+        [SerializeField] TMP_InputField _inputFieldName;
+        [SerializeField] TMP_InputField _inputFieldFrase;
         [SerializeField] Slider _age;
         [SerializeField] TMP_Text _ageText;
+
 
         private void Awake()
         {
@@ -86,6 +90,10 @@ namespace Custom
             _playerProfile.intereses.Clear();
             _playerProfile.desintereses.Clear();
 
+            _playerProfile.nombre = _inputFieldName.text;
+            _playerProfile.frase = _inputFieldFrase.text;
+
+            _playerProfile.edad = (int)_age.value;
             _playerProfile.signo = (ZodiacSign)_zodiacSign.value;
 
             _playerProfile.intereses.Add(allIntereses[_intereses1.value]);
@@ -95,6 +103,8 @@ namespace Custom
             _playerProfile.desintereses.Add(allIntereses[_desintereses1.value]);
             _playerProfile.desintereses.Add(allIntereses[_desintereses2.value]);
             _playerProfile.desintereses.Add(allIntereses[_desintereses3.value]);
+
+            Main.instance.playerProfile = _playerProfile;
         }
     }
 }

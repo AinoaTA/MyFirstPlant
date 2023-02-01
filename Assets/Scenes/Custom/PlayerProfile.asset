@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
-  m_Name: PlayerProfile
+  m_Name: Fernando
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
   nombre: 
-  edad: 0
-  signo: 0
-  intereses: []
-  desintereses: []
-  frase: Aqui va la frase estelar
+  edad: 34
+  signo: 2
+  intereses:
+  - "El cine de acci\xF3n\r"
+  - "El cine de acci\xF3n\r"
+  - "El Arte\r"
+  desintereses:
+  - "Literatura G\xF3tica\r"
+  - "El Arte\r"
+  - "Literatura G\xF3tica\r"
+  frase: Van dos y se cae el del medio
