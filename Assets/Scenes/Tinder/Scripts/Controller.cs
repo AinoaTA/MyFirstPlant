@@ -167,10 +167,8 @@ namespace Tinder
             anyMenuOpen = true;
             _showMatches.SetActive(true);
 
-            for (int i = 0; i < _matchesProfile.Count; i++)
-            {
-                _matchesProfile[i].SetUp(_finalMatches[i]);
-            }
+            for (int i = 0; i < _matchesProfile.Count; i++) 
+                _matchesProfile[i].SetUp(_finalMatches[i]); 
         }
 
         public void Selector(Transform tf, int i)
@@ -183,6 +181,7 @@ namespace Tinder
         {
             Main.instance.profilePlantSelected = _finalMatches[_indexSelector];
             Debug.Log("Cambiazo de escena bro");
+            Main.instance.managerScene.LoadSceneWithLoading("Game_");
         }
 
         [System.Serializable]

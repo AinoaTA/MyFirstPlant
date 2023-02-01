@@ -105,6 +105,7 @@ namespace Custom
             _playerProfile.desintereses.Add(allIntereses[_desintereses3.value]);
 
             Main.instance.playerProfile = _playerProfile;
+            Main.instance.managerScene.LoadSceneWithLoading("tinder");
         }
     }
 }

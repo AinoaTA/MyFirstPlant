@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tinder/Tinder.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Custom/Custom.unity
+    guid: 4ba10097250cfcd45900aeadf8e2c9d3
+  - enabled: 1
+    path: Assets/Scenes/Loading/Loading.unity
+    guid: b16190694612ee245990fec02440e612
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/Game_.unity
+    guid: d76e3c226cef13746bd79ba921698a9a
   m_configObjects: {}

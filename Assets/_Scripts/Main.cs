@@ -4,6 +4,7 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     public static Main instance;
+    public ManagerScene managerScene;
 
     public List<PlantaScriptableObject> plantProfiles = new();
     public PlantaScriptableObject playerProfile;
