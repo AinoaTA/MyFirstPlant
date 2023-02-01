@@ -3,7 +3,22 @@ guid: f44b85dfd789fd24aa4df28d19cd1f86
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cristal
+    second: {fileID: 2100000, guid: 83ff47d31a4edcc4692cee35798f0639, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Movil
+    second: {fileID: 2100000, guid: 421bad13a1a279f4599336b551961a1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pantalla
+    second: {fileID: 2100000, guid: 10e9761d1b76f5f4ba6489e6fb3bc16b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
