@@ -157,7 +157,7 @@ Transform:
   - {fileID: 874638391}
   - {fileID: 3566029109066226169}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &115856030
 PrefabInstance:
@@ -567,7 +567,7 @@ Transform:
   - {fileID: 2049710522}
   - {fileID: 1096224250}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &970188157
 PrefabInstance:
@@ -893,6 +893,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1246894328}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1327221939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 633971625, guid: a97bd106f19f348448ee9db11a04c200, type: 3}
+      propertyPath: m_Name
+      value: PitonisaCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 633971625, guid: a97bd106f19f348448ee9db11a04c200, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363337, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_Name
+      value: Pitonisa (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892735945869363342, guid: a97bd106f19f348448ee9db11a04c200,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97bd106f19f348448ee9db11a04c200, type: 3}
 --- !u!1001 &1335935528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1290,7 +1367,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 127.16, y: -57.3, z: 0}
 --- !u!114 &1700545733
 MonoBehaviour:
@@ -1476,7 +1553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1965659356
 Transform:
   m_ObjectHideFlags: 0
@@ -1499,7 +1576,7 @@ Transform:
   - {fileID: 970188158}
   - {fileID: 1573435409}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1972242203
 PrefabInstance:
