@@ -9,7 +9,7 @@ public class CanvasFadeIn : MonoBehaviour
     public float DelayFadeIn = 0f;
     public float DelayFadeOut = 0f;
     private CanvasGroup canvGroup;
-    public bool HideOnStart;
+    public bool StartWithFadeOut;
 
     public UnityEvent onShow;
     public UnityEvent onHide;
@@ -21,7 +21,7 @@ public class CanvasFadeIn : MonoBehaviour
 
     private void Start()
     {
-        if (HideOnStart)
+        if (StartWithFadeOut)
         {
             canvGroup.alpha = 1f;
             canvGroup.interactable = false;
@@ -44,7 +44,7 @@ public class CanvasFadeIn : MonoBehaviour
     {
         float counter = 0f;
 
-        if (end >= 1)
+        if (end == 1)
         {
             canvGroup.interactable = true;
             canvGroup.blocksRaycasts = true;
