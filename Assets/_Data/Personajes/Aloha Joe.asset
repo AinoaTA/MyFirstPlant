@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 23
   signo: 12
   intereses:
-  - "Los deportes acu\xE1ticos"
-  - La playa
-  - Viajar en mi Camper
+  - "Deportes Acu\xE1ticos"
+  - Playa
+  - Viajar
   desintereses:
-  - Los sitios cerrados
-  - La negatividad
+  - Sitios Cerrados
+  - Negatividad
   frase: "\u201CConmigo nunca te aburrir\xE1s\u201D."
+  modeloPrefab: {fileID: 0}

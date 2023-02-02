@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 20
   signo: 8
   intereses:
-  - Tomar el sol
-  - "Las comedias rom\xE1nticas"
-  - Ver el lado bueno de las cosas
+  - Tomar el Sol
+  - "Comedias Rom\xE1nticas"
+  - Positividad
   desintereses:
-  - "Los d\xEDas lluviosos"
-  - "La gente t\xF3xica"
+  - "D\xEDas Lluviosos"
+  - "Gente T\xF3xica"
   frase: "\u201CHoy es un buen d\xEDa para sonre\xEDr\u201D."
+  modeloPrefab: {fileID: 0}

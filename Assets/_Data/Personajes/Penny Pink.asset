@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 18
   signo: 7
   intereses:
-  - "Las novelas rom\xE1nticas"
-  - El rosa
-  - Los cotilleos
+  - "Novelas Rom\xE1nticas"
+  - Color Rosa
+  - Cotillear
   desintereses:
-  - Los malos modales
-  - El chocolate
+  - Vulgaridad
+  - Chocolate
   frase: "\u201CEl amor no hay que comprenderlo, hay que sentirlo\u201D."
+  modeloPrefab: {fileID: 0}
