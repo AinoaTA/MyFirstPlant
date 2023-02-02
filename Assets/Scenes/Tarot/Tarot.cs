@@ -10,13 +10,14 @@ public class Tarot : MonoBehaviour
     [SerializeField] Transform _cardGroup;
     [SerializeField] Transform _nearPos;
     [SerializeField] float _time;
-    [SerializeField] Vector3 _upEnd = new Vector3(0, 2, 0);
+    [SerializeField] Vector3 _upEnd = new(0, 2, 0);
     [SerializeField] float _yPos = 0.2f;
     [SerializeField] float _zPos = 0.051f;
 
     [SerializeField] List<Card> _cards = new();
-    Vector3 endRot = new Vector3(0, 0, -90);
+    Vector3 endRot = new(0, 0, -90);
 
+    [SerializeField] int _maxReroll=3;
     Vector3[] _initPoses;
     private void Awake()
     {
@@ -56,18 +57,37 @@ public class Tarot : MonoBehaviour
 
     IEnumerator ActionCard()
     {
-        yield return CardChoseRoutine();
-
-        Vector3 endPos = _cards[_indexCardSelected].transform.localPosition;
-        endPos.z = _zPos;
-        yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
-        
-
-        yield return new WaitForSeconds(1);
-
-        Vector3 end = _cards[_indexCardSelected].transform.localPosition;
-        end.y -= _yPos;
+        yield return CardChoseRoutine(); 
+        yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition); 
+        yield return new WaitForSeconds(1); 
         yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
+
+        //IA Moment
+        yield return Reroll();
+        _indexCardSelected = Random.Range(0, _cards.Count);
+        yield return CardChoseRoutine();
+        yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
+        yield return new WaitForSeconds(1);
+        yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
+    }
+
+    IEnumerator Reroll() 
+    {
+        for (int i = 0; i < _maxReroll; i++)
+        {
+            for (int e = 0; e < _cards.Count; e++)
+            {
+                StartCoroutine(MovementCard(_cards[e].transform, _initPoses[1], 0.25f));
+            }
+
+            yield return new WaitForSeconds(_time);
+
+            for (int e = 0; e < _cards.Count; e++)
+            {
+                StartCoroutine(MovementCard(_cards[e].transform, _initPoses[e], 0.25f));
+            }
+            yield return new WaitForSeconds(0.2f);
+        } 
     }
 
     IEnumerator CardChoseRoutine()
@@ -79,8 +99,7 @@ public class Tarot : MonoBehaviour
             if (i != _indexCardSelected)
             {
                 StartCoroutine(MoveAndRot(_cards[i].transform, endRot, _initPoses[i]));
-            }
-
+            } 
         }
         yield return new WaitForSeconds(1);
         yield return ShowCard(_cards[_indexCardSelected].transform); 
@@ -100,14 +119,14 @@ public class Tarot : MonoBehaviour
         }
     }
 
-    IEnumerator MovementCard(Transform ob, Vector3 end)
+    IEnumerator MovementCard(Transform ob, Vector3 end, float time=1)
     {
         float t = 0;
         Vector3 act = ob.localPosition;
-        while (t < 1)
+        while (t < time)
         {
             t += Time.deltaTime;
-            ob.localPosition = Vector3.Lerp(act, end, t / 1);
+            ob.localPosition = Vector3.Lerp(act, end, t / time);
             yield return null;
         }
     }
