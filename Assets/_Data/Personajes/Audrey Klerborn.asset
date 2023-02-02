@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 16
   signo: 9
   intereses:
-  - La cocina Gourmet
+  - Cocinar
   - Cantar
-  - "Las pel\xEDculas de terror"
+  - Cine de Terror
   desintereses:
-  - Los dentistas
-  - Las flores
+  - Dentistas
+  - Flores
   frase: "\u201CMala hierba, nunca muere\u201D."
+  modeloPrefab: {fileID: 0}

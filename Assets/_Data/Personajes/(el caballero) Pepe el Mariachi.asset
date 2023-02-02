@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 25
   signo: 5
   intereses:
-  - El tequila
-  - Todo lo picante...
-  - Las curvas...
+  - Tequila
+  - Picante...
+  - Curvas...
   desintereses:
-  - La timidez
-  - Llegar temprano a casa
+  - Timidez
+  - Madrugar
   frase: "\u201CY yo sigo siendo el Rey\u201D."
+  modeloPrefab: {fileID: 0}

@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 25
   signo: 10
   intereses:
-  - El senderismo
-  - El activismo medioambiental
-  - La escalada
+  - Senderismo
+  - Activismo Medioambiental
+  - Escalada
   desintereses:
-  - El sedentarismo
-  - "El color marr\xF3n"
+  - Tranquilidad
+  - "Color Marr\xF3n"
   frase: "\u201CSoy Hiedra, pero no venenosa\u201D."
+  modeloPrefab: {fileID: 0}

@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 28
   signo: 3
   intereses:
-  - Color negro
+  - Color Negro
   - "M\xFAsica Rock"
   - "Literatura G\xF3tica"
   desintereses:
-  - La playa
-  - Los musicales
+  - Playa
+  - Musicales
   frase: "\u201CY entonces dijo el p\xE1jaro: Nunca m\xE1s\u201D."
+  modeloPrefab: {fileID: 0}

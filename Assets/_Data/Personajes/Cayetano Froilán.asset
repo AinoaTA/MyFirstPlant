@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 21
   signo: 1
   intereses:
-  - "Los coches r\xE1pidos"
-  - Las zonas VIP
-  - Los yates
+  - "Coches R\xE1pidos"
+  - Zonas VIP
+  - Yates
   desintereses:
-  - La ropa sin marca
+  - Vulgaridad
   - La "igualdad"
   frase: "\u201CSobran las presentaciones\u201D. "
+  modeloPrefab: {fileID: 0}

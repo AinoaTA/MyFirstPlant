@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 33
   signo: 11
   intereses:
-  - Pasear por el parque
-  - La limpieza
-  - Cantar en el coro de la Iglesia
+  - Pasear
+  - Limpieza
+  - "Religi\xF3n"
   desintereses:
-  - Lo moderno
-  - La falta de valores
+  - Moderneces
+  - Trasnochar
   frase: "\u201CDios conoce el anhelo de tu coraz\xF3n\u2026\u201D."
+  modeloPrefab: {fileID: 0}

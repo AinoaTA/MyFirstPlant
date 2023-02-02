@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 21
   signo: 4
   intereses:
-  - La fiesta
-  - El desfase
-  - Lo extremo
+  - Fiesta
+  - Desfasar
+  - Trasnochar
   desintereses:
-  - Lo aburrido
-  - Lo tranquilo
+  - Aburrirse
+  - Tranquilidad
   frase: "\u201CNo soy apta para todos los p\xFAblicos\u201D."
+  modeloPrefab: {fileID: 0}

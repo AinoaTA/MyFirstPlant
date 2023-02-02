@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 0
   signo: 6
   intereses:
-  - El Arte
-  - El aire libre
-  - "El cine de acci\xF3n"
+  - Arte
+  - Aire Libre
+  - "Cine de Acci\xF3n"
   desintereses:
-  - Los espejos
-  - Los chulitos con espada
+  - Espejos
+  - Chulitos
   frase: "\u201CM\xEDrame a los ojos, no a mis hojas\u201D"
+  modeloPrefab: {fileID: 0}

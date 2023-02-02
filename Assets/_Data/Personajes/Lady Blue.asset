@@ -18,10 +18,11 @@ MonoBehaviour:
   edad: 22
   signo: 2
   intereses:
-  - El lujo
-  - La belleza
-  - Las cosas brillantes
+  - Lujo
+  - Belleza
+  - Brillos
   desintereses:
-  - La vulgaridad
+  - Vulgaridad
   frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
     Y a m\xED me sobra de ambas\u201D."
+  modeloPrefab: {fileID: 0}
