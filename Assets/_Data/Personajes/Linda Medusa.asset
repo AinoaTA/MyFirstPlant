@@ -27,3 +27,5 @@ MonoBehaviour:
   frase: "\u201CM\xEDrame a los ojos, no a mis hojas\u201D"
   modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
     type: 3}
+  puzlePrefab: {fileID: 4506098881952172955, guid: 005d7d32f5f77354482696e667b1fff7,
+    type: 3}
