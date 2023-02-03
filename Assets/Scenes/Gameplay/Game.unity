@@ -512,19 +512,19 @@ PrefabInstance:
         type: 3}
       propertyPath: plantProfiles.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f75f7b91a237263418a96c2f8f849a2c,
+      objectReference: {fileID: 11400000, guid: c42a12cb91641674c8baff1a03fa4ad6,
         type: 2}
     - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
       propertyPath: plantProfiles.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f75f7b91a237263418a96c2f8f849a2c,
+      objectReference: {fileID: 11400000, guid: c42a12cb91641674c8baff1a03fa4ad6,
         type: 2}
     - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
       propertyPath: plantProfiles.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: f75f7b91a237263418a96c2f8f849a2c,
+      objectReference: {fileID: 11400000, guid: c42a12cb91641674c8baff1a03fa4ad6,
         type: 2}
     - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
@@ -1770,7 +1770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2050578487
 RectTransform:
   m_ObjectHideFlags: 0

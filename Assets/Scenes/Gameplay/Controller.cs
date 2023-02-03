@@ -44,12 +44,15 @@ namespace Gameplay
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             StartCoroutine(GameFlow());
+            //UpdateEnd();
             //MinigameTarot();
             //End();
         }
 
         IEnumerator GameFlow()
         {
+            yield return new WaitForSeconds(1);
+            
             //Conejo dice lo suyo
 
             //La cita habla (se presenta)
