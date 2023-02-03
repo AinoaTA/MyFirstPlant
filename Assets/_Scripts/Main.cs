@@ -5,6 +5,7 @@ public class Main : MonoBehaviour
 {
     public static Main instance;
     public ManagerScene managerScene;
+    public CanvasFadeIn fade;
 
     public List<PlantaScriptableObject> plantProfiles = new();
     public PlantaScriptableObject playerProfile;

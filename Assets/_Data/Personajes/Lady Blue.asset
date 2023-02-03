@@ -25,4 +25,5 @@ MonoBehaviour:
   - Vulgaridad
   frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
     Y a m\xED me sobra de ambas\u201D."
-  modeloPrefab: {fileID: 0}
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}

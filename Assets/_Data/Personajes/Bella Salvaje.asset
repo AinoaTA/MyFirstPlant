@@ -25,4 +25,5 @@ MonoBehaviour:
   - Aburrirse
   - Tranquilidad
   frase: "\u201CNo soy apta para todos los p\xFAblicos\u201D."
-  modeloPrefab: {fileID: 0}
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}

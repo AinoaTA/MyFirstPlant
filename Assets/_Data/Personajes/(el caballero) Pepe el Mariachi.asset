@@ -25,4 +25,5 @@ MonoBehaviour:
   - Timidez
   - Madrugar
   frase: "\u201CY yo sigo siendo el Rey\u201D."
-  modeloPrefab: {fileID: 0}
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}
