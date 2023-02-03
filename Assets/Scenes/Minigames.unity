@@ -601,6 +601,60 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame
       objectReference: {fileID: 0}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1783669549, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1445558206, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 945837201, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -273540039, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -1285676571, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 1471921698, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: -1096606796, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 891740509, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
+    - target: {fileID: 1951827031394393417, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
+        type: 3}
+      propertyPath: listOfSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 1144926464, guid: fdf93fa3f60426146b272535e21dacb4,
+        type: 3}
     - target: {fileID: 1951827031394393418, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
         type: 3}
       propertyPath: m_Pivot.x
