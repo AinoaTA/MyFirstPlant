@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 namespace Gameplay
 {
@@ -14,10 +15,15 @@ namespace Gameplay
         public Tarot tarot;
         public CameraManager cameraManager;
         public Rematch rematch;
-        public Cutegame.Minigames.PuzleDeTiempo _puzle;
-        [SerializeField] private Canvas _canvas;
+        [HideInInspector] public Cutegame.Minigames.PuzleDeTiempo _puzle;
         GameObject _player, _plant;
-         
+
+        [Header("UI")]
+        [SerializeField] private Canvas _canvas;
+        [SerializeField] private GameObject _endCanvas;
+        [SerializeField] private TMP_Text _content;
+
+
         private void Awake()
         {
             controller = this;
@@ -38,7 +44,7 @@ namespace Gameplay
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             StartCoroutine(GameFlow());
-            // MinigameTarot();
+            //MinigameTarot();
             //End();
         }
 
@@ -100,5 +106,28 @@ namespace Gameplay
         {
             _currentPoints += points;
         }
+
+
+        #region EndGame
+        private void UpdateEnd()
+        {
+            _endCanvas.SetActive(true);
+            _content.text = "Has hecho un total de: " + _currentPoints + " puntos. Te gustaría echar raices con esa planta?";
+
+        }
+
+        public void Yes() 
+        {
+            _endCanvas.SetActive(false);
+            //End game
+        }
+
+
+        public void No() 
+        {
+            _endCanvas.SetActive(false);
+            rematch.StartReMatch();
+        }
+        #endregion
     }
 }
