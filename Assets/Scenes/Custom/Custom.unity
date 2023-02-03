@@ -13113,10 +13113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b29abdde4a28c946b421f7d59b560f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _intereses: {fileID: 4900000, guid: 89ba6c4533133af40980fb1789bf53f7, type: 3}
-  _desintereses: {fileID: 4900000, guid: 8bf816f0bc8efcb4abe11ccb2926f2a2, type: 3}
-  allIntereses: []
-  allDesintereses: []
+  _interesesDesinteres: {fileID: 4900000, guid: 8b20f66c45c8de64da5cc1259902e74b,
+    type: 3}
+  allInteresesDesintereses: []
   _playerProfile: {fileID: 11400000, guid: 85c42d238a5bec04e8bbe9ce9e5b6772, type: 2}
   _zodiacSign: {fileID: 303142679}
   _intereses1: {fileID: 876428048}
