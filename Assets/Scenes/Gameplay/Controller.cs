@@ -44,7 +44,7 @@ namespace Gameplay
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             StartCoroutine(GameFlow());
-            //UpdateEnd();
+            UpdateEnd();
             //MinigameTarot();
             //End();
         }
@@ -128,8 +128,15 @@ namespace Gameplay
 
         public void No() 
         {
-            _endCanvas.SetActive(false);
-            rematch.StartReMatch();
+            if (Main.instance.plantProfiles.Count <= 0)
+            {
+                _content.text = "Estarás forever plantón :(...";
+            }
+            else
+            {
+                _endCanvas.SetActive(false);
+                rematch.StartReMatch();
+            }
         }
         #endregion
     }

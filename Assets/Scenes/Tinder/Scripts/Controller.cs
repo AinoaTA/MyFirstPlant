@@ -190,7 +190,7 @@ namespace Tinder
             Main.instance.profilePlantSelected = _finalMatches[_indexSelector];
             _finalMatches.RemoveAt(_indexSelector);
             Debug.Log("Escena encontronazo!!!");
-            Main.instance.managerScene.LoadSceneWithLoading("Rematch");
+            Main.instance.managerScene.LoadSceneWithLoading("Game");
         }
 
         [System.Serializable]

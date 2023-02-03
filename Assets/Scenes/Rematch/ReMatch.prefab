@@ -48,7 +48,7 @@ MonoBehaviour:
   _matches: {fileID: 4679058674598179505, guid: aeaa45ffde8bc3f4bbea3a0534eed637,
     type: 3}
   _selector: {fileID: 1382347179281904105}
-  _canvasGroup: {fileID: 0}
+  _canvasGroup: {fileID: 5018637308711550624}
 --- !u!1 &151625552008416772
 GameObject:
   m_ObjectHideFlags: 0
