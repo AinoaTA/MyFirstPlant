@@ -113,7 +113,7 @@ TextureImporter:
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: Rock_1
       rect:
         serializedVersion: 2
-        x: 360
+        x: 358
         y: 720
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: Rock_2
       rect:
         serializedVersion: 2
-        x: 720
-        y: 720
-        width: 360
-        height: 360
+        x: 717
+        y: 719
+        width: 362
+        height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,7 +176,7 @@ TextureImporter:
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: Rock_4
       rect:
         serializedVersion: 2
-        x: 360
-        y: 360
+        x: 358
+        y: 362
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: Rock_5
       rect:
         serializedVersion: 2
-        x: 720
-        y: 360
+        x: 718
+        y: 362
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: Rock_6
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
+        x: 358
+        y: 2
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: Rock_7
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
+        x: 718
+        y: 3
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,6 +268,27 @@ TextureImporter:
       bones: []
       spriteID: 1320bea3b0c9f5e44b0af19ac99f1d5f
       internalID: -747984162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c64ba49323b6e4048b8d25124374b9cd
+      internalID: -1791230014
       vertices: []
       indices: 
       edges: []
@@ -290,6 +311,7 @@ TextureImporter:
       Rock_4: 2019739142
       Rock_7: -747984162
       Rock_0: -1192236439
+      Rock_8: -1791230014
       Rock_1: -1813869735
   spritePackingTag: 
   pSDRemoveMatte: 0

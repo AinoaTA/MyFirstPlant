@@ -28,10 +28,10 @@ namespace Cutegame.Minigames
         
         private List<PuzzlePiece> completedPieces = new List<PuzzlePiece>();
 
-        public void Start()
-        {
-            SpawnPieces();
-        }
+        //public void Start()
+        //{
+        //    SpawnPieces();
+        //}
 
         public void SpawnPieces()
         {
