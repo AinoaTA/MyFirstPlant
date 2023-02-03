@@ -16,9 +16,9 @@ namespace Cutegame
         {
             if (isPlaying) return;
             isPlaying = true;
-            
+
             base.StartMinigame();
-            
+
             GameCoroutine = StartCoroutine(GameTimer());
         }
 
@@ -30,22 +30,27 @@ namespace Cutegame
                 pointsToAward = 1;
             else
                 pointsToAward = -1;
-            
+
         }
 
         public override void WinGame()
         {
             win = true;
+
+            if (GameCoroutine != null)
+                StopCoroutine(GameCoroutine);
+
+            FinishMinigame();
         }
 
         private void OnDisable()
         {
-            StopCoroutine(GameCoroutine);
+            if (GameCoroutine != null) StopCoroutine(GameCoroutine);
         }
 
         private void OnDestroy()
         {
-            StopCoroutine(GameCoroutine);
+            if (GameCoroutine != null) StopCoroutine(GameCoroutine);
         }
 
         IEnumerator GameTimer()
@@ -58,14 +63,14 @@ namespace Cutegame
             {
                 currentTime -= Time.deltaTime;
                 yield return null;
-                
+
                 if (win)
                     playingGame = false;
-                
+
                 if (currentTime <= 0f)
                     playingGame = false;
             }
-            
+
             FinishMinigame();
         }
     }

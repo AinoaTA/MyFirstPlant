@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 1951827031394393416}
   - component: {fileID: 1951827031394393419}
   - component: {fileID: 1951827031394393417}
+  - component: {fileID: 2118259795235632888}
   m_Layer: 5
   m_Name: MinigameBase
   m_TagString: Untagged
@@ -184,6 +185,18 @@ MonoBehaviour:
   puzzleCenter: {fileID: 1951827031999536648}
   spawnArea: {fileID: 1951827033162563657}
   prefab: {fileID: 8010634858112857552, guid: 43c39f240e76f024282b89e9fb453aa2, type: 3}
+--- !u!225 &2118259795235632888
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951827031394393413}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1951827031999536651
 GameObject:
   m_ObjectHideFlags: 0

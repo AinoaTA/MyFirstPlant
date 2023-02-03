@@ -58,7 +58,7 @@ namespace Gameplay
             //juegan
             yield return null;
             cameraManager.ChooseCam(0);
-            MinigamePuzle();
+           // MinigamePuzle();
             //camara se centra en cita etc etc
 
         }
@@ -70,7 +70,7 @@ namespace Gameplay
 
         IEnumerator MinipuzleRoutine() 
         {
-            _puzle.SpawnPieces();
+            _puzle.StartMinigame();
             yield return null;
 
         }
