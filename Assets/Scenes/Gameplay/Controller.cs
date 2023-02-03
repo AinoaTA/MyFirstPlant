@@ -34,7 +34,7 @@ namespace Gameplay
 
             //cameraManager.ChooseCam(0);
             // MinigameTarot();
-            // End();
+              End();
         }
 
 

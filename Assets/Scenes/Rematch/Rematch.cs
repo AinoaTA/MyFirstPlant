@@ -56,7 +56,7 @@ namespace Gameplay
             Main.instance.profilePlantSelected = Main.instance.plantProfiles[_indexSelector];
             Main.instance.plantProfiles.RemoveAt(_indexSelector);
             Debug.Log("Escena encontronazo!!!");
-            Main.instance.managerScene.LoadSceneWithLoading("Rematch");
+            Main.instance.managerScene.LoadSceneWithLoading("Game");
         }
          
         void Canvas(bool v)

@@ -204,6 +204,14 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 804919409, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 804919409, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2074384281, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
       propertyPath: m_Color.a
       value: 1
