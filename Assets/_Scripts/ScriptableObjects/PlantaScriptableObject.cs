@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,15 @@ public class PlantaScriptableObject : ScriptableObject
     [Header("Modelo")]
     public GameObject modeloPrefab;
     public Cutegame.Minigames.PuzleDeTiempo puzlePrefab;
+    
+    [Header("Dialogo")] 
+    [ConversationPopup(true)] public string starterConversation;
+    [ConversationPopup(true)] public string dinnerConversation;
+    [ConversationPopup(true)] public string pitonisaConversation;
+    [ConversationPopup(true)] public string cartasDelTarot;
+    [ConversationPopup(true)] public string conclusión;
+
+    public string comentarioPitonisa = "";
 }
 
 public enum ZodiacSign

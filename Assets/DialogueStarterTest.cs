@@ -13,6 +13,7 @@ public class DialogueStarterTest : MonoBehaviour
     {
         DialogueLua.SetVariable("plantSign", personaje.signo);
         DialogueLua.SetVariable("playerSign", "Sagitario");
+        DialogueLua.SetVariable("comentarioPitonisa", personaje.comentarioPitonisa);
         DialogueManager.StartConversation(personaje.pitonisaConversation);
     }
 }
