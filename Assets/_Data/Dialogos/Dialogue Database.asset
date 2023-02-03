@@ -1263,7 +1263,7 @@ MonoBehaviour:
   - id: 5
     fields:
     - title: Title
-      value: LadyMedusa_Horoscopo
+      value: Horoscopo
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -2026,7 +2026,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'SayDebug("AAAAAAA");
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2196,8 +2198,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 95.55353, y: 402.54907}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7900002
   - id: 6
     fields:
     - title: Title

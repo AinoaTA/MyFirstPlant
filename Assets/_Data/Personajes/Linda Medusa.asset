@@ -29,3 +29,9 @@ MonoBehaviour:
     type: 3}
   puzlePrefab: {fileID: 4506098881952172955, guid: 005d7d32f5f77354482696e667b1fff7,
     type: 3}
+  starterConversation: 
+  dinnerConversation: 
+  pitonisaConversation: Horoscopo
+  cartasDelTarot: 
+  "conclusi\xF3n": 
+  comentarioPitonisa: "A ver ojazos, \xBFt\xFA de qu\xE9 signo eres? "
