@@ -8,9 +8,8 @@ namespace Custom
 {
     public class Controller : MonoBehaviour
     {
-        [SerializeField] TextAsset _intereses, _desintereses;
-        public List<string> allIntereses;
-        public List<string> allDesintereses;
+        [SerializeField] TextAsset _interesesDesinteres; 
+        public List<string> allInteresesDesintereses; 
 
         int[] _zodiacNumbers = new int[12];
 
@@ -36,8 +35,7 @@ namespace Custom
 
         private void Awake()
         {
-            allIntereses = _intereses.text.Split('\n').ToList();
-            allDesintereses = _desintereses.text.Split('\n').ToList();
+            allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList(); 
         }
 
         private void Start()
@@ -63,12 +61,12 @@ namespace Custom
             _desintereses2.ClearOptions();
             _desintereses3.ClearOptions();
 
-            _intereses1.AddOptions(allIntereses);
-            _intereses2.AddOptions(allIntereses);
-            _intereses3.AddOptions(allIntereses);
-            _desintereses1.AddOptions(allDesintereses);
-            _desintereses2.AddOptions(allDesintereses);
-            _desintereses3.AddOptions(allDesintereses);
+            _intereses1.AddOptions(allInteresesDesintereses);
+            _intereses2.AddOptions(allInteresesDesintereses);
+            _intereses3.AddOptions(allInteresesDesintereses);
+            _desintereses1.AddOptions(allInteresesDesintereses);
+            _desintereses2.AddOptions(allInteresesDesintereses);
+            _desintereses3.AddOptions(allInteresesDesintereses);
 
             List<string> zodiacNames = new();
             for (int i = 0; i < _zodiacNumbers.Length; i++)
@@ -96,13 +94,13 @@ namespace Custom
             _playerProfile.edad = (int)_age.value;
             _playerProfile.signo = (ZodiacSign)_zodiacSign.value;
 
-            _playerProfile.intereses.Add(allIntereses[_intereses1.value]);
-            _playerProfile.intereses.Add(allIntereses[_intereses2.value]);
-            _playerProfile.intereses.Add(allIntereses[_intereses3.value]);
+            _playerProfile.intereses.Add(allInteresesDesintereses[_intereses1.value]);
+            _playerProfile.intereses.Add(allInteresesDesintereses[_intereses2.value]);
+            _playerProfile.intereses.Add(allInteresesDesintereses[_intereses3.value]);
 
-            _playerProfile.desintereses.Add(allIntereses[_desintereses1.value]);
-            _playerProfile.desintereses.Add(allIntereses[_desintereses2.value]);
-            _playerProfile.desintereses.Add(allIntereses[_desintereses3.value]);
+            _playerProfile.desintereses.Add(allInteresesDesintereses[_desintereses1.value]);
+            _playerProfile.desintereses.Add(allInteresesDesintereses[_desintereses2.value]);
+            _playerProfile.desintereses.Add(allInteresesDesintereses[_desintereses3.value]);
 
             Main.instance.playerProfile = _playerProfile;
             Main.instance.managerScene.LoadSceneWithLoading("tinder");
