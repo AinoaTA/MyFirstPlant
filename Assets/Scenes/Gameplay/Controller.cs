@@ -11,12 +11,13 @@ namespace Gameplay
         [SerializeField] private float _currentPoints;
         [SerializeField] private Transform _playerPos, _plantPos;
 
-        [SerializeField] public Tarot tarot;
-        [SerializeField] public CameraManager cameraManager;
-        [SerializeField] public Rematch rematch;
-        [SerializeField] public Cutegame.Minigames.PuzleDeTiempo _puzle;
+        public Tarot tarot;
+        public CameraManager cameraManager;
+        public Rematch rematch;
+        public Cutegame.Minigames.PuzleDeTiempo _puzle;
+        [SerializeField] private Canvas _canvas;
         GameObject _player, _plant;
-
+         
         private void Awake()
         {
             controller = this;
@@ -24,6 +25,10 @@ namespace Gameplay
 
         private void Start()
         {
+            _puzle = Main.instance.profilePlantSelected.puzlePrefab;
+
+            Instantiate(_puzle, _canvas.transform.position, Quaternion.identity, _canvas.transform);
+
             _player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
             _player.transform.position = _playerPos.position;
             _player.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
@@ -37,14 +42,14 @@ namespace Gameplay
             //End();
         }
 
-        IEnumerator GameFlow() 
-        { 
+        IEnumerator GameFlow()
+        {
             //Conejo dice lo suyo
 
             //La cita habla (se presenta)
 
             //El personaje elige respuesta
-              
+
             //minipuzzle
 
             //habla cita en funcion del puzle
@@ -58,17 +63,17 @@ namespace Gameplay
             //juegan
             yield return null;
             cameraManager.ChooseCam(0);
-           // MinigamePuzle();
+            // MinigamePuzle();
             //camara se centra en cita etc etc
 
         }
 
-        public void MinigamePuzle() 
+        public void MinigamePuzle()
         {
             StartCoroutine(MinipuzleRoutine());
         }
 
-        IEnumerator MinipuzleRoutine() 
+        IEnumerator MinipuzleRoutine()
         {
             _puzle.StartMinigame();
             yield return null;
