@@ -30,8 +30,9 @@ namespace Gameplay
             _plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position, Quaternion.identity);
             _plant.transform.position = _plantPos.transform.position;
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
-             
-            MinigameTarot();
+
+            cameraManager.ChooseCam(1);
+           // MinigameTarot();
         }
 
 
