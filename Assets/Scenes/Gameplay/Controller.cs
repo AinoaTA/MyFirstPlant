@@ -13,6 +13,7 @@ namespace Gameplay
 
         [SerializeField] public Tarot tarot;
         [SerializeField] public CameraManager cameraManager;
+        [SerializeField] public Rematch rematch;
 
         GameObject _player, _plant;
 
@@ -31,8 +32,9 @@ namespace Gameplay
             _plant.transform.position = _plantPos.transform.position;
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
-            cameraManager.ChooseCam(1);
-           // MinigameTarot();
+            //cameraManager.ChooseCam(0);
+            // MinigameTarot();
+            // End();
         }
 
 
@@ -42,10 +44,15 @@ namespace Gameplay
         }
 
         IEnumerator TarotRoutine()
-        {  
-            cameraManager.ChooseCam("Pitonisa",true); 
+        {
+            cameraManager.ChooseCam("Pitonisa", true);
             yield return new WaitForSeconds(1);
             tarot.StartTarot();
+        }
+
+        public void End()
+        {
+            rematch.StartReMatch();
         }
 
         public void ModifyPoints(float points)

@@ -1,15 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Rematch
+namespace Gameplay
 {
-    public class Controller : MonoBehaviour
+    public class Rematch : MonoBehaviour
     {
         [SerializeField] private Transform _parent;
         [SerializeField] private MatchesProfiles _matches;
         [SerializeField] private Transform _selector;
+        [SerializeField] private CanvasGroup _canvasGroup;
         private int _indexSelector;
 
+        #region enables
         private void OnEnable()
         {
             MatchesProfiles.delegateMatch += Selector;
@@ -18,9 +20,21 @@ namespace Rematch
         {
             MatchesProfiles.delegateMatch -= Selector;
         }
+        #endregion
 
-        private IEnumerator Start()
+        private void Start()
         {
+            Canvas(false);
+        } 
+         
+        public void StartReMatch()
+        {
+            StartCoroutine(ReMatchRoutine());
+        }
+
+        IEnumerator ReMatchRoutine()
+        {
+            Canvas(true);
             for (int i = 0; i < Main.instance.plantProfiles.Count; i++)
             {
                 MatchesProfiles gm = Instantiate(_matches, transform.position, Quaternion.identity, _parent);
@@ -43,6 +57,13 @@ namespace Rematch
             Main.instance.plantProfiles.RemoveAt(_indexSelector);
             Debug.Log("Escena encontronazo!!!");
             Main.instance.managerScene.LoadSceneWithLoading("Rematch");
+        }
+         
+        void Canvas(bool v)
+        {
+            _canvasGroup.alpha = v ? 1 : 0;
+            _canvasGroup.blocksRaycasts = v;
+            _canvasGroup.interactable = v;
         }
     }
 }
