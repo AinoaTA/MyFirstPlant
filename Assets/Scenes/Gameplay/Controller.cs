@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 namespace Gameplay
 {
@@ -11,11 +12,17 @@ namespace Gameplay
         [SerializeField] private float _currentPoints;
         [SerializeField] private Transform _playerPos, _plantPos;
 
-        [SerializeField] public Tarot tarot;
-        [SerializeField] public CameraManager cameraManager;
-        [SerializeField] public Rematch rematch;
-        [SerializeField] public Cutegame.Minigames.PuzleDeTiempo _puzle;
+        public Tarot tarot;
+        public CameraManager cameraManager;
+        public Rematch rematch;
+        [HideInInspector] public Cutegame.Minigames.PuzleDeTiempo _puzle;
         GameObject _player, _plant;
+
+        [Header("UI")]
+        [SerializeField] private Canvas _canvas;
+        [SerializeField] private GameObject _endCanvas;
+        [SerializeField] private TMP_Text _content;
+
 
         private void Awake()
         {
@@ -24,6 +31,10 @@ namespace Gameplay
 
         private void Start()
         {
+            _puzle = Main.instance.profilePlantSelected.puzlePrefab;
+
+            Instantiate(_puzle, _canvas.transform.position, Quaternion.identity, _canvas.transform);
+
             _player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
             _player.transform.position = _playerPos.position;
             _player.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
@@ -33,18 +44,21 @@ namespace Gameplay
             _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             StartCoroutine(GameFlow());
-            // MinigameTarot();
+            UpdateEnd();
+            //MinigameTarot();
             //End();
         }
 
-        IEnumerator GameFlow() 
-        { 
+        IEnumerator GameFlow()
+        {
+            yield return new WaitForSeconds(1);
+            
             //Conejo dice lo suyo
 
             //La cita habla (se presenta)
 
             //El personaje elige respuesta
-              
+
             //minipuzzle
 
             //habla cita en funcion del puzle
@@ -58,17 +72,17 @@ namespace Gameplay
             //juegan
             yield return null;
             cameraManager.ChooseCam(0);
-           // MinigamePuzle();
+            // MinigamePuzle();
             //camara se centra en cita etc etc
 
         }
 
-        public void MinigamePuzle() 
+        public void MinigamePuzle()
         {
             StartCoroutine(MinipuzleRoutine());
         }
 
-        IEnumerator MinipuzleRoutine() 
+        IEnumerator MinipuzleRoutine()
         {
             _puzle.StartMinigame();
             yield return null;
@@ -95,5 +109,35 @@ namespace Gameplay
         {
             _currentPoints += points;
         }
+
+
+        #region EndGame
+        private void UpdateEnd()
+        {
+            _endCanvas.SetActive(true);
+            _content.text = "Has hecho un total de: " + _currentPoints + " puntos. Te gustaría echar raices con esa planta?";
+
+        }
+
+        public void Yes() 
+        {
+            _endCanvas.SetActive(false);
+            //End game
+        }
+
+
+        public void No() 
+        {
+            if (Main.instance.plantProfiles.Count <= 0)
+            {
+                _content.text = "Estarás forever plantón :(...";
+            }
+            else
+            {
+                _endCanvas.SetActive(false);
+                rematch.StartReMatch();
+            }
+        }
+        #endregion
     }
 }
