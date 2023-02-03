@@ -19,6 +19,7 @@ public class PlantaScriptableObject : ScriptableObject
     
     [Header("Modelo")]
     public GameObject modeloPrefab;
+    public Cutegame.Minigames.PuzleDeTiempo puzlePrefab;
 }
 
 public enum ZodiacSign

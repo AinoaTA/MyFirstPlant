@@ -27,14 +27,26 @@ namespace Cutegame.Minigames
         private List<PuzzlePiece> ListOfPieces;
         
         private List<PuzzlePiece> completedPieces = new List<PuzzlePiece>();
+        private CanvasGroup _canvasGroup;
 
-        public void Start()
+        private void Awake()
         {
+            TryGetComponent(out _canvasGroup);
+        }
+
+        public override void StartMinigame()
+        {
+            base.StartMinigame();
+
+            _canvasGroup.alpha = 1;
+            _canvasGroup.blocksRaycasts = true;
+            _canvasGroup.interactable = true;
+
             SpawnPieces();
         }
 
-        public void SpawnPieces()
-        {
+        private void SpawnPieces()
+        {  
                 ListOfPieces = new List<PuzzlePiece>();
             for (int i=0; i < listOfSprites.Count; i++)
             {
@@ -63,9 +75,9 @@ namespace Cutegame.Minigames
             
             if(!completedPieces.Contains(piece))
                 completedPieces.Add(piece);
-            
-            if(completedPieces.Count >= ListOfPieces.Count)
+
+            if (completedPieces.Count >= ListOfPieces.Count)
                 WinGame();
-        }
+        } 
     }
 }

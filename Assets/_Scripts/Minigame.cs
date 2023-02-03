@@ -39,6 +39,8 @@ namespace Cutegame
             SetupPoints();
             // Invoke points.
             OnEndMinigame?.Invoke(pointsToAward);
+
+            gameObject.SetActive(false);
         }
     }
 }

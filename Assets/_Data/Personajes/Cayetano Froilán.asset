@@ -27,3 +27,5 @@ MonoBehaviour:
   frase: "\u201CSobran las presentaciones\u201D. "
   modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
     type: 3}
+  puzlePrefab: {fileID: 4506098881952172955, guid: 10907ed89983e9f4f94bc087ed1c079f,
+    type: 3}
