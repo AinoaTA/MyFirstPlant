@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: Dialogue Database
+  m_Name: Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -157,7 +157,7 @@ MonoBehaviour:
   - id: 3
     fields:
     - title: Name
-      value: plantSign
+      value: plantHoroscope
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
@@ -166,20 +166,6 @@ MonoBehaviour:
       typeString: CustomFieldType_Text
     - title: Description
       value: "El hor\xF3scopo de la planta"
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 4
-    fields:
-    - title: Name
-      value: playerSign
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: DEFAULT
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Description
-      value: El horoscopo del jugador
       type: 0
       typeString: CustomFieldType_Text
   conversations:
@@ -1986,7 +1972,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yo soy [var=plantSign].
+        value: Yo soy [var=plantHoroscope].
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -2096,7 +2082,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\xBF[var=playerSign]?"
+        value: "\xBF[var=playerHoroscope]?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -2125,7 +2111,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 441.01984
-        y: 769.7749
+        y: 770.8738
         width: 160
         height: 30
     - id: 15
@@ -2178,8 +2164,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 159.3151, y: 478.76788}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0, y: 515.83203}
+    canvasZoom: 0.8800001
   syncInfo:
     syncActors: 0
     syncItems: 0
