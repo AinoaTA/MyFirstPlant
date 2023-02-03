@@ -58,6 +58,7 @@ namespace Gameplay
             //juegan
             yield return null;
             cameraManager.ChooseCam(0);
+            MinigamePuzle();
             //camara se centra en cita etc etc
 
         }
