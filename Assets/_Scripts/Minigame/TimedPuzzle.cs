@@ -7,7 +7,7 @@ namespace Cutegame
     {
         public float maxTime = 45f;
         private float currentTime = 0f;
-        private bool isPlaying = false;
+        protected bool isPlaying = false;
         private bool win = false;
 
         private Coroutine GameCoroutine;
