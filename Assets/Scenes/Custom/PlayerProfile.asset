@@ -29,10 +29,19 @@ MonoBehaviour:
   modeloPrefab: {fileID: 3095338774891288905, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
     type: 3}
   puzlePrefab: {fileID: 0}
+  tiestoMat: {fileID: 2100000, guid: d3f4d85b4b866444ca54e7f7aebddc43, type: 2}
+  decoSelected: Unicorn_Horn
+  faceName: Feliz
   caritas:
-  - name: Feliz
+  - name: sonrisa
     sprite: {fileID: 2800000, guid: fc83a4601d7f7b946a609bb26b76e917, type: 3}
-  - name: Triste
+  - name: risa
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: duda
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: enfado
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: triste
     sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
   starterConversation: 
   dinnerConversation: 
