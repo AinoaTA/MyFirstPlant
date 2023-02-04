@@ -2187,7 +2187,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: MinigameTarot()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2198,8 +2198,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 91.16991, y: 332.8152}
+    canvasZoom: 0.6700003
   - id: 6
     fields:
     - title: Title

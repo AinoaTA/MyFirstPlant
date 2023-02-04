@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 namespace Gameplay
 {
@@ -16,14 +17,21 @@ namespace Gameplay
         public CameraManager cameraManager;
         public Rematch rematch;
         [HideInInspector] public Cutegame.Minigames.PuzleDeTiempo _puzle;
-        GameObject _player, _plant;
+        public GameObject player, plant;
 
         [Header("UI")]
         [SerializeField] private Canvas _canvas;
         [SerializeField] private GameObject _endCanvas;
         [SerializeField] private TMP_Text _content;
 
-
+        private void OnEnable()
+        {
+            Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
+        }
+        private void OnDisable()
+        {
+            Lua.UnregisterFunction("MinigameTarot");
+        }
         private void Awake()
         {
             controller = this;
@@ -35,16 +43,16 @@ namespace Gameplay
 
             Instantiate(_puzle, _canvas.transform.position, Quaternion.identity, _canvas.transform);
 
-            _player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
-            _player.transform.position = _playerPos.position;
-            _player.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+            player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
+            player.transform.position = _playerPos.position;
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
 
-            _plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position, Quaternion.identity);
-            _plant.transform.position = _plantPos.transform.position;
-            _plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position, Quaternion.identity);
+            plant.transform.position = _plantPos.transform.position;
+            plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             StartCoroutine(GameFlow());
-            UpdateEnd();
+            //UpdateEnd();
             //MinigameTarot();
             //End();
         }

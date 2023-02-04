@@ -17,3 +17,6 @@ MonoBehaviour:
   - functionName: Debug/SayDebug
     parameters: 02000000
     returnValue: 0
+  - functionName: MinigameTarot
+    parameters: 
+    returnValue: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 namespace Gameplay
 {
@@ -19,10 +20,20 @@ namespace Gameplay
         Vector3 endRot = new(0, 0, -90);
 
         [SerializeField] int _maxReroll = 3;
-        Vector3[] _initPoses; 
+        Vector3[] _initPoses;
 
-        private void Start()
+        private void OnEnable()
         {
+            Lua.RegisterFunction("StartTarot", this, SymbolExtensions.GetMethodInfo(() => StartTarot()));
+        }
+        private void OnDisable()
+        {
+            Lua.UnregisterFunction("StartTarot");
+        }
+        private IEnumerator Start()
+        {
+            yield return null;
+            StartVoice();
             _initPoses = new Vector3[_cards.Count];
 
             for (int i = 0; i < _cards.Count; i++)
@@ -30,13 +41,22 @@ namespace Gameplay
                 _initPoses[i] = _cards[i].transform.localPosition;
             }
         }
+         
+        public void StartVoice()
+        {
+            DialogueLua.SetVariable("plantSign", Main.instance.profilePlantSelected.signo);
+            DialogueLua.SetVariable("playerSign", Main.instance.playerProfile.signo);
+            DialogueLua.SetVariable("comentarioPitonisa", Main.instance.profilePlantSelected.comentarioPitonisa);
+            DialogueManager.StartConversation("Horoscopo", Controller.controller.player.transform, Controller.controller.plant.transform);
+        }
 
         public void StartTarot()
         {
+            print("ALO");
             StartCoroutine(StartTarotRoutine());
         }
         IEnumerator StartTarotRoutine()
-        {
+        { 
             yield return new WaitForSeconds(1);
             for (int i = 0; i < _cards.Count; i++)
             {
