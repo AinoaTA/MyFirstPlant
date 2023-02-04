@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: Conejo Ignacio
-  persistentDataName: 
+  persistentDataName: Conejo_Ignacio
   portrait: {fileID: 2800000, guid: 5a3bee3cd23074d46b0bed115df172fd, type: 3}
   spritePortrait: {fileID: 0}
   barkUISettings:

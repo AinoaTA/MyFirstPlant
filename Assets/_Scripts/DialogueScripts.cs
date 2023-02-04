@@ -22,8 +22,7 @@ public class DialogueScripts : MonoBehaviour
 
     public void ChangeFace(string face)
     {
-        // 
-        Debug.Log(DialogueManager.currentConversant.gameObject.name);
-        DialogueManager.currentConversant.gameObject.GetComponent<Personaje>().ChangeFace(face);
+        //Debug.Log(DialogueManager.CurrentConversationState.subtitle.speakerInfo.Name);
+        DialogueManager.CurrentConversationState.subtitle.speakerInfo.transform.gameObject.GetComponent<Personaje>().ChangeFace(face);
     }
 }
