@@ -114,7 +114,7 @@ namespace Gameplay
             //La cita habla (se presenta)
             yield return new WaitForSeconds(1);
             DialogueManager.StartConversation(Main.instance.profilePlantSelected.starterConversation, player.transform,
-                plant.transform);
+                plant.transform); 
         }
 
         public void MinigamePuzle()

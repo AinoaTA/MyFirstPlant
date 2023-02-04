@@ -1049,7 +1049,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 418.9908
+        x: 419.9908
         y: 322.75226
         width: 160
         height: 30
@@ -1103,7 +1103,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 180, y: 68}
     canvasZoom: 1
   - id: 4
     fields:
@@ -5064,7 +5064,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5113,14 +5113,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 785.81323
-        y: 337.44177
+        y: 336.0132
         width: 160
         height: 30
     - id: 5
@@ -5173,8 +5173,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 426.31442, y: 19.732964}
-    canvasZoom: 1.2699997
+    canvasScrollPosition: {x: 498.97693, y: 0}
+    canvasZoom: 0.7000003
   - id: 11
     fields:
     - title: Title
@@ -9058,7 +9058,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9107,14 +9107,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 588.70447
-        y: 536.53973
+        y: 534.8156
         width: 160
         height: 30
     - id: 11
@@ -9167,8 +9167,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 91.836914, y: 91.73652}
+    canvasZoom: 0.5800004
   - id: 18
     fields:
     - title: Title
@@ -12950,7 +12950,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12999,7 +12999,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13059,8 +13059,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 176.59393, y: 27.652773}
+    canvasZoom: 0.85000014
   - id: 25
     fields:
     - title: Title
@@ -17080,7 +17080,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 420.0498
-        y: 232.62845
+        y: 230.90433
         width: 160
         height: 30
     - id: 6
@@ -17348,8 +17348,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 282.6482, y: 155.67007}
-    canvasZoom: 0.97000015
+    canvasScrollPosition: {x: 221.16965, y: 0}
+    canvasZoom: 0.5500004
   - id: 32
     fields:
     - title: Title
