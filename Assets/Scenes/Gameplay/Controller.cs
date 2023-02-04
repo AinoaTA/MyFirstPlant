@@ -1,7 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using PixelCrushers.DialogueSystem;
+using Unity.VisualScripting;
 
 namespace Gameplay
 {
@@ -24,6 +26,14 @@ namespace Gameplay
         [SerializeField] private GameObject _endCanvas;
         [SerializeField] private TMP_Text _content;
 
+        private List<string> chisteString = new List<string>()
+        {
+            "¿Qué es lo peor que te puede ocurrir cuando vienes aquí? ¡Que te den PLANTÓN!",
+            "Noto al público algo seco esta noche. Pediré que os rieguen debidamente.",
+            "¡Guau! ¿Eso que noto es un brote, o es que te alegras de verme?",
+            "Y la planta le dijo a la maceta, ¿en tu invernadero o en el mío?"
+        };
+
         private void OnEnable()
         {
             Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
@@ -35,6 +45,8 @@ namespace Gameplay
         private void Awake()
         {
             controller = this;
+            DialogueLua.SetVariable("chisteMalo", chisteString[Random.Range(0, chisteString.Count)]);
+            
         }
 
         private void Start()
@@ -118,12 +130,18 @@ namespace Gameplay
             _currentPoints += points;
         }
 
+        #region Dataloading
+
+        
+
+        #endregion
+
 
         #region EndGame
         private void UpdateEnd()
         {
             _endCanvas.SetActive(true);
-            _content.text = "Has hecho un total de: " + _currentPoints + " puntos. Te gustar�a echar raices con esa planta?";
+            _content.text = "Has hecho un total de: " + _currentPoints + " puntos. Te gustaría echar raices con esa planta?";
 
         }
 
@@ -138,7 +156,7 @@ namespace Gameplay
         {
             if (Main.instance.plantProfiles.Count <= 0)
             {
-                _content.text = "Estar�s forever plant�n :(...";
+                _content.text = "Estarás forever plantón :(...";
             }
             else
             {
