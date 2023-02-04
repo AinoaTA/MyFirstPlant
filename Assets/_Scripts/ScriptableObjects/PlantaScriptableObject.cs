@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
@@ -21,6 +22,20 @@ public class PlantaScriptableObject : ScriptableObject
     [Header("Modelo")]
     public GameObject modeloPrefab;
     public Cutegame.Minigames.PuzleDeTiempo puzlePrefab;
+
+    [Header("Custom")]
+    public Material tiestoMat;
+    public string decoSelected;
+    public string faceName;
+
+    public List<Carita> caritas = new List<Carita>()
+    {
+        new Carita() { name = "sonrisa"},
+        new Carita() { name = "risa"},
+        new Carita() { name = "duda"},
+        new Carita() { name = "enfado"},
+        new Carita() { name = "triste"}
+    };
     
     [Header("Dialogo")] 
     [ConversationPopup(true)] public string starterConversation;
@@ -30,6 +45,13 @@ public class PlantaScriptableObject : ScriptableObject
     [ConversationPopup(true)] public string conclusión;
 
     public string comentarioPitonisa = "";
+}
+
+[Serializable]
+public struct Carita
+{
+    public string name;
+    public Texture2D sprite;
 }
 
 public enum ZodiacSign

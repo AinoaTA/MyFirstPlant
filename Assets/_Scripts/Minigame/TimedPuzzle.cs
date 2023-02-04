@@ -17,9 +17,9 @@ namespace Cutegame
             if (isPlaying) return;
             isPlaying = true;
 
-            base.StartMinigame();
-
             GameCoroutine = StartCoroutine(GameTimer());
+
+            base.StartMinigame();
         }
 
         protected override void SetupPoints()

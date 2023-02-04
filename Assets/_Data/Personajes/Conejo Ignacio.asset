@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
+  m_Name: Conejo Ignacio
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 0}
+  nombre: Ignacio
+  tipoPlanta: 
+  edad: 50
+  signo: 11
+  intereses: []
+  desintereses: []
+  frase: Que mono tu conejo
+  modeloPrefab: {fileID: 1075002145792703555, guid: 2cece7ba51afc7e44ba77817dc819013,
+    type: 3}
+  puzlePrefab: {fileID: 0}
+  caritas:
+  - name: sonrisa
+    sprite: {fileID: 2800000, guid: ae4181955b2f03842970842f4ce48308, type: 3}
+  - name: risa
+    sprite: {fileID: 2800000, guid: d02fc1092a7b18d4fb3f84d6a0df90e8, type: 3}
+  - name: duda
+    sprite: {fileID: 2800000, guid: ba2f634ab431df54892faa847b5d8a37, type: 3}
+  - name: enfado
+    sprite: {fileID: 2800000, guid: 8fdae4ac756ed6047b01021ff0cc3ebb, type: 3}
+  - name: triste
+    sprite: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
+  starterConversation: 
+  dinnerConversation: 
+  pitonisaConversation: 
+  cartasDelTarot: 
+  "conclusi\xF3n": 
+  comentarioPitonisa: 

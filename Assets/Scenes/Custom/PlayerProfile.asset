@@ -13,15 +13,39 @@ MonoBehaviour:
   m_Name: PlayerProfile
   m_EditorClassIdentifier: 
   imagen: {fileID: 0}
-  nombre: pepesoteeeeee
-  edad: 41
-  signo: 4
+  nombre: 
+  tipoPlanta: 
+  edad: 18
+  signo: 0
   intereses:
-  - "El cine de acci\xF3n\r"
-  - "El aire libre\r"
-  - "El cine de acci\xF3n\r"
+  - "Activismo medioambiental\r"
+  - "Activismo medioambiental\r"
+  - "Activismo medioambiental\r"
   desintereses:
-  - "M\xFAsica Rock\r"
-  - "Literatura G\xF3tica\r"
-  - "El Arte\r"
-  frase: van dos y se cae el del medio jajajajajajajajajajajajajajaja
+  - "Activismo medioambiental\r"
+  - "Activismo medioambiental\r"
+  - "Activismo medioambiental\r"
+  frase: 
+  modeloPrefab: {fileID: 3095338774891288905, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
+    type: 3}
+  puzlePrefab: {fileID: 0}
+  tiestoMat: {fileID: 2100000, guid: d3f4d85b4b866444ca54e7f7aebddc43, type: 2}
+  decoSelected: Unicorn_Horn
+  faceName: Feliz
+  caritas:
+  - name: sonrisa
+    sprite: {fileID: 2800000, guid: fc83a4601d7f7b946a609bb26b76e917, type: 3}
+  - name: risa
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: duda
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: enfado
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  - name: triste
+    sprite: {fileID: 2800000, guid: 801d637feaae56b4898faf70e2119d6a, type: 3}
+  starterConversation: 
+  dinnerConversation: 
+  pitonisaConversation: 
+  cartasDelTarot: 
+  "conclusi\xF3n": 
+  comentarioPitonisa: 

@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1951827031394393413, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
         type: 3}
       propertyPath: m_Name
-      value: MinigameBase Variant
+      value: MinigameBase Diamante
       objectReference: {fileID: 0}
     - target: {fileID: 1951827031394393413, guid: 8a3ce332fb5260c49b2c8ee33af6cf90,
         type: 3}
