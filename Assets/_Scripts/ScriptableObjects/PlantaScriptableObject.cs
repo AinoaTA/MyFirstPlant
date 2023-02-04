@@ -23,7 +23,6 @@ public class PlantaScriptableObject : ScriptableObject
     public GameObject modeloPrefab;
     public Cutegame.Minigames.PuzleDeTiempo puzlePrefab;
 
-
     [Header("Custom")]
     public Material tiestoMat;
     public string decoSelected;
