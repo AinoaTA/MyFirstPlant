@@ -7818,32 +7818,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091769984}
   m_CullTransparentMesh: 1
---- !u!1 &1112476859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3095338774891288905, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2107254951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1112476861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2431673988168221683, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
     type: 3}
   m_PrefabInstance: {fileID: 2107254951}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1112476862
+--- !u!114 &1112476862 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8253537262311163658, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107254951}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112476859}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22507b59f839bb94fb2fd78d2fbfb2f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 50510cf36d85da64897bb794aafc2f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faceRenderer: {fileID: 2112795667}
-  personaje: {fileID: 11400000, guid: 85c42d238a5bec04e8bbe9ce9e5b6772, type: 2}
 --- !u!1 &1115847115
 GameObject:
   m_ObjectHideFlags: 0
@@ -14617,11 +14609,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 521378551}
     m_Modifications:
-    - target: {fileID: 2072732441648374246, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2431673988168221683, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
         type: 3}
       propertyPath: m_RootOrder
@@ -14692,11 +14679,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2657728772365315729, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2753304551586691182, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
         type: 3}
       propertyPath: m_Controller
@@ -14707,10 +14689,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maceta
       objectReference: {fileID: 0}
-    - target: {fileID: 5265861388543924319, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
+    - target: {fileID: 3095338774891288905, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908009865280442006, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7592134536793018497, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
         type: 3}
@@ -14725,6 +14712,11 @@ PrefabInstance:
     - target: {fileID: 7592134536793018497, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253537262311163658, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
+        type: 3}
+      propertyPath: _updateMaceta
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15039,12 +15031,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!137 &2112795667 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2472921270843007822, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2107254951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2119125405
 GameObject:
   m_ObjectHideFlags: 0

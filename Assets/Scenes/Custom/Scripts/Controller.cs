@@ -46,6 +46,7 @@ namespace Custom
         [SerializeField] private GameObject[] _decorations;
         private int _indexDeco;
         bool _block;
+
         private void Awake()
         {
             allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList();
@@ -172,6 +173,10 @@ namespace Custom
 
             Main.instance.playerProfile = _playerProfile;
             Main.instance.managerScene.LoadSceneWithLoading("tinder");
+
+            Main.instance.playerProfile.tiestoMat = _baseMat[_indexBase];
+            Main.instance.playerProfile.faceName = _faceName[_indexFace];
+            Main.instance.playerProfile.decoSelected = _decorations[_indexDeco].name;
         }
         #endregion
     }
