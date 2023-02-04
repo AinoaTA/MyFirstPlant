@@ -21,12 +21,9 @@ namespace Gameplay
 
         [SerializeField] int _maxReroll = 3;
         Vector3[] _initPoses;
-
-
-        private IEnumerator Start()
-        {
-            yield return null;
-            StartVoice();
+         
+        private void Start()
+        { 
             _initPoses = new Vector3[_cards.Count];
 
             for (int i = 0; i < _cards.Count; i++)
@@ -44,12 +41,12 @@ namespace Gameplay
         }
 
         public void StartTarot()
-        {
-            print("ALO");
+        { 
             StartCoroutine(StartTarotRoutine());
         }
         IEnumerator StartTarotRoutine()
-        { 
+        {
+            StartVoice();
             yield return new WaitForSeconds(1);
             for (int i = 0; i < _cards.Count; i++)
             {
