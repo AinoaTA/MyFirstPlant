@@ -3952,7 +3952,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\xBFY t\xFA, Lady Medusa?"
+        value: "\xBFY t\xFA, Linda Medusa?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -4389,7 +4389,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Lady Medusa y t\xFA tuvisteis vuestra cita en el Museo. "
+        value: "Linda Medusa y t\xFA tuvisteis vuestra cita en el Museo. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -4604,7 +4604,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Lady Medusa y t\xFA os fuisteis cada una por vuestro lado. "
+        value: "Linda Medusa y t\xFA os fuisteis cada una por vuestro lado. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
