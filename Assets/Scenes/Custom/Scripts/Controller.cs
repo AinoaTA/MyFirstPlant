@@ -15,7 +15,9 @@ namespace Custom
 
         [SerializeField] PlantaScriptableObject _playerProfile;
 
-        [Header("UI")]
+        [Header("UI Personality")]
+        [SerializeField] private GameObject _canvasPersonality;
+        [SerializeField] private GameObject _canvasFisico;
         [SerializeField] TMP_Dropdown _zodiacSign;
 
         [SerializeField] TMP_Dropdown _intereses1;
@@ -32,26 +34,63 @@ namespace Custom
         [SerializeField] Slider _age;
         [SerializeField] TMP_Text _ageText;
 
+        [Header("UI Físico")]
+        [SerializeField] private SpriteRenderer _face;
+        [SerializeField] private Sprite[] _faceMat;
+        private int _indexFace;
+
+        [SerializeField] private MeshRenderer _base;
+        [SerializeField] private Material[] _baseMat;
+        private int _indexBase;
+
+        [SerializeField] private GameObject[] _decorations;
 
         private void Awake()
         {
             allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList(); 
+        } 
+
+        public void StartPersonality() 
+        {
+            _canvasFisico.SetActive(false);
+            _canvasPersonality.SetActive(true);
+            SetUpDropdowns();
+            SetSlider(); 
         }
 
-        private void Start()
+        #region custom
+
+        public void LeftMaterial() 
         {
-            SetUpDropdowns();
-            SetSlider();
+            _indexBase++;
+            if (_indexBase >= _baseMat.Length) _indexBase = 0; 
+            _base.material = _baseMat[_indexBase]; 
         }
-#if UNITY_EDITOR
-        private void Update()
+
+        public void RightMaterial()
         {
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                SaveValues();
-            }
+            _indexBase--;
+            if (_indexBase <0 ) _indexBase = _baseMat.Length-1;
+            _base.material = _baseMat[_indexBase];
+        } 
+
+        public void LeftSprite()
+        {
+            _indexFace++;
+            if (_indexFace >= _faceMat.Length) _indexFace = 0;
+            _face.sprite = _faceMat[_indexFace];
         }
-#endif
+
+        public void RightSprite()
+        {
+            _indexFace--;
+            if (_indexFace < 0) _indexFace = _baseMat.Length - 1;
+            _face.sprite = _faceMat[_indexFace];
+        }
+
+        #endregion
+
+        #region personality
         private void SetUpDropdowns()
         {
             _intereses1.ClearOptions();
@@ -105,5 +144,6 @@ namespace Custom
             Main.instance.playerProfile = _playerProfile;
             Main.instance.managerScene.LoadSceneWithLoading("tinder");
         }
+        #endregion
     }
 }
