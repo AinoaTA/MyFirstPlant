@@ -505,6 +505,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
+      propertyPath: profilePlantSelected
+      value: 
+      objectReference: {fileID: 11400000, guid: 86e57b5273753a541a091e76b035f25e,
+        type: 2}
+    - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
       propertyPath: plantProfiles.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1163,6 +1169,9 @@ MonoBehaviour:
   cameraManager: {fileID: 102287014}
   rematch: {fileID: 1849234995}
   _puzle: {fileID: 0}
+  player: {fileID: 0}
+  plant: {fileID: 0}
+  _conejo: {fileID: 1868327671358068797}
   _canvas: {fileID: 1677173261}
   _endCanvas: {fileID: 2050578486}
   _content: {fileID: 613944532}
@@ -2157,3 +2166,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 714a7bd10df99244e8b203ed351ad86e, type: 3}
+--- !u!1 &1868327671358068797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1525818466011221250, guid: 714a7bd10df99244e8b203ed351ad86e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1868327671358068796}
+  m_PrefabAsset: {fileID: 0}
