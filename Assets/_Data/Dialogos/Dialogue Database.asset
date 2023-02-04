@@ -1049,7 +1049,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 419.9908
+        x: 418.9908
         y: 322.75226
         width: 160
         height: 30
@@ -1103,7 +1103,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 180, y: 68}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
   - id: 4
     fields:
@@ -4010,7 +4010,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\xBFY t\xFA, Linda Medusa?"
+        value: "\xBFY t\xFA, Lady Medusa?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -4447,7 +4447,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Linda Medusa y t\xFA tuvisteis vuestra cita en el Museo. "
+        value: "Lady Medusa y t\xFA tuvisteis vuestra cita en el Museo. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -4662,7 +4662,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Linda Medusa y t\xFA os fuisteis cada una por vuestro lado. "
+        value: "Lady Medusa y t\xFA os fuisteis cada una por vuestro lado. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -5064,7 +5064,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5113,14 +5113,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 785.81323
-        y: 336.0132
+        y: 337.44177
         width: 160
         height: 30
     - id: 5
@@ -5173,8 +5173,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 498.97693, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 426.31442, y: 19.732964}
+    canvasZoom: 1.2699997
   - id: 11
     fields:
     - title: Title
@@ -5264,7 +5264,7 @@ MonoBehaviour:
         destinationConversationID: 11
         destinationDialogueID: 1
         isConnector: 0
-        priority: 2
+        priority: 3
       - originConversationID: 11
         originDialogueID: 0
         destinationConversationID: 11
@@ -5278,8 +5278,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 838.9296
-        y: 45.906944
+        x: 777.9296
+        y: 37.906937
         width: 160
         height: 30
     - id: 1
@@ -5326,7 +5326,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puzzle"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5546,8 +5546,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.43000045
+    canvasScrollPosition: {x: 339.8881, y: 20.139114}
+    canvasZoom: 1.0000001
   - id: 12
     fields:
     - title: Title
@@ -9058,7 +9058,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9107,14 +9107,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 588.70447
-        y: 534.8156
+        y: 536.53973
         width: 160
         height: 30
     - id: 11
@@ -9167,8 +9167,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 91.836914, y: 91.73652}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5500004
   - id: 18
     fields:
     - title: Title
@@ -12950,7 +12950,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12999,7 +12999,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13059,8 +13059,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 176.59393, y: 27.652773}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 25
     fields:
     - title: Title
@@ -17080,7 +17080,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 420.0498
-        y: 230.90433
+        y: 232.62845
         width: 160
         height: 30
     - id: 6
@@ -17348,8 +17348,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 221.16965, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 282.6482, y: 155.67007}
+    canvasZoom: 0.97000015
   - id: 32
     fields:
     - title: Title

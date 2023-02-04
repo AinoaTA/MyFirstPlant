@@ -160,6 +160,10 @@ namespace Gameplay
         public void AddPoints(int points)
         {
             var a = DialogueLua.GetVariable("Puntos").AsInt;
+            
+            if(a > 0)
+                DialogueLua.SetVariable("Puzzle", true);
+            
             a += points;
             DialogueLua.SetVariable("Puntos", a);
             Debug.Log($"Tienes {a} pontos");
