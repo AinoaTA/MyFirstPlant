@@ -37,11 +37,11 @@ namespace Cutegame.MainMenu
         [SerializeField] private GameStateCanvasTable gameStateCanvasTable;
 
         private readonly string twitterNameParameter =
-            "Juega a este increíble juego creado por @andrew_raaya @JordiAlbaDev @Sergisggs @GuillemLlovDev @Belmontes_ART @montane @ovillaloboss_ y @RenderingCode hecho para la #IndieSpainJam (@IndieDevDay @spaingamedevs)!\n\nAquí tenéis el link:\n\n";
+            "Si tu destino es echar raíces con una bonita planta, no te pierdas este juego creado por @andrew_raaya @JordiAlbaDev @Sergisggs @Ariehn_ @AinoaTAdev durante la #GlobalGameJam (@TCM_GJJ @globalgamejam)!\n\nAquí tenéis el link:\n\n";
 
         private readonly string twitterDescriptionParam = "";
         private readonly string twitterAdress = "https://twitter.com/intent/tweet";
-        private readonly string jamLink = "https://andrew-raya.itch.io/cosmic-defender";
+        private readonly string jamLink = "https://globalgamejam.org/2023/games/pl%C3%A1ntame-9";
 
         [SerializeField] private string boatSceneName = "Barco";
 
@@ -173,6 +173,16 @@ namespace Cutegame.MainMenu
         public void SergiTwitter()
         {
             OpenTwitter("Sergisggs");
+        }
+
+        public void DianaTwitter()
+        {
+            OpenTwitter("Ariehn_");
+        }
+
+        public void AinoaTwitter()
+        {
+            OpenTwitter("AinoaTAdev");
         }
 
         [Serializable]
