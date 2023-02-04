@@ -44,7 +44,7 @@ namespace Custom
         private int _indexBase;
 
         [SerializeField] private GameObject[] _decorations;
-
+        bool _block;
         private void Awake()
         {
             allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList(); 
@@ -54,8 +54,18 @@ namespace Custom
         {
             _canvasFisico.SetActive(false);
             _canvasPersonality.SetActive(true);
-            SetUpDropdowns();
-            SetSlider(); 
+            if (!_block)
+            {
+                _block = true;
+                SetUpDropdowns();
+                SetSlider();
+            }
+        }
+
+        public void StartFisico() 
+        {
+            _canvasFisico.SetActive(true);
+            _canvasPersonality.SetActive(false); 
         }
 
         #region custom
