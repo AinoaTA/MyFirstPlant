@@ -16,12 +16,9 @@ public class Personaje : MonoBehaviour
         var mat = faceRenderer.materials[0];
         mat.mainTexture = texture;
         faceRenderer.materials[0] = mat;
+        Debug.Log($"Changing {gameObject.name} with face {faceName}");
     }
 
-    private void OnEnable()
-    {
-        Lua.RegisterFunction("ChangeFace", this, SymbolExtensions.GetMethodInfo(() => ChangeFace(string.Empty)));
-    }
     //
     // private void OnValidate()
     // {

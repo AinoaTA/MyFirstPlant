@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 namespace Cutegame.Minigames
 {
+    [RequireComponent(typeof(CanvasGroup))]
     public class PuzleDeTiempo : TimedPuzzle
     {
         // Have a list of pieces that move when the game begins.
@@ -27,45 +28,39 @@ namespace Cutegame.Minigames
         private List<PuzzlePiece> ListOfPieces;
         
         private List<PuzzlePiece> completedPieces = new List<PuzzlePiece>();
-        private CanvasGroup _canvasGroup;
-
-        private void Awake()
-        {
-            TryGetComponent(out _canvasGroup);
-        }
-
+        public CanvasGroup _canvasGroup;
+        
         public override void StartMinigame()
         {
-            base.StartMinigame();
-
             _canvasGroup.alpha = 1;
             _canvasGroup.blocksRaycasts = true;
             _canvasGroup.interactable = true;
 
             SpawnPieces();
+            
+            base.StartMinigame();
         }
 
         private void SpawnPieces()
         {  
-                ListOfPieces = new List<PuzzlePiece>();
+            ListOfPieces = new List<PuzzlePiece>();
             for (int i=0; i < listOfSprites.Count; i++)
             {
                 Vector2 correctPos = new Vector2();
                 correctPos.x = puzzleCenter.localPosition.x + ((-1+i%columns)* puzzleCenter.rect.width);
                 correctPos.y = puzzleCenter.localPosition.y - ((-1+i/columns)* puzzleCenter.rect.height);
-                  
-                PuzzlePiece piece = Instantiate(prefab);
-                piece.transform.parent = this.transform;
-                piece.transform.localScale = Vector3.one;
+                
+                var p = Instantiate(prefab, transform, false);
+                p.transform.localScale = Vector3.one;
 
-                piece.Setup(
+                p.Setup(
                     correctPos,
                     (Vector2) spawnArea.position + new Vector2(Random.Range(-spawnAreaRange, spawnAreaRange), Random.Range(-spawnAreaRange, spawnAreaRange)),
                     acceptRange,
                     listOfSprites[i],
                     AddPoint
                     );
-                ListOfPieces.Add(piece);
+                ListOfPieces.Add(p);
             }
         }
 

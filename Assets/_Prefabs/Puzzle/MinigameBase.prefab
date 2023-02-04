@@ -185,6 +185,7 @@ MonoBehaviour:
   puzzleCenter: {fileID: 1951827031999536648}
   spawnArea: {fileID: 1951827033162563657}
   prefab: {fileID: 8010634858112857552, guid: 43c39f240e76f024282b89e9fb453aa2, type: 3}
+  _canvasGroup: {fileID: 2118259795235632888}
 --- !u!225 &2118259795235632888
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -123,6 +123,50 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 5
+    fields:
+    - title: Name
+      value: Linda Medusa
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 6
+    fields:
+    - title: Name
+      value: "Cayetano Froil\xE1n"
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items: []
   locations: []
   variables:
@@ -13106,7 +13150,7 @@ MonoBehaviour:
         destinationConversationID: 25
         destinationDialogueID: 3
         isConnector: 0
-        priority: 2
+        priority: 3
       - originConversationID: 25
         originDialogueID: 0
         destinationConversationID: 25
@@ -13120,8 +13164,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 606.4775
-        y: 38.417908
+        x: 566.05194
+        y: 34.16259
         width: 160
         height: 30
     - id: 3
@@ -13168,8 +13212,8 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["Puzzle"] == true
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13430,7 +13474,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Block
+      falseConditionAction: Passthrough
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 25
@@ -13439,14 +13483,14 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["Puzzle"] == true
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 848.26843
+        x: 849.3323
         y: 116.77612
         width: 160
         height: 30
@@ -13555,8 +13599,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 181.98433, y: 17.79723}
+    canvasZoom: 0.94000006
   - id: 26
     fields:
     - title: Title
@@ -16734,6 +16778,12 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 31
+        originDialogueID: 0
+        destinationConversationID: 31
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16823,7 +16873,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Es como si fu\xE9ramos protagonistas de nuestra propia comedia rom\xE1ntica "
+        value: "Es como si fu\xE9ramos protagonistas de nuestra propia comedia rom\xE1ntica...\\."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16878,7 +16928,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "y este fuera el inicio de algo s\xFAper emocionante que nos cambiar\xE1
+        value: "...y este fuera el inicio de algo s\xFAper emocionante que nos cambiar\xE1
           la vida. "
         type: 0
         typeString: CustomFieldType_Text
@@ -16968,14 +17018,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 234.48285
-        y: 324.89648
+        x: 420.0498
+        y: 182.62845
         width: 160
         height: 30
     - id: 5
@@ -17015,7 +17065,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 31
+        originDialogueID: 5
+        destinationConversationID: 31
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -17023,8 +17079,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 234.48285
-        y: 374.89648
+        x: 420.0498
+        y: 232.62845
         width: 160
         height: 30
     - id: 6
@@ -17072,14 +17128,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 706.8963
-        y: 307.65512
+        x: 713.0819
+        y: 286.00565
         width: 160
         height: 30
     - id: 7
@@ -17119,7 +17175,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 31
+        originDialogueID: 7
+        destinationConversationID: 31
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -17127,8 +17189,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 706.8963
-        y: 357.65512
+        x: 713.0819
+        y: 336.00565
         width: 160
         height: 30
     - id: 8
@@ -17169,6 +17231,61 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 31
+        originDialogueID: 8
+        destinationConversationID: 31
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1006.8783
+        y: 190.48486
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -17177,13 +17294,62 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1101.7236
-        y: 311.1034
+        x: 713.79285
+        y: 86.96551
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 31
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: MinigamePuzle()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 720.0498
+        y: 512.52527
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 126.407166, y: 126.72848}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 282.6482, y: 155.67007}
+    canvasZoom: 0.97000015
   - id: 32
     fields:
     - title: Title
@@ -20678,7 +20844,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("risa")
       onExecute:
         m_PersistentCalls:
           m_Calls:
@@ -20696,7 +20862,7 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 225
+        x: 223.93616
         y: 234.96909
         width: 160
         height: 30
@@ -20746,7 +20912,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20806,7 +20972,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 45.971176}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.94000006
   syncInfo:
     syncActors: 0
