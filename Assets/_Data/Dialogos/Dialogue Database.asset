@@ -4207,7 +4207,7 @@ MonoBehaviour:
   - id: 9
     fields:
     - title: Title
-      value: "LadyMedusa_Conclusi\xF3n"
+      value: LadyMedusa_Final
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
@@ -7870,7 +7870,7 @@ MonoBehaviour:
   - id: 16
     fields:
     - title: Title
-      value: New Conversation 16
+      value: EricaDraven_Final
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
