@@ -404,7 +404,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7437717320538144806
 Transform:
   m_ObjectHideFlags: 0
@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5274246504066051718
 Transform:
   m_ObjectHideFlags: 0
@@ -598,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2431673988168221683}
   - component: {fileID: 2753304551586691182}
+  - component: {fileID: 8253537262311163658}
   m_Layer: 0
   m_Name: Maceta
   m_TagString: Untagged
@@ -648,6 +649,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8253537262311163658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3095338774891288905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50510cf36d85da64897bb794aafc2f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceRenderer: {fileID: 2472921270843007822}
+  personaje: {fileID: 11400000, guid: 85c42d238a5bec04e8bbe9ce9e5b6772, type: 2}
+  _baseMaceta: {fileID: 8883973640207097501}
+  decorations:
+  - {fileID: 3908009865280442006}
+  - {fileID: 5265861388543924319}
+  - {fileID: 2657728772365315729}
+  - {fileID: 2072732441648374246}
 --- !u!1 &3228282129189808030
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1777186630194901099
 Transform:
   m_ObjectHideFlags: 0
@@ -992,7 +1013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &213171021645047292
 Transform:
   m_ObjectHideFlags: 0

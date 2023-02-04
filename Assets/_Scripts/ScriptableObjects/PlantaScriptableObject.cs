@@ -23,7 +23,20 @@ public class PlantaScriptableObject : ScriptableObject
     public GameObject modeloPrefab;
     public Cutegame.Minigames.PuzleDeTiempo puzlePrefab;
 
-    public List<Carita> caritas;
+
+    [Header("Custom")]
+    public Material tiestoMat;
+    public string decoSelected;
+    public string faceName;
+
+    public List<Carita> caritas = new List<Carita>()
+    {
+        new Carita() { name = "sonrisa"},
+        new Carita() { name = "risa"},
+        new Carita() { name = "duda"},
+        new Carita() { name = "enfado"},
+        new Carita() { name = "triste"}
+    };
     
     [Header("Dialogo")] 
     [ConversationPopup(true)] public string starterConversation;

@@ -8,8 +8,8 @@ namespace Custom
 {
     public class Controller : MonoBehaviour
     {
-        [SerializeField] TextAsset _interesesDesinteres; 
-        public List<string> allInteresesDesintereses; 
+        [SerializeField] TextAsset _interesesDesinteres;
+        public List<string> allInteresesDesintereses;
 
         int[] _zodiacNumbers = new int[12];
 
@@ -35,22 +35,24 @@ namespace Custom
         [SerializeField] TMP_Text _ageText;
 
         [Header("UI Físico")]
-        [SerializeField] private SpriteRenderer _face;
-        [SerializeField] private Sprite[] _faceMat;
+        [SerializeField] private Personaje _personaje;
+        [SerializeField] private string[] _faceName;
         private int _indexFace;
 
-        [SerializeField] private MeshRenderer _base;
+        [SerializeField] private SkinnedMeshRenderer _base;
         [SerializeField] private Material[] _baseMat;
         private int _indexBase;
 
         [SerializeField] private GameObject[] _decorations;
+        private int _indexDeco;
         bool _block;
+
         private void Awake()
         {
-            allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList(); 
-        } 
+            allInteresesDesintereses = _interesesDesinteres.text.Split('\n').ToList();
+        }
 
-        public void StartPersonality() 
+        public void StartPersonality()
         {
             _canvasFisico.SetActive(false);
             _canvasPersonality.SetActive(true);
@@ -62,40 +64,58 @@ namespace Custom
             }
         }
 
-        public void StartFisico() 
+        public void StartFisico()
         {
             _canvasFisico.SetActive(true);
-            _canvasPersonality.SetActive(false); 
+            _canvasPersonality.SetActive(false);
         }
 
         #region custom
 
-        public void LeftMaterial() 
+        public void LeftMaterial()
         {
             _indexBase++;
-            if (_indexBase >= _baseMat.Length) _indexBase = 0; 
-            _base.material = _baseMat[_indexBase]; 
+            if (_indexBase >= _baseMat.Length) _indexBase = 0;
+            _base.material = _baseMat[_indexBase];
         }
 
         public void RightMaterial()
         {
             _indexBase--;
-            if (_indexBase <0 ) _indexBase = _baseMat.Length-1;
+            if (_indexBase < 0) _indexBase = _baseMat.Length - 1;
             _base.material = _baseMat[_indexBase];
-        } 
-
-        public void LeftSprite()
-        {
-            _indexFace++;
-            if (_indexFace >= _faceMat.Length) _indexFace = 0;
-            _face.sprite = _faceMat[_indexFace];
         }
 
-        public void RightSprite()
+        public void LeftFace()
+        {
+            _indexFace++;
+            if (_indexFace >= _faceName.Length) _indexFace = 0;
+            _personaje.ChangeFace(_faceName[_indexFace]);
+        }
+
+        public void RightFace()
         {
             _indexFace--;
-            if (_indexFace < 0) _indexFace = _baseMat.Length - 1;
-            _face.sprite = _faceMat[_indexFace];
+            if (_indexFace < 0) _indexFace = _faceName.Length - 1;
+            _personaje.ChangeFace(_faceName[_indexFace]);
+        }
+
+        public void LeftDeco()
+        {
+            _indexDeco++;
+            if (_indexDeco >= _faceName.Length) _indexFace = 0;
+
+            for (int i = 0; i < _decorations.Length; i++) 
+                _decorations[i].SetActive(i == _indexDeco); 
+        }
+
+        public void RightDeco()
+        {
+            _indexDeco--;
+            if (_indexDeco < 0) _indexDeco = _decorations.Length - 1;
+
+            for (int i = 0; i < _decorations.Length; i++)
+                _decorations[i].SetActive(i == _indexDeco);
         }
 
         #endregion
@@ -153,6 +173,10 @@ namespace Custom
 
             Main.instance.playerProfile = _playerProfile;
             Main.instance.managerScene.LoadSceneWithLoading("tinder");
+
+            Main.instance.playerProfile.tiestoMat = _baseMat[_indexBase];
+            Main.instance.playerProfile.faceName = _faceName[_indexFace];
+            Main.instance.playerProfile.decoSelected = _decorations[_indexDeco].name;
         }
         #endregion
     }
