@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
+  m_Name: Lady Blue
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 21300000, guid: 177f0e0a4941a464f935c21b367d57c7, type: 3}
+  nombre: Lady Blue
+  tipoPlanta: "Orqu\xEDdea"
+  edad: 22
+  signo: 2
+  intereses:
+  - Lujo
+  - Belleza
+  - Brillos
+  desintereses:
+  - Vulgaridad
+  frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
+    Y a m\xED me sobra de ambas\u201D."
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}
+  puzlePrefab: {fileID: 4506098881952172955, guid: 10907ed89983e9f4f94bc087ed1c079f,
+    type: 3}

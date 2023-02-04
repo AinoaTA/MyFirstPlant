@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
+  m_Name: Erica Draven
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 21300000, guid: fc8dcc4a15d828e4686470389805489c, type: 3}
+  nombre: Erica Draven
+  tipoPlanta: Planta Cuervo
+  edad: 28
+  signo: 3
+  intereses:
+  - Color Negro
+  - "M\xFAsica Rock"
+  - "Literatura G\xF3tica"
+  desintereses:
+  - Playa
+  - Musicales
+  frase: "\u201CY entonces dijo el p\xE1jaro: Nunca m\xE1s\u201D."
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}
+  puzlePrefab: {fileID: 4506098881952172955, guid: c4f8f4598dc075d458152b8bfc788dd2,
+    type: 3}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
+  m_Name: Penny Pink
+  m_EditorClassIdentifier: 
+  imagen: {fileID: 21300000, guid: 23743f0c0ed1e6546808a5d645c2a6a5, type: 3}
+  nombre: Penny Pink
+  tipoPlanta: Suculenta
+  edad: 18
+  signo: 7
+  intereses:
+  - "Novelas Rom\xE1nticas"
+  - Color Rosa
+  - Cotillear
+  desintereses:
+  - Vulgaridad
+  - Chocolate
+  frase: "\u201CEl amor no hay que comprenderlo, hay que sentirlo\u201D."
+  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+    type: 3}
+  puzlePrefab: {fileID: 4506098881952172955, guid: 64288d29becdfce4da90f1d324dc2d34,
+    type: 3}
