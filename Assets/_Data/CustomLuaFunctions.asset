@@ -20,3 +20,6 @@ MonoBehaviour:
   - functionName: MinigameTarot
     parameters: 
     returnValue: 0
+  - functionName: PlantaPresenta
+    parameters: 
+    returnValue: 0

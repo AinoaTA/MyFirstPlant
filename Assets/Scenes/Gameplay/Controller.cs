@@ -20,8 +20,9 @@ namespace Gameplay
         public Rematch rematch;
         [HideInInspector] public Cutegame.Minigames.PuzleDeTiempo _puzle;
         public GameObject player, plant;
+        [SerializeField] GameObject _conejo;
 
-        [Header("UI")]
+        [Header("UI")] 
         [SerializeField] private Canvas _canvas;
         [SerializeField] private GameObject _endCanvas;
         [SerializeField] private TMP_Text _content;
@@ -36,21 +37,22 @@ namespace Gameplay
 
         private void OnEnable()
         {
-            Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
+            //Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
+            Lua.RegisterFunction("PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
         }
         private void OnDisable()
         {
-            Lua.UnregisterFunction("MinigameTarot");
+            //Lua.UnregisterFunction("MinigameTarot");
+            Lua.UnregisterFunction("PlantaPresenta");
         }
         private void Awake()
         {
-            controller = this;
-            DialogueLua.SetVariable("chisteMalo", chisteString[Random.Range(0, chisteString.Count)]);
-            
+            controller = this; 
         }
 
         private void Start()
         {
+            DialogueLua.SetVariable("chisteMalo", chisteString[Random.Range(0, chisteString.Count)]);
             _puzle = Main.instance.profilePlantSelected.puzlePrefab;
 
             Instantiate(_puzle, _canvas.transform.position, Quaternion.identity, _canvas.transform);
@@ -69,12 +71,15 @@ namespace Gameplay
             //End();
         }
 
+
+
         IEnumerator GameFlow()
         {
+            cameraManager.ChooseCam(1);
             yield return new WaitForSeconds(1);
-            
+            DialogueManager.StartConversation("SaludoConejo", player.transform, _conejo.transform);
             //Conejo dice lo suyo
-
+            
             //La cita habla (se presenta)
 
             //El personaje elige respuesta
@@ -89,13 +94,25 @@ namespace Gameplay
 
             //pitonisa habla
 
-            //juegan
-            yield return null;
-            cameraManager.ChooseCam(0);
-            // MinigamePuzle();
-            //camara se centra en cita etc etc
+            //juegan 
 
+            // MinigamePuzle();
+            //camara se centra en cita etc etc 
         }
+
+
+        public void PlantaPresenta() 
+        {
+            print("A");
+            cameraManager.ChooseCam(2);
+            StartCoroutine(Delay());
+        }
+
+        IEnumerator Delay() 
+        {
+            yield return new WaitForSeconds(1);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.starterConversation, player.transform, plant.transform);
+        } 
 
         public void MinigamePuzle()
         {
