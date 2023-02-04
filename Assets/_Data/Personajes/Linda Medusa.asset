@@ -29,6 +29,9 @@ MonoBehaviour:
     type: 3}
   puzlePrefab: {fileID: 4506098881952172955, guid: 005d7d32f5f77354482696e667b1fff7,
     type: 3}
+  tiestoMat: {fileID: 0}
+  decoSelected: 
+  faceName: 
   caritas:
   - name: sonrisa
     sprite: {fileID: 2800000, guid: ae4181955b2f03842970842f4ce48308, type: 3}
@@ -40,9 +43,13 @@ MonoBehaviour:
     sprite: {fileID: 2800000, guid: 8fdae4ac756ed6047b01021ff0cc3ebb, type: 3}
   - name: triste
     sprite: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
-  starterConversation: 
-  dinnerConversation: 
-  pitonisaConversation: Horoscopo
-  cartasDelTarot: 
-  "conclusi\xF3n": 
+  dialoguitos:
+    intro: LadyMedusa_Intro
+    puzzle: LadyMedusa_Puzzle
+    "hor\xF3scopo": Horoscopo
+    minijuegoTarot: Minijuego del Tarot
+    cuestionario: LadyMedusa_Cuestionario
+    laCuenta: LadyMedusa_LaCuenta
+    conclusionCita: "LadyMedusa_Conclusi\xF3nCita"
+    final: LadyMedusa_Final
   comentarioPitonisa: "A ver ojazos, \xBFt\xFA de qu\xE9 signo eres? "

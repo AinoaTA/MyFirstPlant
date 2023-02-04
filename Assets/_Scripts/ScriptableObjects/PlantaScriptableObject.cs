@@ -36,13 +36,8 @@ public class PlantaScriptableObject : ScriptableObject
         new Carita() { name = "enfado"},
         new Carita() { name = "triste"}
     };
-    
-    [Header("Dialogo")] 
-    [ConversationPopup(true)] public string starterConversation;
-    [ConversationPopup(true)] public string dinnerConversation;
-    [ConversationPopup(true)] public string pitonisaConversation;
-    [ConversationPopup(true)] public string cartasDelTarot;
-    [ConversationPopup(true)] public string conclusión;
+
+    [Header("Dialogo")] public Dialoguitos dialoguitos;
 
     public string comentarioPitonisa = "";
 }
@@ -52,6 +47,19 @@ public struct Carita
 {
     public string name;
     public Texture2D sprite;
+}
+
+[Serializable]
+public struct Dialoguitos
+{
+    [ConversationPopup(true)] public string intro;
+    [ConversationPopup(true)] public string puzzle;
+    [ConversationPopup(true)] public string horóscopo;
+    [ConversationPopup(true)] public string minijuegoTarot;
+    [ConversationPopup(true)] public string cuestionario;
+    [ConversationPopup(true)] public string laCuenta;
+    [ConversationPopup(true)] public string conclusionCita;
+    [ConversationPopup(true)] public string final;
 }
 
 public enum ZodiacSign
