@@ -21,7 +21,18 @@ namespace Gameplay
 
         [SerializeField] int _maxReroll = 3;
         Vector3[] _initPoses;
-         
+
+
+        private void OnEnable()
+        {
+            Lua.RegisterFunction("StartVoice", this, SymbolExtensions.GetMethodInfo(() => StartVoice()));
+            Lua.RegisterFunction("StartTarot", this, SymbolExtensions.GetMethodInfo(() => StartTarot()));
+        }
+        private void OnDisable()
+        {
+            Lua.UnregisterFunction("StartVoice");
+            Lua.UnregisterFunction("StartTarot");
+        }
         private void Start()
         { 
             _initPoses = new Vector3[_cards.Count];
@@ -34,6 +45,13 @@ namespace Gameplay
          
         public void StartVoice()
         {
+            StartCoroutine(Delay());
+        }
+
+        IEnumerator Delay() 
+        {
+            yield return new WaitForSeconds(1);
+            Controller.controller.cameraManager.ChooseCam("Pitonisa", true);
             DialogueLua.SetVariable("plantSign", Main.instance.profilePlantSelected.signo);
             DialogueLua.SetVariable("playerSign", Main.instance.playerProfile.signo);
             DialogueLua.SetVariable("comentarioPitonisa", Main.instance.profilePlantSelected.comentarioPitonisa);
@@ -45,8 +63,7 @@ namespace Gameplay
             StartCoroutine(StartTarotRoutine());
         }
         IEnumerator StartTarotRoutine()
-        {
-            StartVoice();
+        { 
             yield return new WaitForSeconds(1);
             for (int i = 0; i < _cards.Count; i++)
             {

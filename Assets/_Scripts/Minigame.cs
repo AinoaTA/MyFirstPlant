@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using PixelCrushers.DialogueSystem;
 namespace Cutegame
 {
     public class Minigame : MonoBehaviour
@@ -39,7 +37,7 @@ namespace Cutegame
             SetupPoints();
             // Invoke points.
             OnEndMinigame?.Invoke(pointsToAward);
-
+ 
             gameObject.SetActive(false);
         }
     }

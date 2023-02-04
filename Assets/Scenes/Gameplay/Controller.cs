@@ -40,6 +40,7 @@ namespace Gameplay
             //Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
             Lua.RegisterFunction("PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
             Lua.RegisterFunction("MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
+            Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot())); 
         }
 
         private void OnDisable()
@@ -105,7 +106,7 @@ namespace Gameplay
 
         public void PlantaPresenta()
         {
-            cameraManager.ChooseCam(2);
+            cameraManager.ChooseCam(2,true);
             StartCoroutine(Delay());
         }
 
@@ -154,18 +155,34 @@ namespace Gameplay
             _currentPoints += points;
         }
 
+
+        public void ConejoPresentaTarot() 
+        { 
+            StartCoroutine(DelayConejo()); 
+        }
+
+        IEnumerator DelayConejo() 
+        {//primero camera o conejo?
+            cameraManager.ChooseCam(1, true);
+            yield return new WaitForSeconds(0.5f);
+            DialogueManager.StartConversation("AnuncioPitonisa", _conejo.transform, player.transform);
+           
+        }
         #region Dataloading
 
         public void AddPoints(int points)
         {
             var a = DialogueLua.GetVariable("Puntos").AsInt;
             
-            if(a > 0)
+            if(points > 0)
                 DialogueLua.SetVariable("Puzzle", true);
             
             a += points;
             DialogueLua.SetVariable("Puntos", a);
             Debug.Log($"Tienes {a} pontos");
+
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.puzzle,
+                plant.transform, player.transform);
         }
 
         public void ChangeFace(string face)

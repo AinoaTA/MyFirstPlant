@@ -17,7 +17,7 @@ MonoBehaviour:
   - functionName: Debug/SayDebug
     parameters: 02000000
     returnValue: 0
-  - functionName: MinigameTarot
+  - functionName: StartTarot
     parameters: 
     returnValue: 0
   - functionName: PlantaPresenta
@@ -28,4 +28,10 @@ MonoBehaviour:
     returnValue: 0
   - functionName: ChangeFace
     parameters: 02000000
+    returnValue: 0
+  - functionName: ConejoPresentaTarot
+    parameters: 
+    returnValue: 0
+  - functionName: StartVoice
+    parameters: 
     returnValue: 0
