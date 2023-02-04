@@ -22,14 +22,7 @@ namespace Gameplay
         [SerializeField] int _maxReroll = 3;
         Vector3[] _initPoses;
 
-        private void OnEnable()
-        {
-            Lua.RegisterFunction("StartTarot", this, SymbolExtensions.GetMethodInfo(() => StartTarot()));
-        }
-        private void OnDisable()
-        {
-            Lua.UnregisterFunction("StartTarot");
-        }
+
         private IEnumerator Start()
         {
             yield return null;
