@@ -23,12 +23,16 @@ MonoBehaviour:
   - Brillos
   desintereses:
   - Vulgaridad
+  - "\xBFQuieres saber m\xE1s?"
   frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
     Y a m\xED me sobra de ambas\u201D."
-  modeloPrefab: {fileID: 5606525503578289249, guid: f5c55589656569d4c8de7c6f1a53c447,
+  modeloPrefab: {fileID: 5519986520378760657, guid: 5d677fdc690165e43a16df38f911ff84,
     type: 3}
   puzlePrefab: {fileID: 4506098881952172955, guid: 10907ed89983e9f4f94bc087ed1c079f,
     type: 3}
+  tiestoMat: {fileID: 0}
+  decoSelected: 
+  faceName: 
   caritas:
   - name: sonrisa
     sprite: {fileID: 2800000, guid: ae4181955b2f03842970842f4ce48308, type: 3}
@@ -40,9 +44,13 @@ MonoBehaviour:
     sprite: {fileID: 2800000, guid: 8fdae4ac756ed6047b01021ff0cc3ebb, type: 3}
   - name: triste
     sprite: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
-  starterConversation: 
-  dinnerConversation: 
-  pitonisaConversation: 
-  cartasDelTarot: 
-  "conclusi\xF3n": 
+  dialoguitos:
+    intro: 
+    puzzle: 
+    "hor\xF3scopo": 
+    minijuegoTarot: 
+    cuestionario: 
+    laCuenta: 
+    conclusionCita: 
+    final: 
   comentarioPitonisa: 
