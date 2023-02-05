@@ -108,8 +108,8 @@ namespace Gameplay
             // TODO DISABLED THIS BECAUSE OF ERROR
             plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, -90, 0)));
 
-            /*este es la buena !!!*/ StartCoroutine(GameFlow());
 
+            /*este es la buena !!!*/ StartCoroutine(GameFlow());
             //tarot.EndCard();
             //End();
         }
