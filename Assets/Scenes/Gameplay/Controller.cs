@@ -83,7 +83,7 @@ namespace Gameplay
 
             player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
             player.transform.position = _playerPos.position;
-            player.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position,
                 Quaternion.identity);
@@ -106,7 +106,7 @@ namespace Gameplay
             };
 
             // TODO DISABLED THIS BECAUSE OF ERROR
-            plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, 90, 0)));
+            plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, -90, 0)));
 
             /*este es la buena !!!*/ StartCoroutine(GameFlow());
 
