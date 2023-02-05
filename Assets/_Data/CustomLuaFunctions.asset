@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conditionFunctions: []
   scriptFunctions:
-  - functionName: Debug/SayDebug
+  - functionName: SayDebug
     parameters: 02000000
     returnValue: 0
   - functionName: PlayAnimation
