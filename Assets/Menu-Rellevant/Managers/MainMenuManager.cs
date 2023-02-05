@@ -28,8 +28,8 @@ namespace Cutegame.MainMenu
 
         public CanvasFadeIn MainCanvas;
         public CanvasFadeIn OptionsCanvas;
-        public CanvasFadeIn ControlsCanvas;
-        public CanvasFadeIn LocalizationCanvas;
+        //public CanvasFadeIn ControlsCanvas;
+        //public CanvasFadeIn LocalizationCanvas;
         public CanvasFadeIn CreditsCanvas;
         public CanvasFadeIn Fade;
         public float Duration = 0.4f;
@@ -54,8 +54,8 @@ namespace Cutegame.MainMenu
 
             gameStateCanvasTable.Add(MenuState.Main, MainCanvas);
             gameStateCanvasTable.Add(MenuState.Options, OptionsCanvas);
-            gameStateCanvasTable.Add(MenuState.Controls, ControlsCanvas);
-            gameStateCanvasTable.Add(MenuState.Localization, LocalizationCanvas);
+            //gameStateCanvasTable.Add(MenuState.Controls, ControlsCanvas);
+            //gameStateCanvasTable.Add(MenuState.Localization, LocalizationCanvas);
             gameStateCanvasTable.Add(MenuState.Credits, CreditsCanvas);
 
             foreach (var item in gameStateCanvasTable)
@@ -77,7 +77,8 @@ namespace Cutegame.MainMenu
             //BackgroundMusic.Stop();
             MainCanvas.GetComponent<CanvasGroup>().interactable = false;
             //LoadingScreen.Show();
-            StartCoroutine(LoadAfterFade(sceneName, 2f));
+            Main.instance.managerScene.LoadSceneWithLoading("Custom");
+            //StartCoroutine(LoadAfterFade(sceneName, 2f));
             PlayClickSound();
         }
 

@@ -929,8 +929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCanvas: {fileID: 2563615264508775244}
   OptionsCanvas: {fileID: 3737128658709477949}
-  ControlsCanvas: {fileID: 1997404095380927715}
-  LocalizationCanvas: {fileID: 0}
   CreditsCanvas: {fileID: 3605420691072667235}
   Fade: {fileID: 1967654993}
   Duration: 0.2
@@ -3200,6 +3198,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551931274}
   m_CullTransparentMesh: 1
+--- !u!1001 &1749571900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 505636637665896732, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_Name
+      value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
 --- !u!33 &1886162880
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3515,6 +3582,7 @@ MonoBehaviour:
   Duration: 1
   DelayFadeIn: 0
   DelayFadeOut: 2
+  canvGroup: {fileID: 0}
   StartWithFadeOut: 1
   onShow:
     m_PersistentCalls:
@@ -9426,7 +9494,6 @@ MonoBehaviour:
   _nearPos: {fileID: 1868327670264802319}
   _time: 0.5
   _yPos: 0.1
-  _zPos: 0.051
   _cardInfo:
   - {fileID: 11400000, guid: 722951621212cc242857494267dd9b2d, type: 2}
   - {fileID: 11400000, guid: 3cdb797d49f06ba4c924580e33742b84, type: 2}
@@ -9442,6 +9509,9 @@ MonoBehaviour:
   - {fileID: 5351389517655258757}
   - {fileID: 5351389516826706347}
   _maxReroll: 3
+  _muerte: {fileID: 0}
+  _torre: {fileID: 0}
+  _fortuna: {fileID: 0}
 --- !u!1 &1868327671494399177
 GameObject:
   m_ObjectHideFlags: 0
@@ -9846,6 +9916,7 @@ MonoBehaviour:
   Duration: 0.4
   DelayFadeIn: 0.5
   DelayFadeOut: 0
+  canvGroup: {fileID: 1997404095380927708}
   StartWithFadeOut: 0
   onShow:
     m_PersistentCalls:
@@ -11188,6 +11259,7 @@ MonoBehaviour:
   Duration: 0.4
   DelayFadeIn: 0.5
   DelayFadeOut: 0
+  canvGroup: {fileID: 2563615264508775247}
   StartWithFadeOut: 0
   onShow:
     m_PersistentCalls:
@@ -14328,6 +14400,7 @@ MonoBehaviour:
   Duration: 0.4
   DelayFadeIn: 0.5
   DelayFadeOut: 0
+  canvGroup: {fileID: 3605420691072667228}
   StartWithFadeOut: 0
   onShow:
     m_PersistentCalls:
@@ -14561,6 +14634,7 @@ MonoBehaviour:
   Duration: 0.4
   DelayFadeIn: 0.5
   DelayFadeOut: 0
+  canvGroup: {fileID: 3737128658709477948}
   StartWithFadeOut: 0
   onShow:
     m_PersistentCalls:

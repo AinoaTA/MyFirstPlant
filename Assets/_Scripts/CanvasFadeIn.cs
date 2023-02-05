@@ -8,7 +8,7 @@ public class CanvasFadeIn : MonoBehaviour
     public float Duration = 0.4f;
     public float DelayFadeIn = 0f;
     public float DelayFadeOut = 0f;
-    private CanvasGroup canvGroup;
+    public  CanvasGroup canvGroup;
     public bool StartWithFadeOut;
 
     public UnityEvent onShow;
