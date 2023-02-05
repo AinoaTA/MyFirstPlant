@@ -1204,6 +1204,7 @@ MonoBehaviour:
   _canvas: {fileID: 1677173261}
   _endCanvas: {fileID: 2050578486}
   _content: {fileID: 613944532}
+  finalMusic: {fileID: 0}
 --- !u!1 &1243279415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,6 +2326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2310442945525641536, guid: 714a7bd10df99244e8b203ed351ad86e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.61399
+      objectReference: {fileID: 0}
     - target: {fileID: 6508495753645137061, guid: 714a7bd10df99244e8b203ed351ad86e,
         type: 3}
       propertyPath: m_RootOrder

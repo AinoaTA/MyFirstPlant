@@ -44,12 +44,12 @@ MonoBehaviour:
   - name: triste
     sprite: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
   dialoguitos:
-    intro: 
-    puzzle: 
-    "hor\xF3scopo": 
-    minijuegoTarot: 
-    cuestionario: 
-    laCuenta: 
-    conclusionCita: 
-    final: 
-  comentarioPitonisa: 
+    intro: "Froil\xE1n_Intro"
+    puzzle: Froilan_Puzle
+    "hor\xF3scopo": Horoscopo
+    minijuegoTarot: Minijuego del Tarot
+    cuestionario: "Froil\xE1n_Cuestionario"
+    laCuenta: "Froil\xE1n_LaCuenta"
+    conclusionCita: "Froil\xE1n_ConclusionCita"
+    final: "Froil\xE1n_Final"
+  comentarioPitonisa: "A ver ricitos, \xBFt\xFA de qu\xE9 signo eres?"
