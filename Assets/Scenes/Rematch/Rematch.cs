@@ -34,6 +34,7 @@ namespace Gameplay
 
         IEnumerator ReMatchRoutine()
         {
+            print("??");
             Canvas(true);
             for (int i = 0; i < Main.instance.plantProfiles.Count; i++)
             {

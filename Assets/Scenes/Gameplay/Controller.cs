@@ -81,8 +81,11 @@ namespace Gameplay
             plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
             /*este es la buena !!!*/ //StartCoroutine(GameFlow());
-           
-            tarot.EndCard();
+
+            //tarot.EndCard();
+            //End();
+
+            StartCoroutine(prueba());
         }
 
         public void ConejoBye() 
@@ -191,6 +194,11 @@ namespace Gameplay
             rematch.StartReMatch();
         }
 
+        IEnumerator prueba()
+        {
+            yield return new WaitForSeconds(2);
+            rematch.StartReMatch();
+        }
         public void ModifyPoints(float points)
         {
             _currentPoints += points;
