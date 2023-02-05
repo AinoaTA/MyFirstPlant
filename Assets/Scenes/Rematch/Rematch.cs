@@ -10,7 +10,7 @@ namespace Gameplay
         [SerializeField] private Transform _selector;
         [SerializeField] private CanvasGroup _canvasGroup;
         private int _indexSelector;
-
+        bool _block;
         #region enables
         private void OnEnable()
         {
@@ -33,7 +33,9 @@ namespace Gameplay
         }
 
         IEnumerator ReMatchRoutine()
-        { 
+        {
+            if (_block) yield break;
+            _block = true;
             Canvas(true);
             for (int i = 0; i < Main.instance.plantProfiles.Count; i++)
             {

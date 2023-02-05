@@ -21,6 +21,7 @@ public class CanvasFadeIn : MonoBehaviour
 
     private void Start()
     {
+        Main.instance.fade.Hide();
         if (StartWithFadeOut)
         {
             canvGroup.alpha = 1f;
