@@ -1,5 +1,3 @@
-using PixelCrushers.DialogueSystem;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Personaje : MonoBehaviour

@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
-using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Default_"+ nameof(PlantaScriptableObject), menuName = "Data/Ficha de Personaje")]
 public class PlantaScriptableObject : ScriptableObject
