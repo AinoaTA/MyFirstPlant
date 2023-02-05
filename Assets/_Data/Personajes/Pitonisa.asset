@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Pitonisa
   m_EditorClassIdentifier: 
-  imagen: {fileID: 21300000, guid: 3728580c149181a44b359e89f6edacae, type: 3}
+  imagen: {fileID: 21300000, guid: b9652a909d8e8c644a78bcc063cb80b0, type: 3}
   nombre: Pitonisa
   tipoPlanta: 
   edad: 20
