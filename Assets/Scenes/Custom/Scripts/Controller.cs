@@ -34,7 +34,7 @@ namespace Custom
         [SerializeField] Slider _age;
         [SerializeField] TMP_Text _ageText;
 
-        [Header("UI Físico")]
+        [Header("UI FÃ­sico")]
         [SerializeField] private Personaje _personaje;
         [SerializeField] private string[] _faceName;
         private int _indexFace;
@@ -103,7 +103,7 @@ namespace Custom
         public void LeftDeco()
         {
             _indexDeco++;
-            if (_indexDeco >= _faceName.Length) _indexFace = 0;
+            if (_indexDeco >= _decorations.Length) _indexDeco = 0;
 
             for (int i = 0; i < _decorations.Length; i++) 
                 _decorations[i].SetActive(i == _indexDeco); 

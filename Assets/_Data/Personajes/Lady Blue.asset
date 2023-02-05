@@ -45,12 +45,12 @@ MonoBehaviour:
   - name: triste
     sprite: {fileID: 2800000, guid: 1732e542f535d374bbfa7565fc78414e, type: 3}
   dialoguitos:
-    intro: 
-    puzzle: 
-    "hor\xF3scopo": 
-    minijuegoTarot: 
-    cuestionario: 
-    laCuenta: 
-    conclusionCita: 
-    final: 
-  comentarioPitonisa: 
+    intro: LadyBlue_Intro
+    puzzle: LadyBlue_Puzle
+    "hor\xF3scopo": Horoscopo
+    minijuegoTarot: Minijuego del Tarot
+    cuestionario: LadyBlue_Cuestionario
+    laCuenta: LadyBlue_LaCuenta
+    conclusionCita: LadyBlue_Cuestionario
+    final: LadyBlue_Final
+  comentarioPitonisa: "A ver belleza, \xBFt\xFA de qu\xE9 signo eres?"

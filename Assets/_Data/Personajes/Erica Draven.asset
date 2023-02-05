@@ -44,12 +44,12 @@ MonoBehaviour:
   - name: triste
     sprite: {fileID: 2800000, guid: 30befcbffd6443a498fd33e34be21952, type: 3}
   dialoguitos:
-    intro: 
-    puzzle: 
-    "hor\xF3scopo": 
-    minijuegoTarot: 
-    cuestionario: 
-    laCuenta: 
-    conclusionCita: 
-    final: 
-  comentarioPitonisa: 
+    intro: EricaDraven_Intro
+    puzzle: EricaDraven_Puzle
+    "hor\xF3scopo": Horoscopo
+    minijuegoTarot: Minijuego del Tarot
+    cuestionario: EricaDraven_Cuestionario
+    laCuenta: EricaDraven_LaCuenta
+    conclusionCita: EricaDraven_ConclusionCita
+    final: EricaDraven_Final
+  comentarioPitonisa: "A ver oscurilla, \xBFt\xFA de qu\xE9 signo eres?"
