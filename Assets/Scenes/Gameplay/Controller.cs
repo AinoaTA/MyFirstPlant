@@ -40,7 +40,8 @@ namespace Gameplay
             //Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
             Lua.RegisterFunction("PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
             Lua.RegisterFunction("MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
-            Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot())); 
+            Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
+            Lua.RegisterFunction("ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
         }
 
         private void OnDisable()
@@ -49,6 +50,7 @@ namespace Gameplay
             Lua.UnregisterFunction("PlantaPresenta");
             Lua.UnregisterFunction("MinigamePuzle");
             Lua.UnregisterFunction("ConejoPresentaTarot");
+            Lua.UnregisterFunction("ConejoBye");
         }
 
         private void Awake()
@@ -76,10 +78,20 @@ namespace Gameplay
             //UpdateEnd();
             //MinigameTarot();
             //End();
-            MinigameTarot();
+            //MinigameTarot();
+            tarot.EndCard();
         }
 
+        public void ConejoBye() 
+        {
+            cameraManager.ChooseCam(1, true);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.laCuenta, Controller.controller.player.transform);
+        }
 
+        public void CambiarScena() 
+        {
+            cameraManager.ChooseCam(2, true);
+        }
         IEnumerator GameFlow()
         {
             cameraManager.ChooseCam(1);

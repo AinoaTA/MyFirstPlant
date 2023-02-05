@@ -124,6 +124,8 @@ namespace Gameplay
         {
             yield return new WaitForSeconds(0.5f);
             Controller.controller.cameraManager.ChooseCam(2, true);
+            yield return new WaitForSeconds(0.5f);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.cuestionario, Controller.controller.player.transform, Controller.controller.plant.transform);
         }
         //public void TarotIA() 
         //{
