@@ -252,7 +252,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: EricaDraven_Cuestionario
+  conversation: LadyBlue_Puzle
   conversationConversant: {fileID: 158405494}
   conversationActor: {fileID: 1008665868}
   startConversationEntryID: -1
@@ -381,6 +381,16 @@ PrefabInstance:
     - target: {fileID: 22325660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193717574850487428, guid: 58ac37417e60e534f91138088a3e6f70,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193717574850487428, guid: 58ac37417e60e534f91138088a3e6f70,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -762,41 +772,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479061470984, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479133538987, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4182089479271441282, guid: 763e6b76717900741b6cbe57087f854d,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -860,11 +835,6 @@ PrefabInstance:
     - target: {fileID: 4182089479654791937, guid: 763e6b76717900741b6cbe57087f854d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4182089479755642922, guid: 763e6b76717900741b6cbe57087f854d,
-        type: 3}
-      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4182089479773051372, guid: 763e6b76717900741b6cbe57087f854d,
