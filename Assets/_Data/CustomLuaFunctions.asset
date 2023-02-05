@@ -44,3 +44,9 @@ MonoBehaviour:
   - functionName: CambiarScena
     parameters: 
     returnValue: 0
+  - functionName: Final
+    parameters: 
+    returnValue: 0
+  - functionName: Conclusiones
+    parameters: 
+    returnValue: 0
