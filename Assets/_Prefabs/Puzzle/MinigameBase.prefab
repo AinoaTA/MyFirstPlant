@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTime: 45
-  acceptRange: 20
+  debug: 0
+  acceptRange: 25
   spawnAreaRange: 15
   columns: 3
   listOfSprites:

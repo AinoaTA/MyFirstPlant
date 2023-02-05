@@ -129,7 +129,7 @@ TextureImporter:
       name: Rock_1
       rect:
         serializedVersion: 2
-        x: 358
+        x: 356
         y: 720
         width: 360
         height: 360
@@ -150,7 +150,7 @@ TextureImporter:
       name: Rock_2
       rect:
         serializedVersion: 2
-        x: 717
+        x: 715
         y: 719
         width: 362
         height: 361
@@ -192,7 +192,7 @@ TextureImporter:
       name: Rock_4
       rect:
         serializedVersion: 2
-        x: 358
+        x: 354
         y: 362
         width: 360
         height: 360
@@ -213,7 +213,7 @@ TextureImporter:
       name: Rock_5
       rect:
         serializedVersion: 2
-        x: 718
+        x: 716
         y: 362
         width: 360
         height: 360
@@ -252,11 +252,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rock_7
+      name: Rock_78
       rect:
         serializedVersion: 2
-        x: 718
-        y: 3
+        x: 716
+        y: 5
         width: 360
         height: 360
       alignment: 0
@@ -277,11 +277,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 2
         width: 360
         height: 365
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,8 +308,8 @@ TextureImporter:
       Rock_6: -963636569
       Rock_2: -814128496
       Rock_5: 1523089564
+      Rock_78: -747984162
       Rock_4: 2019739142
-      Rock_7: -747984162
       Rock_0: -1192236439
       Rock_8: -1791230014
       Rock_1: -1813869735
