@@ -104,7 +104,7 @@ namespace Cutegame.Audio
         private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
         {
             // Stop music?
-            musicAudio.Stop();
+            //musicAudio.Stop();
         }
     }
 }
