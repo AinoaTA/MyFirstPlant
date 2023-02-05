@@ -56,6 +56,7 @@ namespace Gameplay
             Lua.UnregisterFunction("ConejoBye");
             Lua.UnregisterFunction("CambiarScena");
             Lua.UnregisterFunction("Conclusiones");
+            Lua.UnregisterFunction("Final");
         }
 
         private void Awake()
@@ -79,11 +80,8 @@ namespace Gameplay
             plant.transform.position = _plantPos.transform.position;
             plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
-            /*este es la buena*/ //StartCoroutine(GameFlow());
-            //UpdateEnd();
-            //MinigameTarot();
-            //End();
-            //MinigameTarot();
+            /*este es la buena !!!*/ //StartCoroutine(GameFlow());
+           
             tarot.EndCard();
         }
 
