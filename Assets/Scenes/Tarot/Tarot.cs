@@ -27,14 +27,14 @@ namespace Gameplay
             Lua.RegisterFunction("StartVoice", this, SymbolExtensions.GetMethodInfo(() => StartVoice()));
             Lua.RegisterFunction("StartTarot", this, SymbolExtensions.GetMethodInfo(() => StartTarot()));
             Lua.RegisterFunction("StartTarot2", this, SymbolExtensions.GetMethodInfo(() => StartTarot2()));
-            Lua.RegisterFunction("TarotIA", this, SymbolExtensions.GetMethodInfo(() => TarotIA()));
+            Lua.RegisterFunction("EndCard", this, SymbolExtensions.GetMethodInfo(() => EndCard()));
         }
         private void OnDisable()
         {
             Lua.UnregisterFunction("StartVoice");
             Lua.UnregisterFunction("StartTarot");
             Lua.UnregisterFunction("StartTarot2");
-            Lua.UnregisterFunction("TarotIA");
+            Lua.UnregisterFunction("EndCard");
         }
         private void Start()
         {
@@ -79,6 +79,7 @@ namespace Gameplay
         }
         IEnumerator StartTarotRoutine()
         {
+            yield return Reroll();
             yield return new WaitForSeconds(1);
             for (int i = 0; i < _cards.Count; i++)
             {
@@ -101,7 +102,7 @@ namespace Gameplay
         }
 
         IEnumerator ActionCard()
-        {
+        { 
             _indexCardiInfo = Random.Range(0, _cardInfo.Count);
             DialogueLua.SetVariable("card", _cardInfo[_indexCardiInfo].cardName);
             print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
@@ -111,38 +112,36 @@ namespace Gameplay
             DialogueManager.StartConversation("Minijuego del Tarot2", Controller.controller.player.transform); 
             yield return new WaitForSeconds(2);
             yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
-
-            ////IA Moment
-            //_indexCardiInfo = Random.Range(0, _cardInfo.Count);
-            //print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
-
-            //yield return Reroll();
-            //_indexCardSelected = Random.Range(0, _cards.Count);
-            //yield return CardChoseRoutine();
-            //yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
-            //yield return new WaitForSeconds(1);
-            //yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
-            //yield return new WaitForSeconds(1);
-            //Controller.controller.cameraManager.ChooseCam(2, true);
+         
         }
 
-        public void TarotIA() 
+        public void EndCard() 
         {
-            StartCoroutine(IARoutine());
+            StartCoroutine(End());
         }
 
-        IEnumerator IARoutine() 
+        IEnumerator End() 
         {
-            _indexCardiInfo = Random.Range(0, _cardInfo.Count);
-            yield return Reroll();
-            _indexCardSelected = Random.Range(0, _cards.Count);
-            yield return CardChoseRoutine();
-            yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
-            yield return new WaitForSeconds(1);
-            yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
-            yield return new WaitForSeconds(1);
-            Controller.controller.cameraManager.ChooseCam(2, true); 
+            yield return new WaitForSeconds(0.5f);
+            Controller.controller.cameraManager.ChooseCam(2, true);
         }
+        //public void TarotIA() 
+        //{
+        //    StartCoroutine(IARoutine());
+        //}
+
+        //IEnumerator IARoutine() 
+        //{
+        //    _indexCardiInfo = Random.Range(0, _cardInfo.Count);
+         
+        //    _indexCardSelected = Random.Range(0, _cards.Count);
+        //    yield return CardChoseRoutine();
+        //    yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition); 
+        //    yield return new WaitForSeconds(2);
+        //    yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
+        //    yield return new WaitForSeconds(1);
+        //    Controller.controller.cameraManager.ChooseCam(2, true); 
+        //}
 
         IEnumerator Reroll()
         {
