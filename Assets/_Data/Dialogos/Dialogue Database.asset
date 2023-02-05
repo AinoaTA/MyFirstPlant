@@ -4564,7 +4564,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4620,7 +4620,7 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4792,7 +4792,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 535.4372, y: 284.51715}
+    canvasScrollPosition: {x: 612.4864, y: 192.7139}
     canvasZoom: 0.61000025
   - id: 9
     fields:
@@ -8398,7 +8398,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8564,7 +8564,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8572,7 +8572,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1047.9227
-        y: 455.9228
+        y: 453.99976
         width: 160
         height: 30
     - id: 9
@@ -8680,7 +8680,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 228.84601, y: 330.76898}
+    canvasScrollPosition: {x: 340.38437, y: 173.07678}
     canvasZoom: 0.5200004
   - id: 16
     fields:
@@ -12565,7 +12565,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12732,15 +12732,15 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.3201
-        y: 518.8888
+        x: 819.8127
+        y: 517.39624
         width: 160
         height: 30
     - id: 9
@@ -12958,7 +12958,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 307.95898, y: 529.9769}
+    canvasScrollPosition: {x: 352.73508, y: 379.23068}
     canvasZoom: 0.6700003
   - id: 23
     fields:
@@ -16736,7 +16736,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17069,14 +17069,14 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 932.7239
+        x: 934.448
         y: 369.55157
         width: 160
         height: 30
@@ -17295,7 +17295,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 248.21642, y: 234.49055}
+    canvasScrollPosition: {x: 210.28543, y: 84.482666}
     canvasZoom: 0.5800004
   - id: 30
     fields:
@@ -17511,7 +17511,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 248.44775
+        x: 246.80841
         y: 154.32832
         width: 160
         height: 30
@@ -21303,7 +21303,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21524,7 +21524,7 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21696,8 +21696,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 181.40453, y: 253.84595}
-    canvasZoom: 0.52000046
+    canvasScrollPosition: {x: 162.66585, y: 120.78253}
+    canvasZoom: 0.49000046
   - id: 37
     fields:
     - title: Title
