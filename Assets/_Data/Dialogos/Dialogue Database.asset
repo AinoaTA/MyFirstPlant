@@ -3897,7 +3897,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1082.8337
+        x: 1081.8337
         y: 225.24521
         width: 160
         height: 30
@@ -3958,7 +3958,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: CambiarScena()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4183,8 +4183,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 646.77673, y: 220.31238}
-    canvasZoom: 0.64000034
+    canvasScrollPosition: {x: 550.0679, y: 0}
+    canvasZoom: 0.9100002
   - id: 8
     fields:
     - title: Title
@@ -4282,8 +4282,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 937.4878
-        y: 59.558098
+        x: 934.29626
+        y: 4.2389526
         width: 160
         height: 30
     - id: 1
@@ -4344,8 +4344,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 937.4878
-        y: 109.5581
+        x: 934.29626
+        y: 84.02618
         width: 160
         height: 30
     - id: 2
@@ -4792,8 +4792,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 480.81726, y: 291.1808}
-    canvasZoom: 0.5800003
+    canvasScrollPosition: {x: 616.989, y: 206.383}
+    canvasZoom: 0.93999994
   - id: 9
     fields:
     - title: Title
@@ -4892,7 +4892,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 912.499
-        y: 49.999954
+        y: 24.22676
         width: 160
         height: 30
     - id: 1
@@ -4952,8 +4952,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 912.499
-        y: 99.999954
+        x: 914.5609
+        y: 107.216446
         width: 160
         height: 30
     - id: 2
@@ -5007,8 +5007,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 429.99957
-        y: 232.49985
+        x: 767.6466
+        y: 227.79398
         width: 160
         height: 30
     - id: 3
@@ -5062,8 +5062,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 432.49957
-        y: 282.49985
+        x: 770.1466
+        y: 277.79398
         width: 160
         height: 30
     - id: 4
@@ -5118,8 +5118,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 432.49957
-        y: 332.49985
+        x: 770.1466
+        y: 327.79398
         width: 160
         height: 30
     - id: 5
@@ -5159,7 +5159,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 5
+        destinationConversationID: 9
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -5167,8 +5173,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 432.49957
-        y: 382.49985
+        x: 770.1466
+        y: 377.79398
         width: 160
         height: 30
     - id: 6
@@ -5222,8 +5228,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1219.9987
-        y: 212.49991
+        x: 1032.7943
+        y: 267.794
         width: 160
         height: 30
     - id: 7
@@ -5277,8 +5283,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1219.9987
-        y: 262.4999
+        x: 1031.7634
+        y: 317.794
         width: 160
         height: 30
     - id: 8
@@ -5304,7 +5310,62 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Llevabas toda la cena con tierra entre los dientes.
+        value: Llevabas toda la cena con tierra entre los dientes...
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 8
+        destinationConversationID: 9
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1030.7325
+        y: 367.794
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: FIN.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -5320,19 +5381,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: FinishGame()
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1219.9987
-        y: 312.4999
+        x: 901.0744
+        y: 529.8558
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 347.90945, y: 0}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 405.0525, y: 0}
+    canvasZoom: 0.97
   - id: 10
     fields:
     - title: Title
@@ -8017,8 +8078,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 180.76917, y: 217.30756}
-    canvasZoom: 0.52000034
+    canvasScrollPosition: {x: 302.96582, y: 7.0588074}
+    canvasZoom: 0.85000014
   - id: 15
     fields:
     - title: Title
@@ -16356,8 +16417,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 181.81805, y: 212.72711}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 216.98763, y: 0}
+    canvasZoom: 0.85000014
   - id: 29
     fields:
     - title: Title
@@ -22399,7 +22460,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 227.06183
+        x: 226.09097
         y: 317.95877
         width: 160
         height: 30

@@ -21,11 +21,17 @@ namespace Gameplay
         }
 
         public void ChooseCam(int id, bool fades = false)
-        { 
-            StartCoroutine(RoutineID(id, fades)); 
+        {
+            StartCoroutine(RoutineID(id, fades));
+        }
+
+        public void FinalFade()
+        {
+            Main.instance.fade.Show();
         }
 
         #region routines
+
         IEnumerator RoutineID(int id, bool fades = false)
         {
             if (fades)
@@ -61,6 +67,7 @@ namespace Gameplay
                 yield return new WaitForSeconds(1);
             }
         }
+        
         #endregion
     }
 }

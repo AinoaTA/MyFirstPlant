@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cutegame.Audio;
 using Cutegame.Subtitles;
 using UnityEngine;
 using TMPro;
 using PixelCrushers.DialogueSystem;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 namespace Gameplay
 {
@@ -27,7 +29,7 @@ namespace Gameplay
         [Header("UI")] [SerializeField] private Canvas _canvas;
         [SerializeField] private GameObject _endCanvas;
         [SerializeField] private TMP_Text _content;
-
+        
         private List<string> chisteString = new List<string>()
         {
             "¿Qué es lo peor que te puede ocurrir cuando vienes aquí? ¡Que te den PLANTÓN!",
@@ -36,28 +38,33 @@ namespace Gameplay
             "Y la planta le dijo a la maceta, ¿en tu invernadero o en el mío?"
         };
 
+        public AudioClip finalMusic;
+
         private void OnEnable()
         {
             //Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
-            Lua.RegisterFunction("PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
-            Lua.RegisterFunction("MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
-            Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
-            Lua.RegisterFunction("ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
-            Lua.RegisterFunction("CambiarScena", this, SymbolExtensions.GetMethodInfo(() => CambiarScena()));
-            Lua.RegisterFunction("Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
-            Lua.RegisterFunction("Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
+            Lua.RegisterFunction("Gameplay/PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
+            Lua.RegisterFunction("Gameplay/MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
+            Lua.RegisterFunction("Gameplay/ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
+            Lua.RegisterFunction("Gameplay/ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
+            Lua.RegisterFunction("Gameplay/CambiarScena", this, SymbolExtensions.GetMethodInfo(() => CambiarScena()));
+            Lua.RegisterFunction("Gameplay/Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
+            Lua.RegisterFunction("Gameplay/Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
+            Lua.RegisterFunction("Gameplay/FinishGame", this, SymbolExtensions.GetMethodInfo(() => FinishGame()));
+            
         }
 
         private void OnDisable()
         {
             //Lua.UnregisterFunction("MinigameTarot");
-            Lua.UnregisterFunction("PlantaPresenta");
-            Lua.UnregisterFunction("MinigamePuzle");
-            Lua.UnregisterFunction("ConejoPresentaTarot");
-            Lua.UnregisterFunction("ConejoBye");
-            Lua.UnregisterFunction("CambiarScena");
-            Lua.UnregisterFunction("Conclusiones");
-            Lua.UnregisterFunction("Final");
+            Lua.UnregisterFunction("Gameplay/PlantaPresenta");
+            Lua.UnregisterFunction("Gameplay/MinigamePuzle");
+            Lua.UnregisterFunction("Gameplay/ConejoPresentaTarot");
+            Lua.UnregisterFunction("Gameplay/ConejoBye");
+            Lua.UnregisterFunction("Gameplay/CambiarScena");
+            Lua.UnregisterFunction("Gameplay/Conclusiones");
+            Lua.UnregisterFunction("Gameplay/Final");
+            Lua.UnregisterFunction("Gameplay/FinishGame");
         }
 
         private void Awake()
@@ -118,15 +125,19 @@ namespace Gameplay
         }
         IEnumerator Delay3()
         {
-            yield return new WaitForSeconds(1f);
             cameraManager.ChooseCam(1, true);
+            yield return new WaitForSeconds(1f);
             DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.conclusionCita, player.transform);
         }
         IEnumerator Delay4()
         {
-            yield return new WaitForSeconds(1f);
-            cameraManager.ChooseCam(1, true);
-            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.final, player.transform);
+            // FADE TO BLACK. STAY LIKE THAT. THEN SHOW THE END.
+            cameraManager.FinalFade();
+            // Play the music
+            AudioManager.Instance.PlayMusic(finalMusic);
+            
+            yield return new WaitForSeconds(3f);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.final, _conejo.transform,player.transform);
         }
         IEnumerator Delay2() 
         {
@@ -137,6 +148,13 @@ namespace Gameplay
         public void CambiarScena() 
         {
             cameraManager.ChooseCam(2, true);
+        }
+
+        public void FinishGame()
+        {
+            // Se termina el juego aquí.
+            Debug.Log("FINISHED");
+            SceneManager.LoadScene(0);
         }
         IEnumerator GameFlow()
         {
@@ -250,11 +268,7 @@ namespace Gameplay
                 plant.transform, player.transform);
         }
 
-        public void ChangeFace(string face)
-        {
-            
-        }
-      
+        
         #endregion
 
 

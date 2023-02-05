@@ -1,4 +1,5 @@
 using PixelCrushers.DialogueSystem;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Personaje : MonoBehaviour
@@ -6,6 +7,8 @@ public class Personaje : MonoBehaviour
     public SkinnedMeshRenderer faceRenderer;
 
     public PlantaScriptableObject personaje;
+
+    public Animator animator;
     //
     // public string nuevaCara = "feliz";
     // public bool changeFace = false;
@@ -19,7 +22,11 @@ public class Personaje : MonoBehaviour
         Debug.Log($"Changing {gameObject.name} with face {faceName}");
     }
 
-    //
+    public void PlayAnimation(string face)
+    {
+        animator.SetTrigger(face);
+    }
+    
     // private void OnValidate()
     // {
     //     if (!Application.isPlaying) return;
