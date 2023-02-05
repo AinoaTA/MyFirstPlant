@@ -611,34 +611,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 804919409, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 804919409, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 804919409, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074384281, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074384281, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074384281, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074384281, guid: 1c929d993787d1243b49abdaad3a5699, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 505636637665896732, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
       propertyPath: m_Name
@@ -648,7 +620,7 @@ PrefabInstance:
         type: 3}
       propertyPath: profilePlantSelected
       value: 
-      objectReference: {fileID: 11400000, guid: f399f5305a2ec58409b996b1611364dd,
+      objectReference: {fileID: 11400000, guid: 724b7646e65c4fe4bbba85b7f4699827,
         type: 2}
     - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
@@ -665,13 +637,13 @@ PrefabInstance:
         type: 3}
       propertyPath: plantProfiles.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: c42a12cb91641674c8baff1a03fa4ad6,
+      objectReference: {fileID: 11400000, guid: f399f5305a2ec58409b996b1611364dd,
         type: 2}
     - target: {fileID: 505636637665896733, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
       propertyPath: plantProfiles.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 724b7646e65c4fe4bbba85b7f4699827,
+      objectReference: {fileID: 11400000, guid: f399f5305a2ec58409b996b1611364dd,
         type: 2}
     - target: {fileID: 505636637665896734, guid: 1c929d993787d1243b49abdaad3a5699,
         type: 3}
@@ -2458,6 +2430,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1036092948956412706, guid: 714a7bd10df99244e8b203ed351ad86e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1533843986747719268, guid: 714a7bd10df99244e8b203ed351ad86e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2472,6 +2449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722329282430687770, guid: 714a7bd10df99244e8b203ed351ad86e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.40579
       objectReference: {fileID: 0}
     - target: {fileID: 1868327672203837728, guid: 714a7bd10df99244e8b203ed351ad86e,
         type: 3}
