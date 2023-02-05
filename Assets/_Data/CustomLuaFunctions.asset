@@ -32,27 +32,27 @@ MonoBehaviour:
   - functionName: EndCard
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/PlantaPresenta
+  - functionName: PlantaPresenta
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/MinigamePuzle
+  - functionName: MinigamePuzle
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/ConejoPresentaTarot
+  - functionName: ConejoPresentaTarot
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/StartTarot2
+  - functionName: StartTarot2
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/CambiarScena
+  - functionName: CambiarScena
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/Final
+  - functionName: Final
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/Conclusiones
+  - functionName: Conclusiones
     parameters: 
     returnValue: 0
-  - functionName: Gameplay/FinishGame
+  - functionName: FinishGame
     parameters: 
     returnValue: 0

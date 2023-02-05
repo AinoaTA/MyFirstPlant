@@ -241,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceRenderer: {fileID: 8386685128179391283}
   personaje: {fileID: 11400000, guid: e247cbfa2301fc8439d97524f8cf29f3, type: 2}
+  animator: {fileID: 1921346082973588077}
 --- !u!114 &8008602870371111983
 MonoBehaviour:
   m_ObjectHideFlags: 0

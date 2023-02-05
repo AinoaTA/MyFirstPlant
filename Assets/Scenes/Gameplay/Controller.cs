@@ -43,28 +43,28 @@ namespace Gameplay
         private void OnEnable()
         {
             //Lua.RegisterFunction("MinigameTarot", this, SymbolExtensions.GetMethodInfo(() => MinigameTarot()));
-            Lua.RegisterFunction("Gameplay/PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
-            Lua.RegisterFunction("Gameplay/MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
-            Lua.RegisterFunction("Gameplay/ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
-            Lua.RegisterFunction("Gameplay/ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
-            Lua.RegisterFunction("Gameplay/CambiarScena", this, SymbolExtensions.GetMethodInfo(() => CambiarScena()));
-            Lua.RegisterFunction("Gameplay/Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
-            Lua.RegisterFunction("Gameplay/Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
-            Lua.RegisterFunction("Gameplay/FinishGame", this, SymbolExtensions.GetMethodInfo(() => FinishGame()));
+            Lua.RegisterFunction("PlantaPresenta", this, SymbolExtensions.GetMethodInfo(() => PlantaPresenta()));
+            Lua.RegisterFunction("MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
+            Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
+            Lua.RegisterFunction("ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
+            Lua.RegisterFunction("CambiarScena", this, SymbolExtensions.GetMethodInfo(() => CambiarScena()));
+            Lua.RegisterFunction("Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
+            Lua.RegisterFunction("Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
+            Lua.RegisterFunction("FinishGame", this, SymbolExtensions.GetMethodInfo(() => FinishGame()));
             
         }
 
         private void OnDisable()
         {
             //Lua.UnregisterFunction("MinigameTarot");
-            Lua.UnregisterFunction("Gameplay/PlantaPresenta");
-            Lua.UnregisterFunction("Gameplay/MinigamePuzle");
-            Lua.UnregisterFunction("Gameplay/ConejoPresentaTarot");
-            Lua.UnregisterFunction("Gameplay/ConejoBye");
-            Lua.UnregisterFunction("Gameplay/CambiarScena");
-            Lua.UnregisterFunction("Gameplay/Conclusiones");
-            Lua.UnregisterFunction("Gameplay/Final");
-            Lua.UnregisterFunction("Gameplay/FinishGame");
+            Lua.UnregisterFunction("PlantaPresenta");
+            Lua.UnregisterFunction("MinigamePuzle");
+            Lua.UnregisterFunction("ConejoPresentaTarot");
+            Lua.UnregisterFunction("ConejoBye");
+            Lua.UnregisterFunction("CambiarScena");
+            Lua.UnregisterFunction("Conclusiones");
+            Lua.UnregisterFunction("Final");
+            Lua.UnregisterFunction("FinishGame");
         }
 
         private void Awake()
@@ -76,7 +76,6 @@ namespace Gameplay
         {
             DialogueLua.SetVariable("chisteMalo", chisteString[Random.Range(0, chisteString.Count)]);
             _puzle = Main.instance.profilePlantSelected.puzlePrefab;
-
             _puzle = Instantiate(_puzle, _canvas.transform.position, Quaternion.identity, _canvas.transform);
 
             player = Instantiate(Main.instance.playerProfile.modeloPrefab, transform.position, Quaternion.identity);
@@ -103,9 +102,10 @@ namespace Gameplay
                     break;
             };
 
-            plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, 90, 0)));
+            // TODO DISABLED THIS BECAUSE OF ERROR
+            //plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, 90, 0)));
 
-            /*este es la buena !!!*/ //StartCoroutine(GameFlow());
+            /*este es la buena !!!*/ StartCoroutine(GameFlow());
 
             //tarot.EndCard();
             //End();
