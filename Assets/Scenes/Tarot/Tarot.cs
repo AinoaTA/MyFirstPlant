@@ -14,7 +14,6 @@ namespace Gameplay
         [SerializeField] Transform _nearPos;
         [SerializeField] float _time;
         [SerializeField] float _yPos = 0.2f;
-        [SerializeField] float _zPos = 0.051f;
         [SerializeField] List<CardInfoScriptableObject> _cardInfo;
         [SerializeField] List<Card> _cards = new();
         Vector3 endRot = new(0, 0, -90);

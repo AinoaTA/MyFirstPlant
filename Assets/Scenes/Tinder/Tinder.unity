@@ -574,7 +574,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 724b7646e65c4fe4bbba85b7f4699827, type: 2}
   - {fileID: 11400000, guid: 19aefd59c0ec4894d929d4ac11a3c0d8, type: 2}
   - {fileID: 11400000, guid: c42a12cb91641674c8baff1a03fa4ad6, type: 2}
-  - {fileID: 11400000, guid: 86e57b5273753a541a091e76b035f25e, type: 2}
   - {fileID: 11400000, guid: f399f5305a2ec58409b996b1611364dd, type: 2}
   cam: {fileID: 0}
   _photo: {fileID: 178971863}
@@ -6804,7 +6803,6 @@ MonoBehaviour:
   _nearPos: {fileID: 0}
   _time: 0.5
   _yPos: 0.1
-  _zPos: 0.051
   _cardInfo:
   - {fileID: 11400000, guid: 722951621212cc242857494267dd9b2d, type: 2}
   - {fileID: 11400000, guid: 3cdb797d49f06ba4c924580e33742b84, type: 2}
