@@ -30,6 +30,11 @@ namespace Gameplay
             Main.instance.fade.Show();
         }
 
+        public void HideFade()
+        {
+            Main.instance.fade.Hide();
+        }
+
         #region routines
 
         IEnumerator RoutineID(int id, bool fades = false)

@@ -56,3 +56,9 @@ MonoBehaviour:
   - functionName: FinishGame
     parameters: 
     returnValue: 0
+  - functionName: Rematch
+    parameters: 
+    returnValue: 0
+  - functionName: LoadScene
+    parameters: 01000000
+    returnValue: 0

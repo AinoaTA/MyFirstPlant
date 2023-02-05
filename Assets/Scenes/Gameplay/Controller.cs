@@ -51,7 +51,8 @@ namespace Gameplay
             Lua.RegisterFunction("Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
             Lua.RegisterFunction("Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
             Lua.RegisterFunction("FinishGame", this, SymbolExtensions.GetMethodInfo(() => FinishGame()));
-            
+            Lua.RegisterFunction("Rematch", this, SymbolExtensions.GetMethodInfo(() => End()));
+            Lua.RegisterFunction("LoadScene", this, SymbolExtensions.GetMethodInfo(() => LoadScene(double.NaN)));
         }
 
         private void OnDisable()
@@ -65,6 +66,8 @@ namespace Gameplay
             Lua.UnregisterFunction("Conclusiones");
             Lua.UnregisterFunction("Final");
             Lua.UnregisterFunction("FinishGame");
+            Lua.UnregisterFunction("Rematch");
+            Lua.UnregisterFunction("LoadScene");
         }
 
         private void Awake()
@@ -226,6 +229,7 @@ namespace Gameplay
         public void End()
         {
             rematch.StartReMatch();
+            cameraManager.HideFade();
         }
 
         IEnumerator prueba()
@@ -268,6 +272,11 @@ namespace Gameplay
                 plant.transform, player.transform);
         }
 
+
+        public void LoadScene(double value)
+        {
+            SceneManager.LoadScene((int) value);
+        }
         
         #endregion
 

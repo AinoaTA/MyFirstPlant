@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 namespace Cutegame.Audio
 {
@@ -22,7 +23,7 @@ namespace Cutegame.Audio
                 }
 
                 _is = value;
-                DontDestroyOnLoad(_is.gameObject);
+                //DontDestroyOnLoad(_is.gameObject);
             }
         }
 
@@ -37,8 +38,10 @@ namespace Cutegame.Audio
         private void Awake()
         {
             Instance = this;
+            SceneManager.sceneLoaded += SceneManagerOnsceneLoaded;
         }
 
+    
         public void PlaySound(AudioClip clip)
         {
             Debug.Log($"Playing {clip.name} as sound");
@@ -96,6 +99,12 @@ namespace Cutegame.Audio
                 db = -144.0f;  // effectively minus infinity
 
             return db;
+        }
+
+        private void SceneManagerOnsceneLoaded(Scene arg0, LoadSceneMode arg1)
+        {
+            // Stop music?
+            musicAudio.Stop();
         }
     }
 }

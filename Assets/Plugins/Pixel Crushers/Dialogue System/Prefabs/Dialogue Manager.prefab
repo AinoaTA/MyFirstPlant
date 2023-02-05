@@ -217,10 +217,10 @@ MonoBehaviour:
       - Fire1
       - Fire2
       cancel:
-        key: 27
+        key: 127
         buttonName: 
       cancelConversation:
-        key: 27
+        key: 127
         buttonName: 
     barkSettings:
       allowBarksDuringConversations: 1
