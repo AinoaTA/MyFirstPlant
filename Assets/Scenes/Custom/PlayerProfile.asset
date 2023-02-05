@@ -18,13 +18,13 @@ MonoBehaviour:
   edad: 18
   signo: 0
   intereses:
-  - "Activismo medioambiental\r"
-  - "Activismo medioambiental\r"
-  - "Activismo medioambiental\r"
+  - Medioambiente
+  - Medioambiente
+  - Medioambiente
   desintereses:
-  - "Activismo medioambiental\r"
-  - "Activismo medioambiental\r"
-  - "Activismo medioambiental\r"
+  - Medioambiente
+  - Medioambiente
+  - Medioambiente
   frase: 
   modeloPrefab: {fileID: 3095338774891288905, guid: e5e86cb52a04b9d4aaf889c4b5b674e6,
     type: 3}
