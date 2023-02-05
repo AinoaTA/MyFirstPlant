@@ -254,6 +254,20 @@ MonoBehaviour:
       value: El chiste que abre el gameplay
       type: 0
       typeString: CustomFieldType_Text
+  - id: 7
+    fields:
+    - title: Name
+      value: card
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: Muerte
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: "N\xFAmero de carta tarot"
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -1445,7 +1459,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 444.71942
+        x: 443.98407
         y: 213
         width: 160
         height: 30
@@ -1494,13 +1508,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 444.71942
-        y: 263
+        x: 443.9841
+        y: 262.2647
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 182.54126, y: 52.39957}
-    canvasZoom: 1.3899997
+    canvasScrollPosition: {x: 272.83115, y: 121.933014}
+    canvasZoom: 1.3599998
   - id: 5
     fields:
     - title: Title
@@ -1589,6 +1603,12 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 5
         destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 5
+        originDialogueID: 0
+        destinationConversationID: 5
+        destinationDialogueID: 16
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2426,9 +2446,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 15
+        destinationConversationID: 5
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: StartTarot()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2438,9 +2464,107 @@ MonoBehaviour:
         y: 819.558
         width: 160
         height: 30
+    - id: 16
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 436
+        y: 100
+        width: 160
+        height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: StartTarot2()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 437.00134
+        y: 860.13403
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 43.42108, y: 588.4073}
-    canvasZoom: 0.76000035
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.37000057
   - id: 6
     fields:
     - title: Title
@@ -21310,8 +21434,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 458
-        y: 105
+        x: 454.9084
+        y: 103.305084
         width: 160
         height: 30
     - id: 2
@@ -21360,17 +21484,194 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: card = math.random(3)
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 455
-        y: 192
+        x: 453.64862
+        y: 192.52942
         width: 160
         height: 30
     - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 4
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 39
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: StartTarot()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 455.38513
+        y: 275.82138
+        width: 160
+        height: 30
+    entryGroups:
+    - name: Carta de la Muerte
+      rect:
+        serializedVersion: 2
+        x: 237.70131
+        y: 403
+        width: 198
+        height: 233
+      color: {r: 1, g: 1, b: 1, a: 0.5}
+    - name: Carta de la Torre
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 402
+        width: 176
+        height: 233
+      color: {r: 1, g: 1, b: 1, a: 0.5}
+    - name: Fortuna
+      rect:
+        serializedVersion: 2
+        x: 639.6486
+        y: 404.2987
+        width: 174
+        height: 228
+      color: {r: 1, g: 1, b: 1, a: 0.5}
+    canvasScrollPosition: {x: 211.90292, y: 0}
+    canvasZoom: 0.7400007
+  - id: 40
+    fields:
+    - title: Title
+      value: Minijuego del Tarot2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 40
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 40
+        originDialogueID: 0
+        destinationConversationID: 40
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 224.93665
+        y: 33.92404
+        width: 160
+        height: 30
+    - id: 16
       fields:
       - title: Title
         value: 
@@ -21400,7 +21701,7 @@ MonoBehaviour:
         value: Continue()
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21408,22 +21709,22 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 3
-        destinationConversationID: 39
-        destinationDialogueID: 4
+      - originConversationID: 40
+        originDialogueID: 16
+        destinationConversationID: 40
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
-      - originConversationID: 39
-        originDialogueID: 3
-        destinationConversationID: 39
-        destinationDialogueID: 5
+      - originConversationID: 40
+        originDialogueID: 16
+        destinationConversationID: 40
+        destinationDialogueID: 18
         isConnector: 0
         priority: 2
-      - originConversationID: 39
-        originDialogueID: 3
-        destinationConversationID: 39
-        destinationDialogueID: 6
+      - originConversationID: 40
+        originDialogueID: 16
+        destinationConversationID: 40
+        destinationDialogueID: 19
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21433,11 +21734,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 454
-        y: 292
+        x: 223.7276
+        y: 169.95917
         width: 160
         height: 30
-    - id: 4
+    - id: 17
       fields:
       - title: Title
         value: 
@@ -21467,32 +21768,32 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Block
+      falseConditionAction: Passthrough
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 4
-        destinationConversationID: 39
-        destinationDialogueID: 7
+      - originConversationID: 40
+        originDialogueID: 17
+        destinationConversationID: 40
+        destinationDialogueID: 20
         isConnector: 0
         priority: 2
-      conditionsString: x==1
+      conditionsString: Variable["card"] == "Muerte"
       userScript: ChangeFace("risa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 255
-        y: 434
+        x: 12.747208
+        y: 309.58087
         width: 160
         height: 30
-    - id: 5
+    - id: 18
       fields:
       - title: Title
         value: Carta de la Torre
@@ -21522,32 +21823,32 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Block
+      falseConditionAction: Passthrough
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 5
-        destinationConversationID: 39
-        destinationDialogueID: 10
+      - originConversationID: 40
+        originDialogueID: 18
+        destinationConversationID: 40
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
-      conditionsString: x==2
+      conditionsString: Variable["card"] == "Torre"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 453
-        y: 435
+        x: 217.79164
+        y: 311.64752
         width: 160
         height: 30
-    - id: 6
+    - id: 19
       fields:
       - title: Title
         value: 
@@ -21577,32 +21878,32 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Block
+      falseConditionAction: Passthrough
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 6
-        destinationConversationID: 39
-        destinationDialogueID: 12
+      - originConversationID: 40
+        originDialogueID: 19
+        destinationConversationID: 40
+        destinationDialogueID: 25
         isConnector: 0
         priority: 2
-      conditionsString: x==3
+      conditionsString: Variable["card"] == "Fortuna"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 644
-        y: 433
+        x: 413.06573
+        y: 308.9054
         width: 160
         height: 30
-    - id: 7
+    - id: 20
       fields:
       - title: Title
         value: 
@@ -21633,7 +21934,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21641,10 +21942,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 7
-        destinationConversationID: 39
-        destinationDialogueID: 8
+      - originConversationID: 40
+        originDialogueID: 20
+        destinationConversationID: 40
+        destinationDialogueID: 21
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21654,11 +21955,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 255
-        y: 484
+        x: 25.469727
+        y: 365.2987
         width: 160
         height: 30
-    - id: 8
+    - id: 21
       fields:
       - title: Title
         value: 
@@ -21690,7 +21991,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21698,10 +21999,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 8
-        destinationConversationID: 39
-        destinationDialogueID: 9
+      - originConversationID: 40
+        originDialogueID: 21
+        destinationConversationID: 40
+        destinationDialogueID: 22
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21711,11 +22012,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 255
-        y: 534
+        x: 25.469727
+        y: 415.2987
         width: 160
         height: 30
-    - id: 9
+    - id: 22
       fields:
       - title: Title
         value: 
@@ -21745,7 +22046,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21753,10 +22054,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 9
-        destinationConversationID: 39
-        destinationDialogueID: 14
+      - originConversationID: 40
+        originDialogueID: 22
+        destinationConversationID: 40
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21766,11 +22067,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 255
-        y: 584
+        x: 25.469727
+        y: 462.97308
         width: 160
         height: 30
-    - id: 10
+    - id: 23
       fields:
       - title: Title
         value: 
@@ -21801,7 +22102,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21809,10 +22110,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 10
-        destinationConversationID: 39
-        destinationDialogueID: 11
+      - originConversationID: 40
+        originDialogueID: 23
+        destinationConversationID: 40
+        destinationDialogueID: 24
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21822,11 +22123,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 453
-        y: 485
+        x: 224.76842
+        y: 366.2987
         width: 160
         height: 30
-    - id: 11
+    - id: 24
       fields:
       - title: Title
         value: 
@@ -21859,7 +22160,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21867,10 +22168,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 11
-        destinationConversationID: 39
-        destinationDialogueID: 14
+      - originConversationID: 40
+        originDialogueID: 24
+        destinationConversationID: 40
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21880,11 +22181,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 452
-        y: 535
+        x: 223.76842
+        y: 416.2987
         width: 160
         height: 30
-    - id: 12
+    - id: 25
       fields:
       - title: Title
         value: 
@@ -21915,7 +22216,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21923,10 +22224,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 12
-        destinationConversationID: 39
-        destinationDialogueID: 13
+      - originConversationID: 40
+        originDialogueID: 25
+        destinationConversationID: 40
+        destinationDialogueID: 26
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21936,11 +22237,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 644
-        y: 483
+        x: 414.41705
+        y: 365.5974
         width: 160
         height: 30
-    - id: 13
+    - id: 26
       fields:
       - title: Title
         value: 
@@ -21973,7 +22274,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -21981,10 +22282,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 13
-        destinationConversationID: 39
-        destinationDialogueID: 14
+      - originConversationID: 40
+        originDialogueID: 26
+        destinationConversationID: 40
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -21994,11 +22295,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 644
-        y: 533
+        x: 414.41705
+        y: 415.5974
         width: 160
         height: 30
-    - id: 14
+    - id: 27
       fields:
       - title: Title
         value: 
@@ -22030,7 +22331,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -22038,10 +22339,10 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 39
-        originDialogueID: 14
-        destinationConversationID: 39
-        destinationDialogueID: 15
+      - originConversationID: 40
+        originDialogueID: 27
+        destinationConversationID: 40
+        destinationDialogueID: 28
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -22051,11 +22352,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 454
-        y: 693
+        x: 225.76842
+        y: 574.2987
         width: 160
         height: 30
-    - id: 15
+    - id: 28
       fields:
       - title: Title
         value: 
@@ -22085,7 +22386,7 @@ MonoBehaviour:
         value: Continue()
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 39
+      conversationID: 40
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -22100,37 +22401,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 453.88495
-        y: 802.177
+        x: 225.65337
+        y: 683.4757
         width: 160
         height: 30
-    entryGroups:
-    - name: Carta de la Muerte
-      rect:
-        serializedVersion: 2
-        x: 239
-        y: 403
-        width: 198
-        height: 233
-      color: {r: 1, g: 1, b: 1, a: 0.5}
-    - name: Carta de la Torre
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 402
-        width: 176
-        height: 233
-      color: {r: 1, g: 1, b: 1, a: 0.5}
-    - name: Fortuna
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 403
-        width: 174
-        height: 228
-      color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 0, y: 312.91342}
-    canvasZoom: 0.74000084
+    entryGroups: []
+    canvasScrollPosition: {x: 46.444504, y: 108.25059}
+    canvasZoom: 0.54999983
   syncInfo:
     syncActors: 0
     syncItems: 0

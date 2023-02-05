@@ -6,7 +6,7 @@ using PixelCrushers.DialogueSystem;
 namespace Gameplay
 {
     public class Tarot : MonoBehaviour
-    { 
+    {
         private int _indexCardSelected;
         private int _indexCardiInfo;
 
@@ -22,19 +22,22 @@ namespace Gameplay
         [SerializeField] int _maxReroll = 3;
         Vector3[] _initPoses;
 
-
         private void OnEnable()
         {
             Lua.RegisterFunction("StartVoice", this, SymbolExtensions.GetMethodInfo(() => StartVoice()));
             Lua.RegisterFunction("StartTarot", this, SymbolExtensions.GetMethodInfo(() => StartTarot()));
+            Lua.RegisterFunction("StartTarot2", this, SymbolExtensions.GetMethodInfo(() => StartTarot2()));
+            Lua.RegisterFunction("TarotIA", this, SymbolExtensions.GetMethodInfo(() => TarotIA()));
         }
         private void OnDisable()
         {
             Lua.UnregisterFunction("StartVoice");
             Lua.UnregisterFunction("StartTarot");
+            Lua.UnregisterFunction("StartTarot2");
+            Lua.UnregisterFunction("TarotIA");
         }
         private void Start()
-        { 
+        {
             _initPoses = new Vector3[_cards.Count];
 
             for (int i = 0; i < _cards.Count; i++)
@@ -42,28 +45,40 @@ namespace Gameplay
                 _initPoses[i] = _cards[i].transform.localPosition;
             }
         }
-         
+
         public void StartVoice()
         {
             StartCoroutine(Delay());
         }
 
-        IEnumerator Delay() 
+        IEnumerator Delay()
         {
             yield return new WaitForSeconds(1);
             Controller.controller.cameraManager.ChooseCam("Pitonisa", true);
             DialogueLua.SetVariable("plantSign", Main.instance.profilePlantSelected.signo);
             DialogueLua.SetVariable("playerSign", Main.instance.playerProfile.signo);
-            DialogueLua.SetVariable("comentarioPitonisa", Main.instance.profilePlantSelected.comentarioPitonisa);
+            DialogueLua.SetVariable("comentarioPitonisa", Main.instance.profilePlantSelected.comentarioPitonisa); 
             DialogueManager.StartConversation("Horoscopo", Controller.controller.player.transform, Controller.controller.plant.transform);
         }
 
         public void StartTarot()
-        { 
+        {
             StartCoroutine(StartTarotRoutine());
         }
+
+
+        public void StartTarot2()
+        {
+            StartCoroutine(Delay2());
+        }
+
+        IEnumerator Delay2() 
+        {
+            yield return new WaitForSeconds(0.5f);
+            DialogueManager.StartConversation("Minijuego del Tarot", Controller.controller.player.transform);
+        }
         IEnumerator StartTarotRoutine()
-        { 
+        {
             yield return new WaitForSeconds(1);
             for (int i = 0; i < _cards.Count; i++)
             {
@@ -82,23 +97,43 @@ namespace Gameplay
         public void CardChose(int val)
         {
             _indexCardSelected = val;
-
             StartCoroutine(ActionCard());
         }
 
         IEnumerator ActionCard()
         {
             _indexCardiInfo = Random.Range(0, _cardInfo.Count);
+            DialogueLua.SetVariable("card", _cardInfo[_indexCardiInfo].cardName);
             print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
             yield return CardChoseRoutine();
-            yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
             yield return new WaitForSeconds(1);
+            yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
+            DialogueManager.StartConversation("Minijuego del Tarot2", Controller.controller.player.transform); 
+            yield return new WaitForSeconds(2);
             yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
 
-            //IA Moment
-            _indexCardiInfo = Random.Range(0, _cardInfo.Count);
-            print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
+            ////IA Moment
+            //_indexCardiInfo = Random.Range(0, _cardInfo.Count);
+            //print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
 
+            //yield return Reroll();
+            //_indexCardSelected = Random.Range(0, _cards.Count);
+            //yield return CardChoseRoutine();
+            //yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
+            //yield return new WaitForSeconds(1);
+            //yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
+            //yield return new WaitForSeconds(1);
+            //Controller.controller.cameraManager.ChooseCam(2, true);
+        }
+
+        public void TarotIA() 
+        {
+            StartCoroutine(IARoutine());
+        }
+
+        IEnumerator IARoutine() 
+        {
+            _indexCardiInfo = Random.Range(0, _cardInfo.Count);
             yield return Reroll();
             _indexCardSelected = Random.Range(0, _cards.Count);
             yield return CardChoseRoutine();
@@ -106,7 +141,7 @@ namespace Gameplay
             yield return new WaitForSeconds(1);
             yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
             yield return new WaitForSeconds(1);
-            Controller.controller.cameraManager.ChooseCam(0,true);
+            Controller.controller.cameraManager.ChooseCam(2, true); 
         }
 
         IEnumerator Reroll()

@@ -9,7 +9,7 @@ namespace Cutegame
         private float currentTime = 0f;
         protected bool isPlaying = false;
         private bool win = false;
-
+        [SerializeField] bool debug = false;
         private Coroutine GameCoroutine;
 
         public override void StartMinigame()
@@ -42,6 +42,8 @@ namespace Cutegame
 
             FinishMinigame();
         }
+        private void OnValidate() { if (debug) { debug = false; WinGame(); } }
+
 
         private void OnDisable()
         {

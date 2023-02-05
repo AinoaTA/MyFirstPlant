@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8eeb4139dbc714f8b07b6f25235d56, type: 3}
   m_Name: Torre
   m_EditorClassIdentifier: 
-  cardName: La torre
+  cardName: Torre
   cardInfo: 
   materialCard: {fileID: 0}

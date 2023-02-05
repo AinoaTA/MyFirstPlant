@@ -48,6 +48,7 @@ namespace Gameplay
             //Lua.UnregisterFunction("MinigameTarot");
             Lua.UnregisterFunction("PlantaPresenta");
             Lua.UnregisterFunction("MinigamePuzle");
+            Lua.UnregisterFunction("ConejoPresentaTarot");
         }
 
         private void Awake()
@@ -71,10 +72,11 @@ namespace Gameplay
             plant.transform.position = _plantPos.transform.position;
             plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
-            StartCoroutine(GameFlow());
+            //StartCoroutine(GameFlow());
             //UpdateEnd();
             //MinigameTarot();
             //End();
+            MinigameTarot();
         }
 
 
@@ -142,7 +144,7 @@ namespace Gameplay
         {
             cameraManager.ChooseCam("Pitonisa", true);
             yield return new WaitForSeconds(1);
-            tarot.StartTarot();
+            tarot.StartVoice();
         }
 
         public void End()
