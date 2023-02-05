@@ -21,6 +21,8 @@ namespace Gameplay
         [SerializeField] int _maxReroll = 3;
         Vector3[] _initPoses;
 
+        [SerializeField]Material _muerte, _torre, _fortuna;
+
         private void OnEnable()
         {
             Lua.RegisterFunction("StartVoice", this, SymbolExtensions.GetMethodInfo(() => StartVoice()));
@@ -105,9 +107,20 @@ namespace Gameplay
             _indexCardiInfo = Random.Range(0, _cardInfo.Count);
             DialogueLua.SetVariable("card", _cardInfo[_indexCardiInfo].cardName);
             print("La carta es " + _cardInfo[_indexCardiInfo].cardName);
+
+            Material m;
+            if (_cardInfo[_indexCardiInfo].cardName == "Muerte")
+                m = _muerte;
+            else if (_cardInfo[_indexCardiInfo].cardName == "Torre")
+                m = _torre;
+            else
+                m = _fortuna;
+
+            _cards[_indexCardSelected].GetComponentInChildren<MeshRenderer>().material = m;
+
             yield return CardChoseRoutine();
             yield return new WaitForSeconds(1);
-            yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition);
+            yield return MovementCard(_cards[_indexCardSelected].transform, _nearPos.localPosition); 
             DialogueManager.StartConversation("Minijuego del Tarot2", Controller.controller.player.transform); 
             yield return new WaitForSeconds(2);
             yield return MoveAndRot(_cards[_indexCardSelected].transform, endRot, _initPoses[_indexCardSelected]);
