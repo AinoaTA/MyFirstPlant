@@ -256,6 +256,9 @@ MonoBehaviour:
   - {fileID: 6029852023958570194}
   - {fileID: 6029852022673191932}
   _maxReroll: 3
+  _muerte: {fileID: 2100000, guid: 052aebc8db7554145b70b552d527e8a0, type: 2}
+  _torre: {fileID: 2100000, guid: 1a431be808c89fb4ab8d4dce15b8af1b, type: 2}
+  _fortuna: {fileID: 2100000, guid: 8b9cb4f7eeabf6449971cdeae82bf79f, type: 2}
 --- !u!1001 &851997302
 PrefabInstance:
   m_ObjectHideFlags: 0
