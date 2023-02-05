@@ -23,6 +23,7 @@ MonoBehaviour:
   - Brillos
   desintereses:
   - Vulgaridad
+  - "\xBFQuieres saber m\xE1s?"
   frase: "\u201CLa elegancia es cuando el interior es igual de hermoso que el exterior.
     Y a m\xED me sobra de ambas\u201D."
   modeloPrefab: {fileID: 5519986520378760657, guid: 5d677fdc690165e43a16df38f911ff84,
