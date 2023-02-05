@@ -2553,7 +2553,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("triste");
+
+        PlayAnimation("Sad")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2609,7 +2611,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAnimation("StopSad");
+
+        ChangeFace("risa")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2676,7 +2680,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("duda");
+
+        CambiarScena();
+
+        PlayAnimation("Happy")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2901,7 +2909,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 499.33752, y: 272.9411}
+    canvasScrollPosition: {x: 481.69043, y: 0}
     canvasZoom: 0.85000026
   - id: 8
     fields:
@@ -3056,7 +3064,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("duda")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3227,7 +3235,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'PlayAnimation("Monologo");
+
+        ChangeFace("duda")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3283,7 +3293,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] >= 5
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3339,7 +3349,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] < 5
-      userScript: 
+      userScript: ChangeFace("triste")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3510,8 +3520,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 458.47833, y: 0}
-    canvasZoom: 0.93999994
+    canvasScrollPosition: {x: 320.02423, y: 81.58708}
+    canvasZoom: 0.88
   - id: 9
     fields:
     - title: Title
@@ -6257,7 +6267,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("triste");
+
+        PlayAnimation("Sad")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6987,7 +6999,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] >= 5
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7153,7 +7165,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] < 5
-      userScript: 
+      userScript: ChangeFace("triste")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7268,7 +7280,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 233.99998}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.99999994
   - id: 16
     fields:
@@ -10569,7 +10581,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("triste");
+
+        PlayAnimation("Sad")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -10917,7 +10931,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 199.99994}
+    canvasScrollPosition: {x: 0, y: 34.285736}
     canvasZoom: 0.7000003
   - id: 22
     fields:
@@ -11299,7 +11313,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] >= 5
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11466,7 +11480,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] < 5
-      userScript: 
+      userScript: ChangeFace("risa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11691,8 +11705,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 298.4678, y: 325.92075}
-    canvasZoom: 0.49000046
+    canvasScrollPosition: {x: 282.67697, y: 212.65024}
+    canvasZoom: 0.85000014
   - id: 23
     fields:
     - title: Title
@@ -14654,7 +14668,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("triste");
+
+        PlayAnimation("Sad")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15002,7 +15018,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 301.69348, y: 319.99994}
+    canvasScrollPosition: {x: 248.75232, y: 0}
     canvasZoom: 0.85000014
   - id: 29
     fields:
@@ -15383,7 +15399,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] >= 5
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15716,14 +15732,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["Puntos"] < 5
-      userScript: 
+      userScript: ChangeFace("enfado")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 934.448
-        y: 369.55157
+        x: 940.4182
+        y: 374.02917
         width: 160
         height: 30
     - id: 12
@@ -15941,8 +15957,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 56.896545}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 91.87218, y: 95.62891}
+    canvasZoom: 0.6700003
   - id: 30
     fields:
     - title: Title
@@ -19012,7 +19028,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("triste");
+
+        PlayAnimation("Sad")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -19360,8 +19378,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 40.329563, y: 177.58606}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 135.07498, y: 69.842606}
+    canvasZoom: 0.85000014
   - id: 36
     fields:
     - title: Title
@@ -20944,9 +20962,9 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 365
+        x: 445
         y: 62
-        width: 320
+        width: 160
         height: 30
     - id: 1
       fields:
@@ -20994,15 +21012,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("sonrisa");
+
+        PlayAnimation("Happy")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 365
+        x: 445
         y: 165
-        width: 320
+        width: 160
         height: 30
     - id: 2
       fields:
@@ -21053,15 +21073,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("risa");
+
+        PlayAnimation("Happy")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 363.98407
+        x: 443.98407
         y: 213
-        width: 320
+        width: 160
         height: 30
     - id: 3
       fields:
@@ -21108,9 +21130,9 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 363.98413
+        x: 443.98413
         y: 262.2647
-        width: 320
+        width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 144.09058, y: 0}
@@ -21323,7 +21345,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21436,7 +21458,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("duda")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21492,7 +21514,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("risa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21547,7 +21569,11 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("duda");
+
+        PlayAnimation("Question");
+
+        PlayAnimation("StopQuestion")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21663,7 +21689,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayAnimation("Question")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21832,7 +21858,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("duda")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21887,9 +21913,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: '
-
-'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -21944,7 +21968,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("duda");
+
+        PlayAnimation("Question")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22005,7 +22031,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 441.01984
+        x: 439.88348
         y: 769.7749
         width: 160
         height: 30
@@ -22054,14 +22080,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("sonrisa");
+
+        PlayAnimation("Si")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 439.70404
-        y: 819.558
+        x: 438.5677
+        y: 818.42163
         width: 160
         height: 30
     - id: 16
@@ -22158,13 +22186,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 437.00134
-        y: 860.13403
+        x: 442.68323
+        y: 890.8158
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 14.754089, y: 421.31122}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 21.590942, y: 426.98135}
+    canvasZoom: 0.8800001
   - id: 39
     fields:
     - title: Title
@@ -22312,14 +22340,16 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'ChangeFace("sonrisa");
+
+        PlayAnimation("Si")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 454.9084
-        y: 103.305084
+        y: 102.1423
         width: 160
         height: 30
     - id: 2
@@ -22368,7 +22398,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: ChangeFace("risa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22673,7 +22703,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["card"] == "Muerte"
-      userScript: ChangeFace("risa")
+      userScript: ChangeFace("sonrisa")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22728,7 +22758,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["card"] == "Torre"
-      userScript: 
+      userScript: ChangeFace("miedo")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -22783,14 +22813,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["card"] == "Fortuna"
-      userScript: 
+      userScript: ChangeFace("duda")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 410.89185
-        y: 308.9054
+        y: 307.5896
         width: 160
         height: 30
     - id: 20
@@ -22958,7 +22988,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 25.469727
-        y: 462.97308
+        y: 461.6573
         width: 160
         height: 30
     - id: 23
@@ -23345,8 +23375,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7599998
+    canvasScrollPosition: {x: 0, y: 285.53238}
+    canvasZoom: 0.9699996
   syncInfo:
     syncActors: 0
     syncItems: 0
