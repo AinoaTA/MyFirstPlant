@@ -3554,7 +3554,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: Continue()
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 6
@@ -3577,7 +3577,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 6.9766846}
+    canvasScrollPosition: {x: 453.48785, y: 586.0457}
     canvasZoom: 0.43000045
   - id: 7
     fields:
@@ -4005,16 +4005,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 6
+        destinationConversationID: 7
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 875.0827
-        y: 386.27866
+        x: 873.8169
+        y: 385.01282
         width: 160
         height: 30
     - id: 7
@@ -4054,16 +4060,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 7
+        destinationConversationID: 7
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1088.9221
-        y: 425.45297
+        x: 1087.6562
+        y: 424.18716
         width: 160
         height: 30
     - id: 8
@@ -4103,21 +4115,76 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 8
+        destinationConversationID: 7
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1316.0972
+        x: 1313.5656
         y: 386.96176
         width: 160
         height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Conclusiones()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1095.4688
+        y: 569.49963
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 635.99475, y: 115.08157}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 646.77673, y: 220.31238}
+    canvasZoom: 0.64000034
   - id: 8
     fields:
     - title: Title
@@ -4206,12 +4273,6 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 8
         destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 8
-        originDialogueID: 0
-        destinationConversationID: 8
-        destinationDialogueID: 4
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4324,16 +4385,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 2
+        destinationConversationID: 8
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 690.97644
-        y: 203.74411
+        x: 689.48395
+        y: 200.759
         width: 160
         height: 30
     - id: 3
@@ -4373,16 +4440,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 3
+        destinationConversationID: 8
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 1164.4088
-        y: 205.43692
+        y: 202.45181
         width: 160
         height: 30
     - id: 4
@@ -4491,7 +4564,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4547,7 +4620,7 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4595,7 +4668,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 7
+        destinationConversationID: 8
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -4604,7 +4683,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 714.5372
-        y: 493.16458
+        y: 491.3464
         width: 160
         height: 30
     - id: 8
@@ -4645,7 +4724,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 8
+        originDialogueID: 8
+        destinationConversationID: 8
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -4657,9 +4742,58 @@ MonoBehaviour:
         y: 496.44327
         width: 160
         height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 8
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Final()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 927.83075
+        y: 648.26135
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 561.62177, y: 161.4609}
-    canvasZoom: 0.9999999
+    canvasScrollPosition: {x: 480.81726, y: 291.1808}
+    canvasZoom: 0.5800003
   - id: 9
     fields:
     - title: Title
@@ -4866,7 +5000,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5081,7 +5215,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -5197,8 +5331,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 330.26642, y: 26.865265}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 347.90945, y: 0}
+    canvasZoom: 0.5800004
   - id: 10
     fields:
     - title: Title
@@ -5517,7 +5651,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 785.81323
+        x: 784.3207
         y: 336.17596
         width: 160
         height: 30
@@ -5567,7 +5701,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1088.1385
-        y: 293.25568
+        y: 294.7482
         width: 160
         height: 30
     entryGroups: []
@@ -5731,7 +5865,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 448.23236
+        x: 446.9665
         y: 156.37201
         width: 160
         height: 30
@@ -5944,8 +6078,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 255.88812, y: 0}
-    canvasZoom: 1.0000001
+    canvasScrollPosition: {x: 377.3593, y: 15.183241}
+    canvasZoom: 0.76000035
   - id: 12
     fields:
     - title: Title
@@ -7705,16 +7839,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 7
+        destinationConversationID: 14
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 251.76938
-        y: 406.84613
+        y: 404.92303
         width: 160
         height: 30
     - id: 8
@@ -7754,16 +7894,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 8
+        destinationConversationID: 14
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 772.92285
-        y: 449.15378
+        x: 769.07666
+        y: 447.23074
         width: 160
         height: 30
     - id: 9
@@ -7803,6 +7949,61 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 14
+        originDialogueID: 9
+        destinationConversationID: 14
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1151.7688
+        y: 385.69226
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 14
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -7811,12 +8012,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1151.7688
-        y: 389.53842
+        x: 778.692
+        y: 581.84607
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 180.76917, y: 217.30756}
     canvasZoom: 0.52000034
   - id: 15
     fields:
@@ -7906,12 +8107,6 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 15
         destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 15
-        originDialogueID: 0
-        destinationConversationID: 15
-        destinationDialogueID: 4
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8024,16 +8219,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 2
+        destinationConversationID: 15
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 426.76935
-        y: 178.99995
+        x: 424.8463
+        y: 177.07686
         width: 160
         height: 30
     - id: 3
@@ -8073,15 +8274,21 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 3
+        destinationConversationID: 15
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1144.0765
+        x: 1142.1536
         y: 180.92297
         width: 160
         height: 30
@@ -8191,7 +8398,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8294,7 +8501,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 7
+        destinationConversationID: 15
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -8351,7 +8564,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8359,7 +8572,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1047.9227
-        y: 455.9228
+        y: 453.99976
         width: 160
         height: 30
     - id: 9
@@ -8399,7 +8612,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 9
+        destinationConversationID: 15
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -8411,9 +8630,58 @@ MonoBehaviour:
         y: 505.9228
         width: 160
         height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Final()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 759.4614
+        y: 738.615
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5200004
+    canvasScrollPosition: {x: 319.84583, y: 397.6011}
+    canvasZoom: 0.55000037
   - id: 16
     fields:
     - title: Title
@@ -8620,7 +8888,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -8836,7 +9104,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -9547,7 +9815,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9596,7 +9864,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9645,19 +9913,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 926.88605
-        y: 512.9034
+        y: 510.9804
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5500004
+    canvasScrollPosition: {x: 0, y: 115.51047}
+    canvasZoom: 0.52000046
   - id: 18
     fields:
     - title: Title
@@ -11738,16 +12006,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 6
+        destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 213.28577
-        y: 374.57138
+        y: 373.14282
         width: 160
         height: 30
     - id: 7
@@ -11787,16 +12061,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 7
+        destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 590.42847
-        y: 391.71426
+        x: 588.9999
+        y: 390.2857
         width: 160
         height: 30
     - id: 8
@@ -11836,20 +12116,75 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 21
+        originDialogueID: 8
+        destinationConversationID: 21
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 886.1427
-        y: 355.99997
+        y: 354.57138
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 21
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Conclusiones()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 590.42847
+        y: 538.8571
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 142.85709, y: 78.57141}
+    canvasScrollPosition: {x: 184.28564, y: 284.2856}
     canvasZoom: 0.7000003
   - id: 22
     fields:
@@ -11939,12 +12274,6 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 22
         destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 22
-        originDialogueID: 0
-        destinationConversationID: 22
-        destinationDialogueID: 4
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -12057,16 +12386,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 22
+        originDialogueID: 2
+        destinationConversationID: 22
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 437.875
-        y: 172.5
+        y: 171.00745
         width: 160
         height: 30
     - id: 3
@@ -12106,16 +12441,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 22
+        originDialogueID: 3
+        destinationConversationID: 22
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 920.68726
-        y: 177.18748
+        y: 174.20238
         width: 160
         height: 30
     - id: 4
@@ -12224,7 +12565,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12329,7 +12670,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 22
+        originDialogueID: 7
+        destinationConversationID: 22
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -12338,7 +12685,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 554.66693
-        y: 618.95917
+        y: 617.4667
         width: 160
         height: 30
     - id: 8
@@ -12385,15 +12732,15 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.3201
-        y: 518.8888
+        x: 819.8127
+        y: 517.39624
         width: 160
         height: 30
     - id: 9
@@ -12543,7 +12890,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 22
+        originDialogueID: 11
+        destinationConversationID: 22
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -12555,9 +12908,58 @@ MonoBehaviour:
         y: 668.8884
         width: 160
         height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 22
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Final()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 670.559
+        y: 866.64954
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 276.4201, y: 107.40471}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 319.8993, y: 531.46936}
+    canvasZoom: 0.6700003
   - id: 23
     fields:
     - title: Title
@@ -12764,7 +13166,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13091,7 +13493,7 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13153,8 +13555,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 39.700882, y: 8.695618}
+    canvasZoom: 0.46000046
   - id: 24
     fields:
     - title: Title
@@ -13530,7 +13932,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13579,7 +13981,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13635,12 +14037,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 761.78046
-        y: 297.5122
+        y: 296.14236
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 50.453007, y: 0}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 98.15851, y: 85.97329}
+    canvasZoom: 0.73000026
   - id: 25
     fields:
     - title: Title
@@ -15776,16 +16178,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 28
+        originDialogueID: 6
+        destinationConversationID: 28
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 350.69073
-        y: 371.40158
+        y: 369.5834
         width: 160
         height: 30
     - id: 7
@@ -15825,9 +16233,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 28
+        originDialogueID: 7
+        destinationConversationID: 28
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15874,20 +16288,75 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 28
+        originDialogueID: 8
+        destinationConversationID: 28
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1077.9629
-        y: 360.49252
+        x: 1076.1448
+        y: 358.67435
+        width: 160
+        height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 28
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Conclusiones()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 752.5086
+        y: 550.4924
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 181.81805, y: 212.72711}
     canvasZoom: 0.5500004
   - id: 29
     fields:
@@ -15977,12 +16446,6 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 29
         destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 29
-        originDialogueID: 0
-        destinationConversationID: 29
-        destinationDialogueID: 4
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -16095,16 +16558,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 2
+        destinationConversationID: 29
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 318.93118
-        y: 166.10342
+        x: 461.55405
+        y: 184.1362
         width: 160
         height: 30
     - id: 3
@@ -16144,16 +16613,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 3
+        destinationConversationID: 29
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 987.8962
-        y: 176.44824
+        x: 920.6831
+        y: 189.56299
         width: 160
         height: 30
     - id: 4
@@ -16261,7 +16736,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16531,7 +17006,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 10
+        destinationConversationID: 29
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16588,14 +17069,14 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 932.7239
+        x: 934.448
         y: 369.55157
         width: 160
         height: 30
@@ -16746,7 +17227,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 29
+        originDialogueID: 14
+        destinationConversationID: 29
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -16758,8 +17245,57 @@ MonoBehaviour:
         y: 519.5516
         width: 160
         height: 30
+    - id: 15
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 29
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Final()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 690.6664
+        y: 796.45935
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 260.28543, y: 437.93066}
     canvasZoom: 0.5800004
   - id: 30
     fields:
@@ -16968,14 +17504,14 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 248.44775
+        x: 246.80841
         y: 154.32832
         width: 160
         height: 30
@@ -17184,7 +17720,7 @@ MonoBehaviour:
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17357,8 +17893,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 153.99094, y: 39.34424}
+    canvasZoom: 0.6100004
   - id: 31
     fields:
     - title: Title
@@ -17696,7 +18232,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 420.0498
-        y: 182.62845
+        y: 180.70538
         width: 160
         height: 30
     - id: 5
@@ -17806,7 +18342,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 713.0819
-        y: 286.00565
+        y: 284.08258
         width: 160
         height: 30
     - id: 7
@@ -18019,8 +18555,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 459.8354, y: 213.94795}
-    canvasZoom: 0.7300004
+    canvasScrollPosition: {x: 245.24167, y: 34.564934}
+    canvasZoom: 0.52000046
   - id: 32
     fields:
     - title: Title
@@ -20209,9 +20745,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 35
+        originDialogueID: 6
+        destinationConversationID: 35
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] + 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20258,9 +20800,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 35
+        originDialogueID: 7
+        destinationConversationID: 35
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20307,9 +20855,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 35
+        originDialogueID: 8
+        destinationConversationID: 35
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20319,9 +20873,58 @@ MonoBehaviour:
         y: 342.80908
         width: 160
         height: 30
+    - id: 9
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 35
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 574.8035
+        y: 534.60004
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 40.329563, y: 177.58606}
+    canvasZoom: 0.5800004
   - id: 36
     fields:
     - title: Title
@@ -20410,12 +21013,6 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 36
         destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 36
-        originDialogueID: 0
-        destinationConversationID: 36
-        destinationDialogueID: 4
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -20528,16 +21125,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 36
+        originDialogueID: 2
+        destinationConversationID: 36
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"]+ 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 418.23926
-        y: 178.60988
+        x: 416.51514
+        y: 176.88573
         width: 160
         height: 30
     - id: 3
@@ -20577,16 +21180,22 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 36
+        originDialogueID: 3
+        destinationConversationID: 36
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Puntos"] = Variable["Puntos"] - 2
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 928.5837
-        y: 176.88573
+        x: 926.8595
+        y: 173.43745
         width: 160
         height: 30
     - id: 4
@@ -20647,7 +21256,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 707.8942
-        y: 288.95456
+        y: 287.23044
         width: 160
         height: 30
     - id: 5
@@ -20694,7 +21303,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -20853,7 +21462,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 36
+        originDialogueID: 8
+        destinationConversationID: 36
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20909,7 +21524,7 @@ MonoBehaviour:
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21013,7 +21628,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 36
+        originDialogueID: 11
+        destinationConversationID: 36
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -21025,9 +21646,58 @@ MonoBehaviour:
         y: 457.92004
         width: 160
         height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Continue()
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 36
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Final()
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 688.92865
+        y: 632.3895
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.5800004
+    canvasScrollPosition: {x: 195.31886, y: 296.29254}
+    canvasZoom: 0.49000046
   - id: 37
     fields:
     - title: Title
@@ -21187,7 +21857,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 538.2856
-        y: 72
+        y: 74.85715
         width: 160
         height: 30
     - id: 2
@@ -21235,7 +21905,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] >= 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21243,7 +21913,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 188.28574
-        y: 153.42856
+        y: 152
         width: 160
         height: 30
     - id: 3
@@ -21396,7 +22066,7 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Puntos"] < 5
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -21404,7 +22074,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 835.4283
-        y: 140.57144
+        y: 139.14285
         width: 160
         height: 30
     - id: 6
@@ -21458,8 +22128,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 75.151794, y: 39.06247}
+    canvasZoom: 0.64000034
   - id: 38
     fields:
     - title: Title

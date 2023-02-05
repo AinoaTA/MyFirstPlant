@@ -14,7 +14,8 @@ namespace Gameplay
 
         [SerializeField] private float _maxPoints;
         [SerializeField] private float _currentPoints;
-        [SerializeField] private Transform _playerPos, _plantPos;
+        [SerializeField] private Transform _playerPos;
+        [SerializeField] private Transform[] _plantPoses;
 
         public Tarot tarot;
         public CameraManager cameraManager;
@@ -77,15 +78,30 @@ namespace Gameplay
 
             plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position,
                 Quaternion.identity);
-            plant.transform.position = _plantPos.transform.position;
-            plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+
+            int i=0;
+            switch (Main.instance.profilePlantSelected.nombre)
+            {
+                case "Cayetano Froilán":
+                    i = 0;
+                    break;
+                case "Linda Medusa":
+                    i = 1;
+                    break;
+                case "Lady Blue":
+                    i = 2;
+                    break;
+                case "Erica Draven":
+                    i = 3;
+                    break;
+            };
+
+            plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, 90, 0)));
 
             /*este es la buena !!!*/ //StartCoroutine(GameFlow());
 
             //tarot.EndCard();
             //End();
-
-            StartCoroutine(prueba());
         }
 
         public void ConejoBye() 
