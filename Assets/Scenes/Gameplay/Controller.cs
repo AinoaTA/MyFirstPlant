@@ -42,6 +42,9 @@ namespace Gameplay
             Lua.RegisterFunction("MinigamePuzle", this, SymbolExtensions.GetMethodInfo(() => MinigamePuzle()));
             Lua.RegisterFunction("ConejoPresentaTarot", this, SymbolExtensions.GetMethodInfo(() => ConejoPresentaTarot()));
             Lua.RegisterFunction("ConejoBye", this, SymbolExtensions.GetMethodInfo(() => ConejoBye()));
+            Lua.RegisterFunction("CambiarScena", this, SymbolExtensions.GetMethodInfo(() => CambiarScena()));
+            Lua.RegisterFunction("Conclusiones", this, SymbolExtensions.GetMethodInfo(() => Conclusiones()));
+            Lua.RegisterFunction("Final", this, SymbolExtensions.GetMethodInfo(() => Final()));
         }
 
         private void OnDisable()
@@ -51,6 +54,9 @@ namespace Gameplay
             Lua.UnregisterFunction("MinigamePuzle");
             Lua.UnregisterFunction("ConejoPresentaTarot");
             Lua.UnregisterFunction("ConejoBye");
+            Lua.UnregisterFunction("CambiarScena");
+            Lua.UnregisterFunction("Conclusiones");
+            Lua.UnregisterFunction("Final");
         }
 
         private void Awake()
@@ -74,18 +80,39 @@ namespace Gameplay
             plant.transform.position = _plantPos.transform.position;
             plant.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
 
-            //StartCoroutine(GameFlow());
-            //UpdateEnd();
-            //MinigameTarot();
-            //End();
-            //MinigameTarot();
+            /*este es la buena !!!*/ //StartCoroutine(GameFlow());
+           
             tarot.EndCard();
         }
 
         public void ConejoBye() 
         {
+            StartCoroutine(Delay2());
+        }
+        public void Conclusiones()
+        {
+            StartCoroutine(Delay3());
+        }
+        public void Final()
+        {
+            StartCoroutine(Delay4());
+        }
+        IEnumerator Delay3()
+        {
+            yield return new WaitForSeconds(1f);
             cameraManager.ChooseCam(1, true);
-            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.laCuenta, Controller.controller.player.transform);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.conclusionCita, player.transform);
+        }
+        IEnumerator Delay4()
+        {
+            yield return new WaitForSeconds(1f);
+            cameraManager.ChooseCam(1, true);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.final, player.transform);
+        }
+        IEnumerator Delay2() 
+        {
+            yield return new WaitForSeconds(1.25f);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.laCuenta, player.transform);
         }
 
         public void CambiarScena() 
