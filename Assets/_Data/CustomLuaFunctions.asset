@@ -35,3 +35,12 @@ MonoBehaviour:
   - functionName: StartVoice
     parameters: 
     returnValue: 0
+  - functionName: StartTarot2
+    parameters: 
+    returnValue: 0
+  - functionName: EndCard
+    parameters: 
+    returnValue: 0
+  - functionName: CambiarScena
+    parameters: 
+    returnValue: 0
