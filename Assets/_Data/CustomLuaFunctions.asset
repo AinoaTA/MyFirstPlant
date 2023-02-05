@@ -17,36 +17,42 @@ MonoBehaviour:
   - functionName: Debug/SayDebug
     parameters: 02000000
     returnValue: 0
-  - functionName: StartTarot
-    parameters: 
-    returnValue: 0
-  - functionName: PlantaPresenta
-    parameters: 
-    returnValue: 0
-  - functionName: MinigamePuzle
-    parameters: 
+  - functionName: PlayAnimation
+    parameters: 02000000
     returnValue: 0
   - functionName: ChangeFace
     parameters: 02000000
     returnValue: 0
-  - functionName: ConejoPresentaTarot
-    parameters: 
-    returnValue: 0
   - functionName: StartVoice
     parameters: 
     returnValue: 0
-  - functionName: StartTarot2
+  - functionName: StartTarot
     parameters: 
     returnValue: 0
   - functionName: EndCard
     parameters: 
     returnValue: 0
-  - functionName: CambiarScena
+  - functionName: Gameplay/PlantaPresenta
     parameters: 
     returnValue: 0
-  - functionName: Final
+  - functionName: Gameplay/MinigamePuzle
     parameters: 
     returnValue: 0
-  - functionName: Conclusiones
+  - functionName: Gameplay/ConejoPresentaTarot
+    parameters: 
+    returnValue: 0
+  - functionName: Gameplay/StartTarot2
+    parameters: 
+    returnValue: 0
+  - functionName: Gameplay/CambiarScena
+    parameters: 
+    returnValue: 0
+  - functionName: Gameplay/Final
+    parameters: 
+    returnValue: 0
+  - functionName: Gameplay/Conclusiones
+    parameters: 
+    returnValue: 0
+  - functionName: Gameplay/FinishGame
     parameters: 
     returnValue: 0
