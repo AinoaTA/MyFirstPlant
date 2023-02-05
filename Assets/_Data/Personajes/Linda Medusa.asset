@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611ea6cae2a817f4cb518c7e81825c26, type: 3}
   m_Name: Linda Medusa
   m_EditorClassIdentifier: 
-  imagen: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+  imagen: {fileID: 21300000, guid: aef46e09b3345f94b9a46a9c6933482a, type: 3}
   nombre: Linda Medusa
   tipoPlanta: Planta Serpiente
   edad: 0
