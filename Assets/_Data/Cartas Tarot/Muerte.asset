@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8eeb4139dbc714f8b07b6f25235d56, type: 3}
   m_Name: Muerte
   m_EditorClassIdentifier: 
-  cardName: La Muerte
+  cardName: Muerte
   cardInfo: 
   materialCard: {fileID: 0}

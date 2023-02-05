@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8eeb4139dbc714f8b07b6f25235d56, type: 3}
   m_Name: Rueda Fortuna
   m_EditorClassIdentifier: 
-  cardName: La Rueda de la Fortuna
+  cardName: Fortuna
   cardInfo: 
   materialCard: {fileID: 0}
