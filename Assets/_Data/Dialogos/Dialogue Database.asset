@@ -6009,8 +6009,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7600001
+    canvasScrollPosition: {x: 0, y: 58.20894}
+    canvasZoom: 0.6700002
   - id: 14
     fields:
     - title: Title
@@ -17007,7 +17007,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 225.45438, y: 0}
+    canvasScrollPosition: {x: 29.090881, y: 47.272705}
     canvasZoom: 0.5500004
   - id: 31
     fields:
@@ -19222,8 +19222,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 425.58112, y: 360.46487}
-    canvasZoom: 0.43000028
+    canvasScrollPosition: {x: 1106.1799, y: 602.7026}
+    canvasZoom: 0.82
   - id: 35
     fields:
     - title: Title
@@ -21442,7 +21442,7 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Parejita, ten\xE9is la oportunidad de conocer vuestro Destino gracias
-          a nuestra [em1]Pitonisa Mari Cruz[/em1]."
+          a nuestra [em1]Pitonisa Mari Cruz[/em1]"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -21587,7 +21587,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 144.09058, y: 0}
+    canvasScrollPosition: {x: 326.65936, y: 87.15596}
     canvasZoom: 1.09
   - id: 5
     fields:
@@ -22042,11 +22042,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -22276,7 +22276,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -22327,11 +22327,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -22637,8 +22637,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 71.07257, y: 398.67343}
-    canvasZoom: 0.6100004
+    canvasScrollPosition: {x: 80.1785, y: 1.4285583}
+    canvasZoom: 0.7000003
   - id: 39
     fields:
     - title: Title
@@ -22928,8 +22928,8 @@ MonoBehaviour:
         width: 174
         height: 228
       color: {r: 1, g: 1, b: 1, a: 0.5}
-    canvasScrollPosition: {x: 84.16808, y: 0}
-    canvasZoom: 0.5600009
+    canvasScrollPosition: {x: 204.60129, y: 31.167238}
+    canvasZoom: 0.71000075
   - id: 40
     fields:
     - title: Title
@@ -23821,8 +23821,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 268.2545}
-    canvasZoom: 0.72999984
+    canvasScrollPosition: {x: 13.924042, y: 0}
+    canvasZoom: 0.7899998
   syncInfo:
     syncActors: 0
     syncItems: 0
