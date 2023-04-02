@@ -16,7 +16,7 @@ public class ManagerScene : MonoBehaviour
     /// Load a scene with a loadingScreen
     /// </summary>
     /// <param name="sceneToLoad"></param>
-    public void LoadSceneWithLoading(string sceneToLoad)
+    public static void LoadSceneWithLoading(string sceneToLoad)
     {
         StartCoroutine(Loading(sceneToLoad));
     }

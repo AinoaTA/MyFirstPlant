@@ -29,7 +29,9 @@ namespace Gameplay
         [Header("UI")] [SerializeField] private Canvas _canvas;
         [SerializeField] private GameObject _endCanvas;
         [SerializeField] private TMP_Text _content;
-        
+
+        [SerializeField] private GameObject _pause;
+
         private List<string> chisteString = new List<string>()
         {
             "¿Qué es lo peor que te puede ocurrir cuando vienes aquí? ¡Que te den PLANTÓN!",
@@ -88,7 +90,7 @@ namespace Gameplay
             plant = Instantiate(Main.instance.profilePlantSelected.modeloPrefab, transform.position,
                 Quaternion.identity);
 
-            int i=0;
+            int i = 0;
             switch (Main.instance.profilePlantSelected.nombre)
             {
                 case "Cayetano Froilán":
@@ -109,12 +111,48 @@ namespace Gameplay
             plant.transform.SetPositionAndRotation(_plantPoses[i].position, Quaternion.Euler(new Vector3(0, -90, 0)));
 
 
-            /*este es la buena !!!*/ StartCoroutine(GameFlow());
+            /*este es la buena !!!*/
+            StartCoroutine(GameFlow());
             //tarot.EndCard();
             //End();
         }
+        bool _pauseMenu;
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (!_pauseMenu)
+                {
+                    _pauseMenu = true;
+                    Time.timeScale = 0;
+                    _pause.SetActive(true);
+                }
+                else
+                {
+                    NoQuit();
+                }
+            }
+        }
 
-        public void ConejoBye() 
+
+       public void NoQuit() 
+        {
+            _pauseMenu = false;
+            Time.timeScale = 1;
+            _pause.SetActive(false);
+        }
+        public void YesQuit()
+        {
+            Application.Quit();
+        }
+
+        public void BackMenu()
+        {
+            Time.timeScale = 1;
+            Main.instance.managerScene.LoadSceneWithLoading("Menu");  
+        }
+
+        public void ConejoBye()
         {
             StartCoroutine(Delay2());
         }
@@ -138,17 +176,17 @@ namespace Gameplay
             cameraManager.FinalFade();
             // Play the music
             AudioManager.Instance.PlayMusic(finalMusic);
-            
+
             yield return new WaitForSeconds(3f);
-            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.final, _conejo.transform,player.transform);
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.final, _conejo.transform, player.transform);
         }
-        IEnumerator Delay2() 
+        IEnumerator Delay2()
         {
             yield return new WaitForSeconds(2f);
             DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.laCuenta, player.transform);
         }
 
-        public void CambiarScena() 
+        public void CambiarScena()
         {
             cameraManager.ChooseCam(2, true);
         }
@@ -187,7 +225,7 @@ namespace Gameplay
 
         public void PlantaPresenta()
         {
-            cameraManager.ChooseCam(2,true);
+            cameraManager.ChooseCam(2, true);
             StartCoroutine(Delay());
         }
 
@@ -195,7 +233,7 @@ namespace Gameplay
         {
             //La cita habla (se presenta)
             yield return new WaitForSeconds(1);
-            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.intro, player.transform, plant.transform); 
+            DialogueManager.StartConversation(Main.instance.profilePlantSelected.dialoguitos.intro, player.transform, plant.transform);
         }
 
         public void MinigamePuzle()
@@ -243,27 +281,27 @@ namespace Gameplay
         }
 
 
-        public void ConejoPresentaTarot() 
-        { 
-            StartCoroutine(DelayConejo()); 
+        public void ConejoPresentaTarot()
+        {
+            StartCoroutine(DelayConejo());
         }
 
-        IEnumerator DelayConejo() 
+        IEnumerator DelayConejo()
         {//primero camera o conejo?
             cameraManager.ChooseCam(1, true);
             yield return new WaitForSeconds(0.5f);
             DialogueManager.StartConversation("AnuncioPitonisa", _conejo.transform, player.transform);
-           
+
         }
         #region Dataloading
 
         public void AddPoints(int points)
         {
             var a = DialogueLua.GetVariable("Puntos").AsInt;
-            
-            if(points > 0)
+
+            if (points > 0)
                 DialogueLua.SetVariable("Puzzle", true);
-            
+
             a += points;
             DialogueLua.SetVariable("Puntos", a);
             Debug.Log($"Tienes {a} pontos");
@@ -275,9 +313,9 @@ namespace Gameplay
 
         public void LoadScene(double value)
         {
-            SceneManager.LoadScene((int) value);
+            SceneManager.LoadScene((int)value);
         }
-        
+
         #endregion
 
 
